@@ -6,6 +6,8 @@ public class Player : MonoBehaviour {
     // Private
     private Color _color { get; }
     private float speed = 15f;
+    private float jumpForce = 8f; 
+    private bool grounded = true;
 
     // Public
     public Rigidbody2D rb;
@@ -21,6 +23,7 @@ public class Player : MonoBehaviour {
 
     private void FixedUpdate() {
         Move();
+        HandleInput();
     }
 
     private void Move() {
@@ -30,5 +33,20 @@ public class Player : MonoBehaviour {
         Vector2 movement = new Vector2(hInput * speed, rb.velocity.y);
 
         rb.velocity = movement;
+    }
+
+    private void HandleInput() {
+        // Pulo
+        if (Input.GetKey(KeyCode.Space) && grounded) {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+
+            grounded = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.CompareTag("Ground")) {
+            grounded = true;
+        }
     }
 }
