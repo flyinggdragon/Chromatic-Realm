@@ -1,7 +1,5 @@
-public enum Color {
-    None,
-    White,
-    Black,
+[System.Serializable]
+public enum ColorName {
     Red,
     RedOrange,
     Orange,
@@ -13,5 +11,9 @@ public enum Color {
     Blue,
     Violet,
     Purple,
-    Magenta
+    Magenta,
+    White,
+    Black,
+    All,
+    None,
 }
