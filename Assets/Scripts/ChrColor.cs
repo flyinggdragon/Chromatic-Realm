@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class ChrColor {
-    public static ColorAttr Red = new ColorAttr(
+    // Estrutura para cores personalizáveis.
+    public static ColorAttr Red = new(
         new Color32(255, 0, 0, 255),
         ColorName.Red,
         ColorName.Green,
@@ -11,7 +12,7 @@ public static class ChrColor {
         new List<ColorName> { ColorName.Blue, ColorName.Yellow }
     );
 
-    public static ColorAttr RedOrange = new ColorAttr(
+    public static ColorAttr RedOrange = new(
         new Color32(236, 90, 41, 255),
         ColorName.RedOrange,
         ColorName.Turquoise,
@@ -19,15 +20,15 @@ public static class ChrColor {
         new List<ColorName> { ColorName.Violet, ColorName.Lime }
     );
 
-    public static ColorAttr Orange = new ColorAttr(
+    public static ColorAttr Orange = new(
         new Color32(255, 165, 0, 255),
         ColorName.Orange,
-        ColorName.Turquoise,
+        ColorName.Blue,
         new List<ColorName> { ColorName.RedOrange, ColorName.OrangeYellow },
         new List<ColorName> { ColorName.Purple, ColorName.Green }
     );
 
-    public static ColorAttr OrangeYellow = new ColorAttr(
+    public static ColorAttr OrangeYellow = new(
         new Color32(247, 176, 62, 255),
         ColorName.OrangeYellow,
         ColorName.Violet,
@@ -35,7 +36,7 @@ public static class ChrColor {
         new List<ColorName> { ColorName.Magenta, ColorName.Turquoise }
     );
 
-    public static ColorAttr Yellow = new ColorAttr(
+    public static ColorAttr Yellow = new(
         new Color32(255, 255, 0, 255),
         ColorName.Yellow,
         ColorName.Purple,
@@ -43,7 +44,7 @@ public static class ChrColor {
         new List<ColorName> { ColorName.Red, ColorName.Blue }
     );
 
-    public static ColorAttr Lime = new ColorAttr(
+    public static ColorAttr Lime = new(
         new Color32(139, 196, 59, 255),
         ColorName.Lime,
         ColorName.Magenta,
@@ -51,7 +52,7 @@ public static class ChrColor {
         new List<ColorName> { ColorName.RedOrange, ColorName.Violet }
     );
 
-    public static ColorAttr Green = new ColorAttr(
+    public static ColorAttr Green = new(
         new Color32(0, 255, 0, 255),
         ColorName.Green,
         ColorName.Red,
@@ -59,15 +60,15 @@ public static class ChrColor {
         new List<ColorName> { ColorName.Orange, ColorName.Purple }
     );
 
-    public static ColorAttr Turquoise = new ColorAttr(
+    public static ColorAttr Turquoise = new(
         new Color32(64, 224, 208, 255),
         ColorName.Turquoise,
-        ColorName.Orange,
+        ColorName.RedOrange,
         new List<ColorName> { ColorName.Blue, ColorName.Violet },
         new List<ColorName> { ColorName.OrangeYellow, ColorName.Magenta }
     );
 
-    public static ColorAttr Blue = new ColorAttr(
+    public static ColorAttr Blue = new(
         new Color32(0, 0, 255, 255),
         ColorName.Blue,
         ColorName.Orange,
@@ -75,7 +76,7 @@ public static class ChrColor {
         new List<ColorName> { ColorName.Yellow, ColorName.Red }
     );
 
-    public static ColorAttr Violet = new ColorAttr(
+    public static ColorAttr Violet = new(
         new Color32(138, 43, 226, 255),
         ColorName.Violet,
         ColorName.OrangeYellow,
@@ -83,7 +84,7 @@ public static class ChrColor {
         new List<ColorName> { ColorName.Lime, ColorName.RedOrange }
     );
 
-    public static ColorAttr Purple = new ColorAttr(
+    public static ColorAttr Purple = new(
         new Color32(128, 0, 128, 255),
         ColorName.Purple,
         ColorName.Yellow,
@@ -91,7 +92,7 @@ public static class ChrColor {
         new List<ColorName> { ColorName.Green, ColorName.Orange }
     );
 
-    public static ColorAttr Magenta = new ColorAttr(
+    public static ColorAttr Magenta = new(
         new Color32(199, 21, 133, 255),
         ColorName.Magenta,
         ColorName.Lime,
@@ -99,7 +100,7 @@ public static class ChrColor {
         new List<ColorName> { ColorName.Turquoise, ColorName.OrangeYellow }
     );
 
-    public static ColorAttr White = new ColorAttr(
+    public static ColorAttr White = new(
         new Color32(255, 255, 255, 255),
         ColorName.White,
         ColorName.All,
@@ -107,7 +108,7 @@ public static class ChrColor {
         new List<ColorName> { ColorName.All }
     );
 
-    public static ColorAttr Black = new ColorAttr(
+    public static ColorAttr Black = new(
         new Color32(0, 0, 0, 255),
         ColorName.Black,
         ColorName.None,
@@ -115,12 +116,16 @@ public static class ChrColor {
         new List<ColorName> { ColorName.None }
     );
 
-    public static List<ColorAttr> colors = new List<ColorAttr> {
+    public static List<ColorAttr> colors = new() {
         Red, RedOrange, Orange, OrangeYellow, Yellow, Lime, Green,
         Turquoise, Blue, Violet, Purple, Magenta, White, Black
     };
 
     public static Harmony DefineHarmony(ColorAttr currentColor, ColorAttr collidingWithColor) {
+        if (collidingWithColor == currentColor) {
+            return Harmony.Identical;
+        }
+        
         if (collidingWithColor.chrColorName == ColorName.White) {
             return Harmony.All;
         }
@@ -129,7 +134,7 @@ public static class ChrColor {
             return Harmony.None;
         }
         
-        else if (currentColor == collidingWithColor) {
+        else if (currentColor.chrColorName == collidingWithColor.complementaryColor) {
             return Harmony.Complementary;
         }
 
