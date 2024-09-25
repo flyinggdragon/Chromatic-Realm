@@ -23,4 +23,13 @@ public class Block : MonoBehaviour {
         _color = colorAttr.rgbValue;
         sr.color = _color;
     }
+
+    public void ChangeColor(ColorAttr newColorAttr) {
+        // Atualiza a cor para a cor recebida.
+        colorAttr = newColorAttr;
+
+        currentColorName = colorAttr.chrColorName;
+        _color = colorAttr.rgbValue;
+        sr.color = _color;
+    }
 }

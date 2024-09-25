@@ -3,7 +3,7 @@ public enum Harmony {
     Complementary,
     Analogue,
     Triadic,
-    Identical,
+    Equal,
     All,
     None
 }

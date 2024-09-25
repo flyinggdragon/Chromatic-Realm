@@ -6,7 +6,7 @@ public class SoftBlock : Block {
     private float GetJumpHeight(ColorAttr playerColor) {
         ColorAttr currentColorAttr = ChrColor.FindColorAttr(currentColorName);
 
-        Harmony currentHarmony = ChrColor.DefineHarmony(currentColorAttr, playerColor);
+        Harmony currentHarmony = ChrColor.DetermineHarmony(currentColorAttr, playerColor);
         
         switch(currentHarmony) {
             case Harmony.All:
@@ -21,7 +21,7 @@ public class SoftBlock : Block {
             case Harmony.Triadic:
                 return 7f;
             
-            case Harmony.Identical:
+            case Harmony.Equal:
                 return 0f;
             
             default:

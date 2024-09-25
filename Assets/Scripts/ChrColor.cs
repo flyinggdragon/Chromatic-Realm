@@ -121,9 +121,9 @@ public static class ChrColor {
         Turquoise, Blue, Violet, Purple, Magenta, White, Black
     };
 
-    public static Harmony DefineHarmony(ColorAttr currentColor, ColorAttr collidingWithColor) {
+    public static Harmony DetermineHarmony(ColorAttr currentColor, ColorAttr collidingWithColor) {
         if (collidingWithColor == currentColor) {
-            return Harmony.Identical;
+            return Harmony.Equal;
         }
         
         if (collidingWithColor.chrColorName == ColorName.White) {
@@ -172,16 +172,16 @@ public class ColorAttr {
     public List<ColorName> triadicColors { get; }
 
     public ColorAttr(
-        Color32 InRGBValue, 
-        ColorName InChrColorName, 
-        ColorName InComplementaryColor, 
-        List<ColorName> InAnalogueColors, 
-        List<ColorName> InTriadicColors
+        Color32 inRGBValue, 
+        ColorName inChrColorName, 
+        ColorName inComplementaryColor, 
+        List<ColorName> inAnalogueColors, 
+        List<ColorName> inTriadicColors
     ) {
-        rgbValue = InRGBValue;
-        chrColorName = InChrColorName;
-        complementaryColor = InComplementaryColor;
-        analogueColors = InAnalogueColors;
-        triadicColors = InTriadicColors;
+        rgbValue = inRGBValue;
+        chrColorName = inChrColorName;
+        complementaryColor = inComplementaryColor;
+        analogueColors = inAnalogueColors;
+        triadicColors = inTriadicColors;
     }
 }

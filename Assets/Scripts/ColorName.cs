@@ -15,5 +15,5 @@ public enum ColorName {
     White,
     Black,
     All,
-    None,
+    None
 }

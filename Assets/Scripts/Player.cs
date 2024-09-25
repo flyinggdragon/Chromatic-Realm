@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
         sr.color = _color;
     }
 
-    private void UpdateColor() {
+    private void ChangeColor(ColorAttr newColorAttr) {
         
     }
     
