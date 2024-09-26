@@ -14,7 +14,7 @@ public class Block : MonoBehaviour {
     protected Vector2 _position;
     protected Color32 _color;
 
-    void Start() {
+    protected virtual void Start() {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
 
