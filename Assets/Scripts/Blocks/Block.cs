@@ -19,9 +19,7 @@ public class Block : MonoBehaviour {
         sr = GetComponent<SpriteRenderer>();
 
         // Atualiza a cor para a cor escolhida no Inspector.
-        colorAttr = ChrColor.FindColorAttr(currentColorName);
-        _color = colorAttr.rgbValue;
-        sr.color = _color;
+        ChangeColor(ChrColor.FindColorAttr(currentColorName));
     }
 
     public void ChangeColor(ColorAttr newColorAttr) {

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3280715813905999643}
   - component: {fileID: 64524793498378825}
   - component: {fileID: 2680046242883691289}
+  - component: {fileID: 353438322289412717}
   m_Layer: 0
   m_Name: ConnectedBlock
   m_TagString: Block
@@ -147,3 +148,30 @@ MonoBehaviour:
   currentColorName: 11
   connectedBlock: {fileID: 0}
   connectionType: 1
+--- !u!50 &353438322289412717
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280089779792033443}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 25
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

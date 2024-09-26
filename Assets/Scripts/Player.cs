@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     // Private
     private float _speed = 15f;
-    private float _jumpForce = 5f; 
+    private float _jumpForce = 10f; 
     private bool _grounded = true;
     private Color32 _color;
 

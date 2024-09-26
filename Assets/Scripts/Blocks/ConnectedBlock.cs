@@ -37,6 +37,7 @@ public class ConnectedBlock : Block {
         CheckConnectionValidity();
     }
 
+    // Futuramente, vou precisar passar ColorAttr newColorAttr de argumento.
     private void UpdateConnectionColors() {
         ChangeColor(ChrColor.colors[i]);
 

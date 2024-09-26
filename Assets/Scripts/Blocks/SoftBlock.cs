@@ -10,16 +10,16 @@ public class SoftBlock : Block {
         
         switch(currentHarmony) {
             case Harmony.All:
-                return 15f;
+                return 20f;
 
             case Harmony.Complementary:
-                return 13f;
+                return 20f;
             
             case Harmony.Analogue:
-                return 10f;
+                return 16f;
             
             case Harmony.Triadic:
-                return 7f;
+                return 13f;
             
             case Harmony.Equal:
                 return 0f;
@@ -30,11 +30,20 @@ public class SoftBlock : Block {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("ThePlayer")) {
-            Player player = collision.gameObject.GetComponent<Player>();
+        ContactPoint2D[] contacts = collision.contacts;
+        
+        foreach (ContactPoint2D contact in contacts) {
+            // Verifica se o contato foi na parte de cima do bloco
+            
+            Debug.Log(contact.normal.y);
+            if (contact.normal.y < -0.9f) {
+                Debug.Log("jump");
+                Player player = collision.gameObject.GetComponent<Player>();
 
-            float jumpForce = GetJumpHeight(player.colorAttr);
-            player.Jump(jumpForce);
+                // Calcula a altura do pulo com base na cor
+                float jumpForce = GetJumpHeight(player.colorAttr);
+                player.Jump(jumpForce);
+            }
         }
     }
 }
