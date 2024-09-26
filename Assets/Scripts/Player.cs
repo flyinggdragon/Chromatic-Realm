@@ -77,7 +77,7 @@ public class Player : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Block")) {
+        if (other.gameObject.CompareTag("Ground")) {
             _grounded = true;
         }
     }

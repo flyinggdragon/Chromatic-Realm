@@ -37,7 +37,6 @@ public class ConnectedBlock : Block {
         CheckConnectionValidity();
     }
 
-    // Futuramente, vou precisar passar ColorAttr newColorAttr de argumento.
     private void UpdateConnectionColors() {
         ChangeColor(ChrColor.colors[i]);
 
@@ -52,7 +51,7 @@ public class ConnectedBlock : Block {
         if (collision.gameObject.CompareTag("ThePlayer")) {
             // Temporário.
             i++;
-            if (i > 10) { i = 0; }
+            if (i > 10) i = 0;
             UpdateConnectionColors();
         }
     }

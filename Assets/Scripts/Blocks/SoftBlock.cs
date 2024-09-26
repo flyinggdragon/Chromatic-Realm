@@ -10,16 +10,16 @@ public class SoftBlock : Block {
         
         switch(currentHarmony) {
             case Harmony.All:
-                return 20f;
+                return 10f;
 
             case Harmony.Complementary:
-                return 20f;
+                return 10f;
             
             case Harmony.Analogue:
-                return 16f;
+                return 7f;
             
             case Harmony.Triadic:
-                return 13f;
+                return 5f;
             
             case Harmony.Equal:
                 return 0f;
@@ -35,9 +35,7 @@ public class SoftBlock : Block {
         foreach (ContactPoint2D contact in contacts) {
             // Verifica se o contato foi na parte de cima do bloco
             
-            Debug.Log(contact.normal.y);
             if (contact.normal.y < -0.9f) {
-                Debug.Log("jump");
                 Player player = collision.gameObject.GetComponent<Player>();
 
                 // Calcula a altura do pulo com base na cor
