@@ -10,8 +10,8 @@ public class Player : MonoBehaviour {
     private Color32 _color;
 
     // Public
-    public Rigidbody2D rb { get; private set; }
-    public SpriteRenderer sr { get; private set; }
+    public Rigidbody2D rb;
+    public SpriteRenderer sr;
     public ColorName currentColorName;
     public ColorAttr colorAttr { get; private set; }
 
@@ -24,17 +24,18 @@ public class Player : MonoBehaviour {
         sr = GetComponent<SpriteRenderer>();
 
         // Atualiza a cor para a cor escolhida no Inspector.
-        colorAttr = ChrColor.FindColorAttr(currentColorName);
-        _color = colorAttr.rgbValue;
-        sr.color = _color;
+        ChangeColor(ChrColor.FindColorAttr(currentColorName));
     }
 
     private void ChangeColor(ColorAttr newColorAttr) {
-        
+        colorAttr = newColorAttr;
+        _color = colorAttr.rgbValue;
+        sr.color = _color;
     }
     
     private void Update() {
-        
+        // Temporário
+        ChangeColor(ChrColor.FindColorAttr(currentColorName));
     }
 
     private void FixedUpdate() {
