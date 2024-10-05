@@ -19,6 +19,7 @@ public class WaterBlock : MonoBehaviour {
             Player player = other.gameObject.GetComponent<Player>();
             Block block = other.gameObject.GetComponent<Block>();
 
+            player.grounded = true;
             ColorAttr objAttr = player?.colorAttr ?? block?.colorAttr;
 
             if (player is not null) {
@@ -34,6 +35,7 @@ public class WaterBlock : MonoBehaviour {
 
     private void OnTriggerExit2D() {
         Player player = GameObject.Find("Player").GetComponent<Player>();
+        player.grounded = false;
 
         player.rb.gravityScale = 1f;
         player.rb.drag = 0.05f;

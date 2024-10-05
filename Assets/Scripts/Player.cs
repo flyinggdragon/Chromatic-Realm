@@ -6,12 +6,12 @@ public class Player : MonoBehaviour {
     // Private
     private float _speed = 15f;
     private float _jumpForce = 10f; 
-    private bool _grounded = true;
     private Color32 _color;
 
     // Public
     public Rigidbody2D rb;
     public SpriteRenderer sr;
+    public bool grounded = true;
     public ColorName currentColorName;
     public ColorAttr colorAttr { get; private set; }
 
@@ -27,15 +27,10 @@ public class Player : MonoBehaviour {
         ChangeColor(ChrColor.FindColorAttr(currentColorName));
     }
 
-    private void ChangeColor(ColorAttr newColorAttr) {
+    public void ChangeColor(ColorAttr newColorAttr) {
         colorAttr = newColorAttr;
         _color = colorAttr.rgbValue;
         sr.color = _color;
-    }
-    
-    private void Update() {
-        // Temporário
-        ChangeColor(ChrColor.FindColorAttr(currentColorName));
     }
 
     private void FixedUpdate() {
@@ -53,33 +48,37 @@ public class Player : MonoBehaviour {
 
     private void HandleInput() {
         // Pulo
-        if (Input.GetKey(KeyCode.Space) && _grounded) {
+        if (Input.GetKey(KeyCode.Space) && grounded) {
             Jump(_jumpForce);
-        }
-
-        // Trocar Cor (temporário)
-        if (Input.GetKeyDown(KeyCode.C)) {
-            if (i > ChrColor.colors.Count) { i = -1; }
-
-            i++;
-
-            colorAttr = ChrColor.colors[i];
-            _color = colorAttr.rgbValue;
-
-            sr.color = _color;
-
-            currentColorName = colorAttr.chrColorName;
         }
     }
 
     public void Jump(float jumpForce) {
         rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
-        _grounded = false;
+        grounded = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Ground")) {
-            _grounded = true;
+            grounded = true;
+        }
+
+        if (other.gameObject.CompareTag("Block")) {
+            if (other.gameObject.GetComponent<Block>() is not SoftBlock) return;
+
+            grounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other) {
+        if (other.gameObject.CompareTag("Ground") ) {
+            grounded = false;
+        }
+
+        if (other.gameObject.CompareTag("Block")) {
+            if (other.gameObject.GetComponent<Block>() is not SoftBlock) return;
+
+            grounded = false;
         }
     }
 }

@@ -4,9 +4,13 @@ using UnityEngine;
 
 public static class ChrColor {
     // Estrutura para cores personalizáveis.
+
+    // Reselecionar as cores, DIREITO DESSA VEZ.
+    // Na dúvida vou colocar qualquer um só para testes.
     public static ColorAttr Magenta = new(
         new Color32(199, 21, 133, 255),
         ColorTemperature.Warm,
+        ColorType.Secondary,
         ColorName.Magenta,
         ColorName.Lime,
         new List<ColorName> { ColorName.Red, ColorName.Purple },
@@ -16,6 +20,7 @@ public static class ChrColor {
     public static ColorAttr Red = new(
         new Color32(255, 0, 0, 255),
         ColorTemperature.Warm,
+        ColorType.Primary,
         ColorName.Red,
         ColorName.Green,
         new List<ColorName> { ColorName.RedOrange, ColorName.Magenta },
@@ -25,6 +30,7 @@ public static class ChrColor {
     public static ColorAttr RedOrange = new(
         new Color32(236, 90, 41, 255),
         ColorTemperature.Warm,
+        ColorType.Tertiary,
         ColorName.RedOrange,
         ColorName.Turquoise,
         new List<ColorName> { ColorName.Red, ColorName.Orange },
@@ -34,6 +40,7 @@ public static class ChrColor {
     public static ColorAttr Orange = new(
         new Color32(255, 165, 0, 255),
         ColorTemperature.Warm,
+        ColorType.Secondary,
         ColorName.Orange,
         ColorName.Blue,
         new List<ColorName> { ColorName.RedOrange, ColorName.OrangeYellow },
@@ -43,6 +50,7 @@ public static class ChrColor {
     public static ColorAttr OrangeYellow = new(
         new Color32(247, 176, 62, 255),
         ColorTemperature.Warm,
+        ColorType.Secondary,
         ColorName.OrangeYellow,
         ColorName.Violet,
         new List<ColorName> { ColorName.Orange, ColorName.Yellow },
@@ -52,6 +60,7 @@ public static class ChrColor {
     public static ColorAttr Yellow = new(
         new Color32(255, 255, 0, 255),
         ColorTemperature.Warm,
+        ColorType.Primary,
         ColorName.Yellow,
         ColorName.Purple,
         new List<ColorName> { ColorName.OrangeYellow, ColorName.Lime },
@@ -61,6 +70,7 @@ public static class ChrColor {
     public static ColorAttr Lime = new(
         new Color32(139, 196, 59, 255),
         ColorTemperature.Cool,
+        ColorType.Tertiary,
         ColorName.Lime,
         ColorName.Magenta,
         new List<ColorName> { ColorName.Yellow, ColorName.Green },
@@ -70,6 +80,7 @@ public static class ChrColor {
     public static ColorAttr Green = new(
         new Color32(0, 255, 0, 255),
         ColorTemperature.Cool,
+        ColorType.Secondary,
         ColorName.Green,
         ColorName.Red,
         new List<ColorName> { ColorName.Turquoise, ColorName.Lime },
@@ -79,6 +90,7 @@ public static class ChrColor {
     public static ColorAttr Turquoise = new(
         new Color32(64, 224, 208, 255),
         ColorTemperature.Cool,
+        ColorType.Tertiary,
         ColorName.Turquoise,
         ColorName.RedOrange,
         new List<ColorName> { ColorName.Blue, ColorName.Violet },
@@ -88,6 +100,7 @@ public static class ChrColor {
     public static ColorAttr Blue = new(
         new Color32(0, 0, 255, 255),
         ColorTemperature.Cool,
+        ColorType.Primary,
         ColorName.Blue,
         ColorName.Orange,
         new List<ColorName> { ColorName.Violet, ColorName.Turquoise },
@@ -97,6 +110,7 @@ public static class ChrColor {
     public static ColorAttr Violet = new(
         new Color32(138, 43, 226, 255),
         ColorTemperature.Cool,
+        ColorType.Secondary,
         ColorName.Violet,
         ColorName.OrangeYellow,
         new List<ColorName> { ColorName.Purple, ColorName.Blue },
@@ -106,6 +120,7 @@ public static class ChrColor {
     public static ColorAttr Purple = new(
         new Color32(128, 0, 128, 255),
         ColorTemperature.Cool,
+        ColorType.Secondary,
         ColorName.Purple,
         ColorName.Yellow,
         new List<ColorName> { ColorName.Magenta, ColorName.Violet },
@@ -115,6 +130,7 @@ public static class ChrColor {
     public static ColorAttr White = new(
         new Color32(255, 255, 255, 255),
         ColorTemperature.Neither,
+        ColorType.All,
         ColorName.White,
         ColorName.All,
         new List<ColorName> { ColorName.All },
@@ -124,6 +140,7 @@ public static class ChrColor {
     public static ColorAttr Black = new(
         new Color32(0, 0, 0, 255),
         ColorTemperature.Neither,
+        ColorType.None,
         ColorName.Black,
         ColorName.None,
         new List<ColorName> { ColorName.None },
@@ -181,6 +198,7 @@ public static class ChrColor {
 public class ColorAttr {
     public Color32 rgbValue { get; }
     public ColorTemperature colorTemperature { get; }
+    public ColorType colorType { get; }
     public ColorName chrColorName { get; }
     public ColorName complementaryColor { get; }
     public List<ColorName> analogueColors { get; }
@@ -189,6 +207,7 @@ public class ColorAttr {
     public ColorAttr(
         Color32 inRGBValue,
         ColorTemperature inColorTemperature,
+        ColorType inColorType,
         ColorName inChrColorName, 
         ColorName inComplementaryColor, 
         List<ColorName> inAnalogueColors, 
@@ -196,6 +215,7 @@ public class ColorAttr {
     ) {
         rgbValue = inRGBValue;
         colorTemperature = inColorTemperature;
+        colorType = inColorType;
         chrColorName = inChrColorName;
         complementaryColor = inComplementaryColor;
         analogueColors = inAnalogueColors;

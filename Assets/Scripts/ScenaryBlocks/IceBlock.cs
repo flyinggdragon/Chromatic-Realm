@@ -16,11 +16,21 @@ public class IceBlock : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Block") || other.gameObject.CompareTag("ThePlayer")) {
+            Player player = other.gameObject.GetComponent<Player>();
+            player.grounded = true;
+
             ColorAttr objAttr = other.gameObject.GetComponent<Block>()?.colorAttr ?? other.gameObject.GetComponent<Player>()?.colorAttr;
 
             if (objAttr.colorTemperature is ColorTemperature.Warm) {
                 Melt();
             }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other) {
+        if (other.gameObject.CompareTag("ThePlayer")) {
+            Player player = other.gameObject.GetComponent<Player>();
+            player.grounded = false;
         }
     }
 }
