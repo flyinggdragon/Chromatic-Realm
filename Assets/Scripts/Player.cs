@@ -14,10 +14,11 @@ public class Player : MonoBehaviour {
     public bool grounded = true;
     public ColorName currentColorName;
     public ColorAttr colorAttr { get; private set; }
+    //[SerializeField] UIManager uiManager;
 
-    // Temporário
-    private int i = 0;
-
+    // Temporário.
+    [SerializeField] public ColorInterface colorInterface;
+    
     // Methods
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -33,9 +34,12 @@ public class Player : MonoBehaviour {
         sr.color = _color;
     }
 
+    private void Update() {
+        HandleInput();
+    }
+
     private void FixedUpdate() {
         Move();
-        HandleInput();
     }
 
     private void Move() {
@@ -48,8 +52,17 @@ public class Player : MonoBehaviour {
 
     private void HandleInput() {
         // Pulo
-        if (Input.GetKey(KeyCode.Space) && grounded) {
+        if (Input.GetKeyDown(KeyCode.Space) && grounded) {
             Jump(_jumpForce);
+        }
+        
+        // Toggleia a interface de cor.
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            // CUIDADO: Linha mais feia da história do universo inteiro.
+            ColorInterface ci = GameObject.Find("UI").transform.GetChild(0).GetComponent<ColorInterface>();
+            // Fim da linha mais feia da história do universo inteiro.
+
+            ci.ToggleVisibility();
         }
     }
 

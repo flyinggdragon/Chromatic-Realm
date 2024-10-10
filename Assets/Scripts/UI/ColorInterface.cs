@@ -4,13 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using Unity.VisualScripting;
 
-public class ColorInterface: MonoBehaviour {
+public class ColorInterface: UIElement {
     [SerializeField] private Transform colorPicker;
     [SerializeField] private Transform colorInfo;
     [SerializeField] private Player player;
 
-    private void Start() {
+    /*
+    private void Awake() {
+        currentlyActive = false;
+    }*/
+
+    protected override void Start() {
         ColorAllSquares();
         ColorHighlight(player.currentColorName);
     }

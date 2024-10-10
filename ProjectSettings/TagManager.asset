@@ -9,6 +9,7 @@ TagManager:
   - Block
   - Light
   - Wall
+  - ChangeRoom
   layers:
   - Default
   - TransparentFX
