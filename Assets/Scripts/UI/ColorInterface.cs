@@ -4,17 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
-using Unity.VisualScripting;
 
 public class ColorInterface: UIElement {
     [SerializeField] private Transform colorPicker;
     [SerializeField] private Transform colorInfo;
     [SerializeField] private Player player;
-
-    /*
-    private void Awake() {
-        currentlyActive = false;
-    }*/
+    private bool colorSelected = false;
 
     protected override void Start() {
         ColorAllSquares();
@@ -138,5 +133,26 @@ public class ColorInterface: UIElement {
 
     private void ColorSelect(ColorName colorName) {
         player.ChangeColor(ChrColor.FindColorAttr(colorName));
+        colorSelected = true;
+    }
+
+    public IEnumerator AsyncColorSelection() {
+        shouldClose = false;
+
+        colorSelected = false;
+        
+        obj.SetActive(true);
+        currentlyActive = true;
+
+        while (!colorSelected) {
+            yield return null;
+        }
+
+        obj.SetActive(false);
+        currentlyActive = false;
+
+        player.EnableMovement();
+
+        shouldClose = true;
     }
 }

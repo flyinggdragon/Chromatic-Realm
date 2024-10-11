@@ -14,10 +14,8 @@ public class Player : MonoBehaviour {
     public bool grounded = true;
     public ColorName currentColorName;
     public ColorAttr colorAttr { get; private set; }
-    //[SerializeField] UIManager uiManager;
-
-    // Temporário.
-    [SerializeField] public ColorInterface colorInterface;
+    public bool shouldMove = true;
+    public bool shouldInput = true;
     
     // Methods
     private void Start() {
@@ -35,11 +33,11 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
-        HandleInput();
+        if (shouldInput) HandleInput();
     }
 
     private void FixedUpdate() {
-        Move();
+        if (shouldMove) Move();
     }
 
     private void Move() {
@@ -69,6 +67,23 @@ public class Player : MonoBehaviour {
     public void Jump(float jumpForce) {
         rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         grounded = false;
+    }
+
+    public void ResetMovement() {
+        rb.velocity = Vector2.zero;
+    }
+
+    // Talvez tratar essas coisas com enums de estados.
+    public void EnableMovement() {
+        shouldMove = true;
+        shouldInput = true;
+    }
+
+    // Talvez tratar essas coisas com enums de estados.
+    public void DisableMovement() {
+        ResetMovement();
+        shouldMove = false;
+        shouldInput = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
