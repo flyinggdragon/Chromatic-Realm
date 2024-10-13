@@ -134,6 +134,8 @@ public class ColorInterface: UIElement {
     private void ColorSelect(ColorName colorName) {
         player.ChangeColor(ChrColor.FindColorAttr(colorName));
         colorSelected = true;
+
+        ToggleVisibility();
     }
 
     public IEnumerator AsyncColorSelection() {

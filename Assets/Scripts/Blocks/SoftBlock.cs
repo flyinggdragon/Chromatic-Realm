@@ -29,19 +29,13 @@ public class SoftBlock : Block {
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        ContactPoint2D[] contacts = collision.contacts;
-        
-        foreach (ContactPoint2D contact in contacts) {
-            // Verifica se o contato foi na parte de cima do bloco
-            
-            if (contact.normal.y < -0.9f) {
-                Player player = collision.gameObject.GetComponent<Player>();
+    protected override void OnCollisionEnter2D(Collision2D collision) {
+        if (IsTopCollision(collision.contacts)) {
+            Player player = collision.gameObject.GetComponent<Player>();
 
-                // Calcula a altura do pulo com base na cor
-                float jumpForce = GetJumpHeight(player.colorAttr);
-                player.Jump(jumpForce);
-            }
+            // Calcula a altura do pulo com base na cor
+            float jumpForce = GetJumpHeight(player.colorAttr);
+            player.Jump(jumpForce);
         }
     }
 }

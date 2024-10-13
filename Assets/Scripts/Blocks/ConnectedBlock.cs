@@ -47,8 +47,14 @@ public class ConnectedBlock : Block {
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
+    protected override void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("ThePlayer")) {
+            if (IsTopCollision(collision.contacts)) {
+                Player player = collision.gameObject.GetComponent<Player>();
+
+                player.grounded = true;
+            }
+
             // Temporário.
             i++;
             if (i > 10) i = 0;
