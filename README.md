@@ -11,7 +11,7 @@ Primariamente será estruturado como jogos antigos de Mario (1-1, 1-2, 1-3, etc.
 - [FlyingDrag0n - Itch.io](https://flyingdrag0n.itch.io)
 
 ## Progresso:
-Objetivos tais quais listados no Whiteboard do projeto. Sob constante atualização conforme necessário.
+Objetivos tais quais listados no Whiteboard do projeto. Sob constante atualização.
 
 **Pré-Dev**
 - [x] Criação do Projeto.
@@ -22,31 +22,28 @@ Objetivos tais quais listados no Whiteboard do projeto. Sob constante atualizaç
 - [x] Movimentações Laterais
 - [x] Pulo
 
-**Pré-Alpha**
-- [ ] Cor do Personagem
-- [ ] Blocos
+**Protótipo**
+- [x] Cor do Personagem
+- [x] Blocos
   - [x] Macios
   - [x] Conectados
-  - [ ] Grudentos
-  - [ ] Omnicromáticos
-  - [ ] Brancos
-  - [ ] Pretos
-- [ ] Combinações Harmônicas
+  - [x] Grudentos
+  - [x] Omnicromáticos
+  - [x] Brancos
+  - [x] Pretos
+- [x] Combinações Harmônicas
   - [x] Macios
   - [x] Conectados
-  - [ ] Grudentos
-  - [ ] Omnicromáticos
-  - [ ] Brancos
-  - [ ] Pretos
-- [ ] Paredes Coloridas
-- [ ] Salas de Troca
-- [ ] Temperatura das Cores
-- [ ] Tentativa de Implementação de Mistura de Cores
-
-- [ ] Protótipo Pronto
-- [ ] Lançamento do Pré-Alpha 1.0
-- [ ] Receber Feedback
-- [ ] Aplicar feedbacks recebidos.
+  - [x] Grudentos
+  - [x] Omnicromáticos
+  - [x] Brancos
+  - [x] Pretos
+- [x] Temperatura das Cores
+- [ ] Paredes/Chãos Coloridas
+- [x] Puxabilidade dos Blocos
+- [x] Seletor de Cores
+- [x] Salas de Troca
+- [ ] Nova Tentativa de Implementação de Mistura de Cores
 
 **Arte**
 - [ ] Círculo Cromático
@@ -63,6 +60,11 @@ Objetivos tais quais listados no Whiteboard do projeto. Sob constante atualizaç
 - [ ] Salas de Troca
 - [ ] Animações
 
+- [ ] Protótipo Pronto
+- [ ] Lançamento do Pré-Alpha 1.0
+- [ ] Receber Feedback
+- [ ] Aplicar feedbacks recebidos.
+
 **UI**
 - [ ] Círculo Cromático
 - [ ] Barra Superior
@@ -75,6 +77,6 @@ Objetivos tais quais listados no Whiteboard do projeto. Sob constante atualizaç
 - [ ] Lançamento do Alpha.
 
 ## Comentários
-Foco na Alpha. Prototipar ideias primeiro, testar com o público, coletar feedback(1), cortar ideias que não funcionarem, manter e/ou melhorar ideias aprovadas.
+Foco na Alpha. Prototipar ideias primeiro, testar com o público, coletar feedback, cortar ideias que não funcionarem, manter e/ou melhorar ideias aprovadas.
 
-Última atualização: 25/09/2024, 18:04
+Última atualização: 13/10/2024, 00:06
