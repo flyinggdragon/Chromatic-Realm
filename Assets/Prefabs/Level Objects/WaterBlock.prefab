@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4250480051096538516}
   - component: {fileID: 2181246265566186672}
   - component: {fileID: 2698583052039336235}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WaterBlock
   m_TagString: Block
   m_Icon: {fileID: 0}
@@ -160,8 +160,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 25
-  m_LinearDrag: 5
-  m_AngularDrag: 5
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

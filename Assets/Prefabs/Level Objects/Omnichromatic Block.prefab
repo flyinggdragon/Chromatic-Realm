@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8351692939011772622}
   - component: {fileID: 8955251540859241710}
   - component: {fileID: 2153062080127991007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Omnichromatic Block
   m_TagString: Block
   m_Icon: {fileID: 0}
@@ -159,8 +159,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 25
-  m_LinearDrag: 5
-  m_AngularDrag: 5
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

@@ -3,5 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Surface : MonoBehaviour {
-    public ColorName colorName;
+    [SerializeField] public ColorName colorName;
+    [SerializeField] public bool wall;
 }
