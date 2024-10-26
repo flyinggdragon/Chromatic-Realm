@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 139187901332712880}
   - component: {fileID: 5660551019404562834}
-  - component: {fileID: 4250480051096538516}
   - component: {fileID: 2181246265566186672}
   - component: {fileID: 2698583052039336235}
+  - component: {fileID: 4127768242735025697}
   m_Layer: 8
   m_Name: WaterBlock
   m_TagString: Block
@@ -87,66 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &4250480051096538516
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9192621307013375166}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.56, y: 2.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.81, y: 1.28}
-      - {x: 0.48, y: 1.28}
-      - {x: 0.42, y: 1.26}
-      - {x: 0.26999998, y: 1.1999999}
-      - {x: 0.02, y: 1.0799999}
-      - {x: -0.62, y: 1.28}
-      - {x: -0.63, y: 1.28}
-      - {x: -0.89, y: 1.27}
-      - {x: -1.12, y: 1.16}
-      - {x: -1.24, y: 1.0799999}
-      - {x: -1.28, y: 1.05}
-      - {x: -1.28, y: -1.28}
-      - {x: 1.28, y: -1.28}
-      - {x: 1.28, y: 1.14}
-      - {x: 1.1, y: 1.16}
-  m_UseDelaunayMesh: 0
 --- !u!50 &2181246265566186672
 Rigidbody2D:
   serializedVersion: 4
@@ -187,6 +127,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iceBlockPrefab: {fileID: 2320980224974801947, guid: b776218e14d395c4885cee17442b31a6, type: 3}
-  blockCollider: {fileID: 4250480051096538516}
+  blockCollider: {fileID: 4127768242735025697}
   rb: {fileID: 2181246265566186672}
   sr: {fileID: 5660551019404562834}
+--- !u!61 &4127768242735025697
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9192621307013375166}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+  m_EdgeRadius: 0
