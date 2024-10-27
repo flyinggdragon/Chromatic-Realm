@@ -11,7 +11,7 @@ public class OmnichromaticBlock : Block {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
 
-        ChangeColor(ChrColor.FindColorAttr(currentColorName));
+        ColorUpdate(ChrColor.FindColorAttr(currentColorName));
         // (Até aqui idêntico à classe-pai.)
 
         StartCoroutine(TimerController(timerSeconds));
@@ -31,7 +31,7 @@ public class OmnichromaticBlock : Block {
             // Troca a cor para a próxima da lista após timerSeconds segundos.
             if (i >= (ChrColor.colors.Count - 2)) i = 0; 
              
-            ChangeColor(ChrColor.colors[i]);
+            ColorUpdate(ChrColor.colors[i]);
             i++;
 
             yield return new WaitForSeconds(timerSeconds);

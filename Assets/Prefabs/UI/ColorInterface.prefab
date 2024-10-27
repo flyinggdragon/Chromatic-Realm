@@ -1000,9 +1000,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be12f6ba2d191c749a4bcbf345e7b400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obj: {fileID: 0}
   colorPicker: {fileID: 1661249510536127027}
   colorInfo: {fileID: 6681520248986065177}
-  player: {fileID: 0}
+  player: {fileID: 2275569327167285872, guid: 3d7e3950648d4934eb353a9d502146cb, type: 3}
 --- !u!1 &4492859453393482870
 GameObject:
   m_ObjectHideFlags: 0

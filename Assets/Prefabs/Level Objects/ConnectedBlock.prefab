@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockCollider: {fileID: 64524793498378825}
   currentColorName: 11
+  isConnected: 1
   connectedBlock: {fileID: 0}
   connectionType: 1
 --- !u!50 &353438322289412717

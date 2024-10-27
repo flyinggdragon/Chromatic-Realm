@@ -1,69 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 [System.Serializable]
 public class ConnectedBlock : Block {
-    [SerializeField] private ConnectedBlock connectedBlock;
-    [SerializeField] private ConnectionType connectionType;
-    //private Line connectingLine;
-    
-    // Temporário
-    private int i = 0;
+    [SerializeField] public ConnectedBlock connectedBlock;
+    [SerializeField] public ConnectionType connectionType;
 
-    private void CheckConnectionValidity() {
-        // Verifica se eu errei a cor complementar do bloco e me avisa em caso afirmativo
-        // Se eu realmente quiser, eu posso programar para se auto-ajustar em caso de erro.
-        
+    public override void ObjectAttrVisualColorChange(ColorAttr newColorAttr) {
         if (connectionType == ConnectionType.Contrast) {
-            if (currentColorName != connectedBlock.colorAttr.complementaryColor) {
-                Debug.LogWarning($"Conexão de tipo {connectionType} inválida em {gameObject.name}:\n{this.currentColorName} (este bloco) não é complementar a {connectedBlock.currentColorName} (bloco conectado)\nO contraste correto seria: {this.colorAttr.complementaryColor}.");
-            }
-        }
-        
-        else if (connectionType == ConnectionType.Equality) { 
-            if (currentColorName != connectedBlock.currentColorName) {
-                Debug.LogWarning($"Conexão de tipo {connectionType} inválida em {gameObject.name}:\n{this.currentColorName} (este bloco) não é igual a {connectedBlock.currentColorName} (bloco conectado)");
-            }
+            colorAttr = ChrColor.FindColorAttr(newColorAttr.chrColorName);
+            
+            ColorAttr complementaryColorAttr = ChrColor.FindColorAttr(newColorAttr.complementaryColor);
+            ApplyColorToBlock(connectedBlock, complementaryColorAttr);
+        } 
+        else if (connectionType == ConnectionType.Equality) {
+            colorAttr = ChrColor.FindColorAttr(newColorAttr.chrColorName);
+            ApplyColorToBlock(connectedBlock, colorAttr);
         }
 
-        else {
-            Debug.LogError($"Tipo de Conexão desconhecida em {gameObject.name}");
-        }
+        ApplyColorToBlock(this, colorAttr);
     }
 
-    void Update() {
-        CheckConnectionValidity();
-    }
+    private void ApplyColorToBlock(Block block, ColorAttr colorAttr) {
+        block.currentColorName = colorAttr.chrColorName;
+        block._color = colorAttr.rgbValue;
+        block.sr.color = colorAttr.rgbValue;
 
-    private void UpdateConnectionColors() {
-        ChangeColor(ChrColor.colors[i]);
-
-        if (connectionType == ConnectionType.Contrast) {
-            connectedBlock.ChangeColor(ChrColor.FindColorAttr(this.colorAttr.complementaryColor));
-        } else {
-            connectedBlock.ChangeColor(ChrColor.FindColorAttr(currentColorName));
+        foreach (Block subBlock in block.GetComponents<Block>()) {
+            if (subBlock != block) {
+                subBlock.currentColorName = colorAttr.chrColorName;
+                subBlock._color = colorAttr.rgbValue;
+                subBlock.sr.color = colorAttr.rgbValue;
+            }
         }
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("ThePlayer")) {
-            if (IsTopCollision(collision.contacts)) {
-                Player player = collision.gameObject.GetComponent<Player>();
-
-                player.grounded = true;
-            }
-
-            // Temporário.
-            i++;
-            if (i > 10) i = 0;
-            UpdateConnectionColors();
+        if (collision.gameObject.CompareTag("ThePlayer") && IsTopCollision(collision.contacts)) {
+            collision.gameObject.GetComponent<Player>().grounded = true;
         }
     }
 
     [System.Serializable]
-    private enum ConnectionType {
+    public enum ConnectionType {
         Contrast,
         Equality
     }

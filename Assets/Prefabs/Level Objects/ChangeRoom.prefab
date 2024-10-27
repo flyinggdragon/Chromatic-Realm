@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e5faa9ce9db5540a683a178f47d8b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorInterface: {fileID: 0}
+  colorInterface: {fileID: 4582734274466218283, guid: f6968b4c7602819448b45bda9fb24ead, type: 3}
   activationTrigger: {fileID: 6748965883978784663}
 --- !u!61 &6748965883978784663
 BoxCollider2D:

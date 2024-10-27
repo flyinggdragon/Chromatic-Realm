@@ -12,7 +12,7 @@ public class Block : MonoBehaviour {
     
     // Protected
     protected Vector2 _position;
-    protected Color32 _color;
+    public Color32 _color;
 
     protected virtual void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -26,24 +26,23 @@ public class Block : MonoBehaviour {
         sr.color = _color;
     }
 
-    public void ChangeColor(ColorAttr newColorAttr) {
+    public virtual void ObjectAttrVisualColorChange(ColorAttr newColorAttr) {
         // Atualiza a cor para a cor recebida.
         colorAttr = newColorAttr;
 
         currentColorName = colorAttr.chrColorName;
         _color = colorAttr.rgbValue;
         sr.color = _color;
+    }
+
+    public virtual void ColorUpdate(ColorAttr newColorAttr) {
+        ObjectAttrVisualColorChange(newColorAttr);
 
         // Atualiza também a cor de qualquer outro componente <Block> associado ao mesmo Object.
         foreach (Block block in GetComponents<Block>()) {
             if (block == this) continue;
-            if (currentColorName == block.currentColorName) continue;
 
-            block.colorAttr = newColorAttr;
-
-            block.currentColorName = block.colorAttr.chrColorName;
-            block._color = block.colorAttr.rgbValue;
-            block.sr.color = block._color;
+            block.ObjectAttrVisualColorChange(newColorAttr);
         }
     }
 
