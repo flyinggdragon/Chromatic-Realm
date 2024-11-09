@@ -9,7 +9,7 @@ public class OmnichromaticBlock : Block {
 
     protected override void Start() {
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponentInChildren<SpriteRenderer>();
 
         ColorUpdate(ChrColor.FindColorAttr(currentColorName));
         // (Até aqui idêntico à classe-pai.)

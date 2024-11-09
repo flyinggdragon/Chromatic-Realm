@@ -12,59 +12,10 @@ public class ColorInterface: UIElement {
     private bool colorSelected = false;
 
     protected override void Start() {
-        ColorAllSquares();
         ColorHighlight(player.currentColorName);
     }
 
-    private void ColorAllSquares() {
-        // Pinta todos os botões com as cores do ChrColor
-        Transform buttonContainer = colorPicker.GetChild(0).GetChild(1);
-        
-        Button[] buttonArray = buttonContainer.GetComponentsInChildren<Button>();
-
-        foreach (Button button in buttonArray) {
-            ColorAttr paintColor = ChrColor.colors[button.transform.GetSiblingIndex()];
-
-            Image img = button.GetComponent<Image>();
-
-            img.color = paintColor.rgbValue;
-            button.gameObject.name = paintColor.chrColorName.ToString();
-
-            // Adiciona um listener que ao ser clicado seleciona nova cor.
-            button.onClick.AddListener(() => {
-                ColorSelect(paintColor.chrColorName);
-            });
-
-            // Adiciona um listener do mouse hover.
-            AddHoverEvent(button, paintColor.chrColorName);
-        }
-    }
-
-    private void AddHoverEvent(Button button, ColorName colorName) {
-        EventTrigger trigger = button.gameObject.AddComponent<EventTrigger>();
-
-        // Evento para quando o mouse passar por cima (PointerEnter).
-        EventTrigger.Entry pointerEnter = new EventTrigger.Entry();
-        pointerEnter.eventID = EventTriggerType.PointerEnter;
-
-        pointerEnter.callback.AddListener((eventData) => {
-            ColorHighlight(colorName);
-        });
-
-        trigger.triggers.Add(pointerEnter);
-
-        // Evento para quando o mouse sair (PointerExit).
-        EventTrigger.Entry pointerExit = new EventTrigger.Entry();
-        pointerExit.eventID = EventTriggerType.PointerExit;
-
-        pointerExit.callback.AddListener((eventData) => {
-            ResetHighlight();
-        });
-
-        trigger.triggers.Add(pointerExit);
-    }
-
-    private void ColorHighlight(ColorName colorName) {
+    public void ColorHighlight(ColorName colorName) {
         ColorAttr colorAttr = ChrColor.FindColorAttr(colorName);
 
         Transform infoContainer = colorInfo.GetChild(0).transform;
@@ -87,10 +38,10 @@ public class ColorInterface: UIElement {
         
         switch(ct) {
             case ColorTemperature.Warm:
-                colorTemperatureTitle.color = ChrColor.RedOrange.rgbValue;
+                colorTemperatureTitle.color = ChrColor.Red.rgbValue;
                 break;
             case ColorTemperature.Cool:
-                colorTemperatureTitle.color = ChrColor.Turquoise.rgbValue;
+                colorTemperatureTitle.color = ChrColor.Blue.rgbValue;
                 break;
             default:
                 colorTemperatureTitle.color = ChrColor.White.rgbValue;
@@ -127,11 +78,7 @@ public class ColorInterface: UIElement {
         }
     }
 
-    private void ResetHighlight() {
-
-    }
-
-    private void ColorSelect(ColorName colorName) {
+    public void ColorSelect(ColorName colorName) {
         player.ChangeColor(ChrColor.FindColorAttr(colorName));
         colorSelected = true;
 

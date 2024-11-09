@@ -16,7 +16,7 @@ public class Block : MonoBehaviour {
 
     protected virtual void Start() {
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponentInChildren<SpriteRenderer>();
 
         // Atualiza a cor para a cor escolhida no Inspector.
         colorAttr = ChrColor.FindColorAttr(currentColorName);

@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
     private float _wallJumpingDuration = 0.4f;
     private Vector2 _wallJumpingPower = new Vector2(8f, 16f);
     private bool _shouldWallJump = false;
-    private Color32 _color;
+    private Color _color;
     
 
     // Public
@@ -34,6 +34,8 @@ public class Player : MonoBehaviour {
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
+    private ColorAttr colorteste;
+
     // Methods
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -43,6 +45,7 @@ public class Player : MonoBehaviour {
 
     public void ChangeColor(ColorAttr newColorAttr) {
         colorAttr = newColorAttr;
+        currentColorName = colorAttr.chrColorName;
         _color = colorAttr.rgbValue;
         sr.color = _color;
     }

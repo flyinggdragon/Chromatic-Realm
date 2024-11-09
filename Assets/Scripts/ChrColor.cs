@@ -4,132 +4,129 @@ using UnityEngine;
 
 public static class ChrColor {
     // Estrutura para cores personalizáveis.
-
-    // Reselecionar as cores, DIREITO DESSA VEZ.
-    // Na dúvida vou colocar qualquer um só para testes.
-    public static ColorAttr Magenta = new(
-        new Color32(199, 21, 133, 255),
-        ColorTemperature.Warm,
-        ColorType.Secondary,
-        ColorName.Magenta,
-        ColorName.Lime,
-        new List<ColorName> { ColorName.Red, ColorName.Purple },
-        new List<ColorName> { ColorName.Turquoise, ColorName.OrangeYellow }
-    );
-    
     public static ColorAttr Red = new(
-        new Color32(255, 0, 0, 255),
+        new Color(1f, 0f, 0f, 1f),
         ColorTemperature.Warm,
         ColorType.Primary,
         ColorName.Red,
-        ColorName.Green,
-        new List<ColorName> { ColorName.RedOrange, ColorName.Magenta },
-        new List<ColorName> { ColorName.Blue, ColorName.Yellow }
-    );
-
-    public static ColorAttr RedOrange = new(
-        new Color32(236, 90, 41, 255),
-        ColorTemperature.Warm,
-        ColorType.Tertiary,
-        ColorName.RedOrange,
-        ColorName.Turquoise,
-        new List<ColorName> { ColorName.Red, ColorName.Orange },
-        new List<ColorName> { ColorName.Violet, ColorName.Lime }
+        ColorName.Cyan,
+        new List<ColorName> { ColorName.Rose, ColorName.Orange },
+        new List<ColorName> { ColorName.Green, ColorName.Blue }
     );
 
     public static ColorAttr Orange = new(
-        new Color32(255, 165, 0, 255),
+        new Color(1f, 0.5f, 0f, 1f),
         ColorTemperature.Warm,
-        ColorType.Secondary,
+        ColorType.Tertiary,
         ColorName.Orange,
-        ColorName.Blue,
-        new List<ColorName> { ColorName.RedOrange, ColorName.OrangeYellow },
-        new List<ColorName> { ColorName.Purple, ColorName.Green }
-    );
-
-    public static ColorAttr OrangeYellow = new(
-        new Color32(247, 176, 62, 255),
-        ColorTemperature.Warm,
-        ColorType.Secondary,
-        ColorName.OrangeYellow,
-        ColorName.Violet,
-        new List<ColorName> { ColorName.Orange, ColorName.Yellow },
-        new List<ColorName> { ColorName.Magenta, ColorName.Turquoise }
+        ColorName.Azure,
+        new List<ColorName> { ColorName.Red, ColorName.Yellow },
+        new List<ColorName> { ColorName.Springgreen, ColorName.Violet }
     );
 
     public static ColorAttr Yellow = new(
-        new Color32(255, 255, 0, 255),
+        new Color(1f, 1f, 0f, 1f),
         ColorTemperature.Warm,
-        ColorType.Primary,
+        ColorType.Secondary,
         ColorName.Yellow,
-        ColorName.Purple,
-        new List<ColorName> { ColorName.OrangeYellow, ColorName.Lime },
-        new List<ColorName> { ColorName.Red, ColorName.Blue }
+        ColorName.Blue,
+        new List<ColorName> { ColorName.Orange, ColorName.Lime },
+        new List<ColorName> { ColorName.Cyan, ColorName.Magenta }
     );
 
     public static ColorAttr Lime = new(
-        new Color32(139, 196, 59, 255),
-        ColorTemperature.Cool,
+        new Color(0.5f, 1f, 0f, 1f),
+        ColorTemperature.Warm,
         ColorType.Tertiary,
         ColorName.Lime,
-        ColorName.Magenta,
-        new List<ColorName> { ColorName.Yellow, ColorName.Green },
-        new List<ColorName> { ColorName.RedOrange, ColorName.Violet }
+        ColorName.Violet,
+        new List<ColorName> { ColorName.Orange, ColorName.Green },
+        new List<ColorName> { ColorName.Azure, ColorName.Rose }
     );
 
     public static ColorAttr Green = new(
-        new Color32(0, 255, 0, 255),
-        ColorTemperature.Cool,
-        ColorType.Secondary,
+        new Color(0f, 1f, 0f, 1f),
+        ColorTemperature.Neutral,
+        ColorType.Primary,
         ColorName.Green,
-        ColorName.Red,
-        new List<ColorName> { ColorName.Turquoise, ColorName.Lime },
-        new List<ColorName> { ColorName.Orange, ColorName.Purple }
+        ColorName.Magenta,
+        new List<ColorName> { ColorName.Lime, ColorName.Springgreen },
+        new List<ColorName> { ColorName.Blue, ColorName.Red }
     );
 
-    public static ColorAttr Turquoise = new(
-        new Color32(64, 224, 208, 255),
+    public static ColorAttr Springgreen = new(
+        new Color(0f, 1f, 0.5f, 1f),
         ColorTemperature.Cool,
         ColorType.Tertiary,
-        ColorName.Turquoise,
-        ColorName.RedOrange,
-        new List<ColorName> { ColorName.Blue, ColorName.Violet },
-        new List<ColorName> { ColorName.OrangeYellow, ColorName.Magenta }
+        ColorName.Springgreen,
+        ColorName.Rose,
+        new List<ColorName> { ColorName.Green, ColorName.Cyan },
+        new List<ColorName> { ColorName.Violet, ColorName.Orange }
+    );
+
+    public static ColorAttr Cyan = new(
+        new Color(0f, 1f, 1f, 1f),
+        ColorTemperature.Cool,
+        ColorType.Secondary,
+        ColorName.Cyan,
+        ColorName.Red,
+        new List<ColorName> { ColorName.Springgreen, ColorName.Azure },
+        new List<ColorName> { ColorName.Magenta, ColorName.Yellow }
+    );
+
+    public static ColorAttr Azure = new(
+        new Color(0f, 0.5f, 1f, 1f),
+        ColorTemperature.Cool,
+        ColorType.Tertiary,
+        ColorName.Azure,
+        ColorName.Orange,
+        new List<ColorName> { ColorName.Cyan, ColorName.Blue },
+        new List<ColorName> { ColorName.Rose, ColorName.Lime }
     );
 
     public static ColorAttr Blue = new(
-        new Color32(0, 0, 255, 255),
+        new Color(0f, 0f, 1f, 1f),
         ColorTemperature.Cool,
         ColorType.Primary,
         ColorName.Blue,
-        ColorName.Orange,
-        new List<ColorName> { ColorName.Violet, ColorName.Turquoise },
-        new List<ColorName> { ColorName.Yellow, ColorName.Red }
+        ColorName.Yellow,
+        new List<ColorName> { ColorName.Azure, ColorName.Violet },
+        new List<ColorName> { ColorName.Red, ColorName.Green }
     );
 
     public static ColorAttr Violet = new(
-        new Color32(138, 43, 226, 255),
+        new Color(0.5f, 0f, 1f, 1f),
         ColorTemperature.Cool,
-        ColorType.Secondary,
+        ColorType.Tertiary,
         ColorName.Violet,
-        ColorName.OrangeYellow,
-        new List<ColorName> { ColorName.Purple, ColorName.Blue },
-        new List<ColorName> { ColorName.Lime, ColorName.RedOrange }
+        ColorName.Lime,
+        new List<ColorName> { ColorName.Magenta, ColorName.Rose },
+        new List<ColorName> { ColorName.Orange, ColorName.Springgreen }
     );
 
-    public static ColorAttr Purple = new(
-        new Color32(128, 0, 128, 255),
-        ColorTemperature.Cool,
+    public static ColorAttr Magenta = new(
+        new Color(1f, 0f, 1f, 1f),
+        ColorTemperature.Neutral,
         ColorType.Secondary,
-        ColorName.Purple,
-        ColorName.Yellow,
-        new List<ColorName> { ColorName.Magenta, ColorName.Violet },
-        new List<ColorName> { ColorName.Green, ColorName.Orange }
+        ColorName.Magenta,
+        ColorName.Green,
+        new List<ColorName> { ColorName.Rose, ColorName.Violet },
+        new List<ColorName> { ColorName.Yellow, ColorName.Cyan }
+    );
+
+    public static ColorAttr Rose = new(
+        new Color(1f, 0f, 0.5f, 1f),
+        ColorTemperature.Warm,
+        ColorType.Tertiary,
+        ColorName.Rose,
+        ColorName.Springgreen,
+        new List<ColorName> { ColorName.Red, ColorName.Magenta },
+        new List<ColorName> { ColorName.Lime, ColorName.Azure }
     );
 
     public static ColorAttr White = new(
-        new Color32(255, 255, 255, 255),
-        ColorTemperature.Neither,
+        new Color(1f, 1f, 1f, 1f),
+        ColorTemperature.Neutral,
         ColorType.All,
         ColorName.White,
         ColorName.All,
@@ -138,8 +135,8 @@ public static class ChrColor {
     );
 
     public static ColorAttr Black = new(
-        new Color32(0, 0, 0, 255),
-        ColorTemperature.Neither,
+        new Color(0f, 0f, 0f, 1f),
+        ColorTemperature.Neutral,
         ColorType.None,
         ColorName.Black,
         ColorName.None,
@@ -148,8 +145,7 @@ public static class ChrColor {
     );
 
     public static List<ColorAttr> colors = new() {
-        Magenta, Red, RedOrange, Orange, OrangeYellow, Yellow, Lime, Green,
-        Turquoise, Blue, Violet, Purple, White, Black
+        Red, Orange, Yellow, Lime, Green, Springgreen, Cyan, Azure, Blue, Violet, Magenta, Rose, White, Black
     };
 
     public static Harmony DetermineHarmony(ColorAttr currentColor, ColorAttr collidingWithColor) {
@@ -196,7 +192,7 @@ public static class ChrColor {
 
 [System.Serializable]
 public class ColorAttr {
-    public Color32 rgbValue { get; }
+    public Color rgbValue { get; }
     public ColorTemperature colorTemperature { get; }
     public ColorType colorType { get; }
     public ColorName chrColorName { get; }
@@ -205,7 +201,7 @@ public class ColorAttr {
     public List<ColorName> triadicColors { get; }
 
     public ColorAttr(
-        Color32 inRGBValue,
+        Color inRGBValue,
         ColorTemperature inColorTemperature,
         ColorType inColorType,
         ColorName inChrColorName, 
