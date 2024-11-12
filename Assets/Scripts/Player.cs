@@ -28,13 +28,12 @@ public class Player : MonoBehaviour {
     public ColorAttr colorAttr { get; private set; }
     public bool shouldMove = true;
     public bool shouldInput = true;
+    public int chromaticCircleUses;
     
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
-
-    private ColorAttr colorteste;
 
     // Methods
     private void Start() {
@@ -51,6 +50,8 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
+        chromaticCircleUses = GameManager.chromaticCircleUses;
+        
         if (shouldInput) HandleInput();
         
         grounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -75,8 +76,10 @@ public class Player : MonoBehaviour {
     private void HandleInput() {
         // Toggleia a interface de cor
         if (Input.GetKeyDown(KeyCode.Q)) {
-            ColorInterface ci = GameObject.Find("UI").transform.GetChild(0).GetComponent<ColorInterface>();
-            ci.ToggleVisibility();
+            if (chromaticCircleUses != 0) {
+                ColorInterface ci = GameObject.Find("UI").transform.GetChild(0).GetComponent<ColorInterface>();
+                ci.ToggleVisibility();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && grounded) {

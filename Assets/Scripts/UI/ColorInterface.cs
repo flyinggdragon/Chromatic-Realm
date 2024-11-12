@@ -82,6 +82,10 @@ public class ColorInterface: UIElement {
         player.ChangeColor(ChrColor.FindColorAttr(colorName));
         colorSelected = true;
 
+        if (GameManager.chromaticCircleUses != -1) {
+            GameManager.chromaticCircleUses -= 1;
+        }
+
         ToggleVisibility();
     }
 
