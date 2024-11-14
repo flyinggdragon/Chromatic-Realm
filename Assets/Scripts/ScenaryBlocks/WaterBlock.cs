@@ -26,7 +26,7 @@ public class WaterBlock : MonoBehaviour {
                 player.grounded = true;
 
                 player.rb.gravityScale = 0.2f;
-                player.rb.drag = 5f;
+                player.rb.linearDamping = 5f;
             }
 
             if (objAttr.colorTemperature is ColorTemperature.Cool) {
@@ -54,7 +54,7 @@ public class WaterBlock : MonoBehaviour {
             //player.waterlogged = false;
 
             player.rb.gravityScale = 1f;
-            player.rb.drag = 0.05f;
+            player.rb.linearDamping = 0.05f;
         }
     }
 }

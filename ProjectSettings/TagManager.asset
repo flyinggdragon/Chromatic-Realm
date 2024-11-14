@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags:
   - Ground
   - ThePlayer
@@ -47,3 +47,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: SkyCloud
+    uniqueID: 1129480165
+    locked: 0
+  - name: Mountain
+    uniqueID: 2089162797
+    locked: 0
+  - name: Pines
+    uniqueID: 4181695163
+    locked: 0
+  - name: Player
+    uniqueID: 2306788339
+    locked: 0
+  - name: Block
+    uniqueID: 3598840361
+    locked: 0
+  - name: Grid
+    uniqueID: 2993867163
+    locked: 0
+  m_RenderingLayers:
+  - Default

@@ -69,8 +69,8 @@ public class Player : MonoBehaviour {
 
     private void Move() {
         float hInput = Input.GetAxis("Horizontal");
-        Vector2 movement = new(hInput * (_speed + _harmonySpeedBonus), rb.velocity.y);
-        rb.velocity = movement;
+        Vector2 movement = new(hInput * (_speed + _harmonySpeedBonus), rb.linearVelocity.y);
+        rb.linearVelocity = movement;
     }
 
     private void HandleInput() {
@@ -86,8 +86,8 @@ public class Player : MonoBehaviour {
             Jump(_jumpForce);
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0f) {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0f) {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
     }
 
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour {
     private void WallSlide() {
         if (walled && !grounded && Input.GetAxisRaw("Horizontal") != 0f) {
             _isWallSliding = true;
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -_wallSlidingSpeed, float.MaxValue));
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -_wallSlidingSpeed, float.MaxValue));
         } else {
             _isWallSliding = false;
         }
@@ -115,7 +115,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space) && _wallJumpingCounter > 0f) {
             _isWallSliding = false;
-            rb.velocity = new Vector2(_wallJumpingDirection * _wallJumpingPower.x, _wallJumpingPower.y);
+            rb.linearVelocity = new Vector2(_wallJumpingDirection * _wallJumpingPower.x, _wallJumpingPower.y);
             _wallJumpingCounter = 0f;
             Invoke(nameof(StopWallJumping), _wallJumpingDuration);
         }
@@ -137,7 +137,7 @@ public class Player : MonoBehaviour {
     }
 
     public void ResetMovement() {
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
     }
 
     public void EnableMovement() {
