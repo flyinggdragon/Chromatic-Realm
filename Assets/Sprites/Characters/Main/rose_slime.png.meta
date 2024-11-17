@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: 17d657fc08b155d4393cdc66246aa58f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8330830064954299217
+    second: rose_slime_0
+  - first:
+      213: -6659652539318084872
+    second: rose_slime_1
+  - first:
+      213: -5018098990928373422
+    second: rose_slime_2
+  - first:
+      213: -8983557205774195112
+    second: rose_slime_3
+  - first:
+      213: 8927540699018742386
+    second: rose_slime_4
+  - first:
+      213: 3458731297714898171
+    second: rose_slime_5
+  - first:
+      213: 2719531360881871216
+    second: rose_slime_6
+  - first:
+      213: 1754865872279053796
+    second: rose_slime_7
+  - first:
+      213: -5543509353058907299
+    second: rose_slime_8
+  - first:
+      213: -8736373713969309979
+    second: rose_slime_9
+  - first:
+      213: -8951559451389069335
+    second: rose_slime_10
+  - first:
+      213: 4334602835738922554
+    second: rose_slime_11
+  - first:
+      213: -1218384691040222605
+    second: rose_slime_12
+  - first:
+      213: 7168785959869017104
+    second: rose_slime_13
+  - first:
+      213: 8867222092456552635
+    second: rose_slime_14
+  - first:
+      213: -1043178807690007904
+    second: rose_slime_15
+  - first:
+      213: -8164176484918595443
+    second: rose_slime_16
+  - first:
+      213: 7264081747184748915
+    second: rose_slime_17
+  - first:
+      213: 5022663929358303203
+    second: rose_slime_18
+  - first:
+      213: -3324677236527977838
+    second: rose_slime_19
+  - first:
+      213: 5097499483525117989
+    second: rose_slime_20
+  - first:
+      213: -7600095331392019406
+    second: rose_slime_21
+  - first:
+      213: 2645233745569226932
+    second: rose_slime_22
+  - first:
+      213: 8264745553241729656
+    second: rose_slime_23
+  - first:
+      213: 9084738954740423054
+    second: rose_slime_24
+  - first:
+      213: 8072142431981437021
+    second: rose_slime_25
+  - first:
+      213: -3344547875629986881
+    second: rose_slime_26
+  - first:
+      213: 949930453109156212
+    second: rose_slime_27
+  - first:
+      213: -4133255038867882435
+    second: rose_slime_28
+  - first:
+      213: -6122856033293805313
+    second: rose_slime_29
+  - first:
+      213: 2820018041223904533
+    second: rose_slime_30
+  - first:
+      213: -5740423761564988330
+    second: rose_slime_31
+  - first:
+      213: -4153803885193872596
+    second: rose_slime_32
+  - first:
+      213: 2464282505714515514
+    second: rose_slime_33
+  - first:
+      213: -2833044625659808431
+    second: rose_slime_34
+  - first:
+      213: 6438218880921427927
+    second: rose_slime_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rose_slime_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 165
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153deb13ecd0d9370800000000000000
+      internalID: 8330830064954299217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 164
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fada62cc492493a0800000000000000
+      internalID: -6659652539318084872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 164
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 259d7f50e812c5ab0800000000000000
+      internalID: -5018098990928373422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 164
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856ad6a715ef35380800000000000000
+      internalID: -8983557205774195112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_4
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 165
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27acad237fef4eb70800000000000000
+      internalID: 8927540699018742386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 166
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf482d54ac1efff20800000000000000
+      internalID: 3458731297714898171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_6
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 133
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07906e03d57bdb520800000000000000
+      internalID: 2719531360881871216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 132
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e526a196398a5810800000000000000
+      internalID: 1754865872279053796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_8
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 131
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b4ed93d9f7113b0800000000000000
+      internalID: -5543509353058907299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_9
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 131
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e69cc9f46a22c680800000000000000
+      internalID: -8736373713969309979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_10
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 131
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7f92a3b1ca5c380800000000000000
+      internalID: -8951559451389069335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_11
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 132
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3e8e9a305a972c30800000000000000
+      internalID: 4334602835738922554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 100
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37206ca249d671fe0800000000000000
+      internalID: -1218384691040222605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 99
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01cecc049d4ac7360800000000000000
+      internalID: 7168785959869017104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_14
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 98
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb86e553383be0b70800000000000000
+      internalID: 8867222092456552635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 98
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aaeb62c662e581f0800000000000000
+      internalID: -1043178807690007904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_16
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 98
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8074dc1eb403be80800000000000000
+      internalID: -8164176484918595443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_17
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 99
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3798850ccd33fc460800000000000000
+      internalID: 7264081747184748915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_18
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 67
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3efb1978b3614b540800000000000000
+      internalID: 5022663929358303203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_19
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 66
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29a2ce31baf5cd1d0800000000000000
+      internalID: -3324677236527977838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 65
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5287046c5c4fdb640800000000000000
+      internalID: 5097499483525117989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_21
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 65
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23426492099078690800000000000000
+      internalID: -7600095331392019406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_22
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 65
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0a7889312c5b420800000000000000
+      internalID: 2645233745569226932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_23
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 66
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a66fbca4642b270800000000000000
+      internalID: 8264745553241729656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_24
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 34
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e89d47242f9731e70800000000000000
+      internalID: 9084738954740423054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_25
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 33
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d508c9a16c2060070800000000000000
+      internalID: 8072142431981437021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_26
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 32
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb89c26d67c591d0800000000000000
+      internalID: -3344547875629986881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_27
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 32
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479a5e2d6b4de2d00800000000000000
+      internalID: 949930453109156212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_28
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 32
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ebf2ae07ab3a6c0800000000000000
+      internalID: -4133255038867882435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_29
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 33
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff85aa4c0ee370ba0800000000000000
+      internalID: -6122856033293805313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_30
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51df757a777b22720800000000000000
+      internalID: 2820018041223904533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_31
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c05bfb00be550b0800000000000000
+      internalID: -5740423761564988330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_32
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2bb16ccf59ba56c0800000000000000
+      internalID: -4153803885193872596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_33
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3eb253f1e3e23220800000000000000
+      internalID: 2464282505714515514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_34
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 155b7be4ce00fa8d0800000000000000
+      internalID: -2833044625659808431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rose_slime_35
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 0
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dfd88706f5295950800000000000000
+      internalID: 6438218880921427927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rose_slime_0: 8330830064954299217
+      rose_slime_1: -6659652539318084872
+      rose_slime_10: -8951559451389069335
+      rose_slime_11: 4334602835738922554
+      rose_slime_12: -1218384691040222605
+      rose_slime_13: 7168785959869017104
+      rose_slime_14: 8867222092456552635
+      rose_slime_15: -1043178807690007904
+      rose_slime_16: -8164176484918595443
+      rose_slime_17: 7264081747184748915
+      rose_slime_18: 5022663929358303203
+      rose_slime_19: -3324677236527977838
+      rose_slime_2: -5018098990928373422
+      rose_slime_20: 5097499483525117989
+      rose_slime_21: -7600095331392019406
+      rose_slime_22: 2645233745569226932
+      rose_slime_23: 8264745553241729656
+      rose_slime_24: 9084738954740423054
+      rose_slime_25: 8072142431981437021
+      rose_slime_26: -3344547875629986881
+      rose_slime_27: 949930453109156212
+      rose_slime_28: -4133255038867882435
+      rose_slime_29: -6122856033293805313
+      rose_slime_3: -8983557205774195112
+      rose_slime_30: 2820018041223904533
+      rose_slime_31: -5740423761564988330
+      rose_slime_32: -4153803885193872596
+      rose_slime_33: 2464282505714515514
+      rose_slime_34: -2833044625659808431
+      rose_slime_35: 6438218880921427927
+      rose_slime_4: 8927540699018742386
+      rose_slime_5: 3458731297714898171
+      rose_slime_6: 2719531360881871216
+      rose_slime_7: 1754865872279053796
+      rose_slime_8: -5543509353058907299
+      rose_slime_9: -8736373713969309979
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

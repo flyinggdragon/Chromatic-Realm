@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: e2aac57147b047d4b96b13053aa2e476
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5395785575796118790
+    second: cyan_slime_0
+  - first:
+      213: -609167633218382278
+    second: cyan_slime_1
+  - first:
+      213: -8121481764161521330
+    second: cyan_slime_2
+  - first:
+      213: 4315872873957035354
+    second: cyan_slime_3
+  - first:
+      213: 4339385465361772014
+    second: cyan_slime_4
+  - first:
+      213: -3747407212724370516
+    second: cyan_slime_5
+  - first:
+      213: 7905629321817522459
+    second: cyan_slime_6
+  - first:
+      213: 7098304166269631346
+    second: cyan_slime_7
+  - first:
+      213: -8377905565737982524
+    second: cyan_slime_8
+  - first:
+      213: -8696344536758059598
+    second: cyan_slime_9
+  - first:
+      213: 513384055130949698
+    second: cyan_slime_10
+  - first:
+      213: -8551932337139346402
+    second: cyan_slime_11
+  - first:
+      213: 3875378147623080030
+    second: cyan_slime_12
+  - first:
+      213: 5983922338917011463
+    second: cyan_slime_13
+  - first:
+      213: -840459318174976264
+    second: cyan_slime_14
+  - first:
+      213: 1089021713986356411
+    second: cyan_slime_15
+  - first:
+      213: -3374801649960387463
+    second: cyan_slime_16
+  - first:
+      213: 2025694153470677069
+    second: cyan_slime_17
+  - first:
+      213: -5725309318658468316
+    second: cyan_slime_18
+  - first:
+      213: -207698228402463524
+    second: cyan_slime_19
+  - first:
+      213: -4416353916915363606
+    second: cyan_slime_20
+  - first:
+      213: 8366813997699823327
+    second: cyan_slime_21
+  - first:
+      213: 8978339670656891712
+    second: cyan_slime_22
+  - first:
+      213: -6232896736127536293
+    second: cyan_slime_23
+  - first:
+      213: -7424474377026684572
+    second: cyan_slime_24
+  - first:
+      213: 2501703603750289885
+    second: cyan_slime_25
+  - first:
+      213: 1252621879820100067
+    second: cyan_slime_26
+  - first:
+      213: -3586978334217262579
+    second: cyan_slime_27
+  - first:
+      213: -5323899729309841187
+    second: cyan_slime_28
+  - first:
+      213: -3213469482915237046
+    second: cyan_slime_29
+  - first:
+      213: 5592672050756263027
+    second: cyan_slime_30
+  - first:
+      213: 1664790396824738387
+    second: cyan_slime_31
+  - first:
+      213: -3157232828268643754
+    second: cyan_slime_32
+  - first:
+      213: -7535064370199041881
+    second: cyan_slime_33
+  - first:
+      213: -7090667937362958488
+    second: cyan_slime_34
+  - first:
+      213: -6266936103951714368
+    second: cyan_slime_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cyan_slime_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 165
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6051181a46ea1ea40800000000000000
+      internalID: 5395785575796118790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 164
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a365a5dd34dcb87f0800000000000000
+      internalID: -609167633218382278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 164
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49f65d6d53ba4f80800000000000000
+      internalID: -8121481764161521330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 164
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d04fb238f05eb30800000000000000
+      internalID: 4315872873957035354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_4
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 165
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeda166f618983c30800000000000000
+      internalID: 4339385465361772014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 166
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3c3d0aef88efbc0800000000000000
+      internalID: -3747407212724370516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_6
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 133
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1188dc7bff66bd60800000000000000
+      internalID: 7905629321817522459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 132
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b3d22e70e328260800000000000000
+      internalID: 7098304166269631346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_8
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 131
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c56b68a643bbbb80800000000000000
+      internalID: -8377905565737982524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_9
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 131
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd702218b0605780800000000000000
+      internalID: -8696344536758059598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_10
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 131
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2480e6ff318ef1700800000000000000
+      internalID: 513384055130949698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_11
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 132
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1412a579de615980800000000000000
+      internalID: -8551932337139346402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 100
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50926384eb18c530800000000000000
+      internalID: 3875378147623080030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 99
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7005caeb9a92b0350800000000000000
+      internalID: 5983922338917011463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_14
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 98
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6730cf3b61654f0800000000000000
+      internalID: -840459318174976264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 98
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb408de9a7bfc1f00800000000000000
+      internalID: 1089021713986356411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_16
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 98
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c75b2a7cb4a21d0800000000000000
+      internalID: -3374801649960387463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_17
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 99
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4094399916bc1c10800000000000000
+      internalID: 2025694153470677069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_18
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 67
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 426d028328d9b80b0800000000000000
+      internalID: -5725309318658468316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_19
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 66
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdcd79bcf8b1e1df0800000000000000
+      internalID: -207698228402463524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 65
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0dadbe285f5b2c0800000000000000
+      internalID: -4416353916915363606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_21
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 65
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd6f9aa6005ec1470800000000000000
+      internalID: 8366813997699823327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_22
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 65
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b3d467c58799c70800000000000000
+      internalID: 8978339670656891712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_23
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 66
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b533d69117d4089a0800000000000000
+      internalID: -6232896736127536293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_24
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 34
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469b55104e7f6f890800000000000000
+      internalID: -7424474377026684572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_25
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 33
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1c9da4c26d7b220800000000000000
+      internalID: 2501703603750289885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_26
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 32
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e12f8886f4326110800000000000000
+      internalID: 1252621879820100067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_27
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 32
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a25fba53e783ec0800000000000000
+      internalID: -3586978334217262579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_28
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 32
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd840b64765bd16b0800000000000000
+      internalID: -5323899729309841187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_29
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 33
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43774ee7867763d0800000000000000
+      internalID: -3213469482915237046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_30
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c159259992d9d40800000000000000
+      internalID: 5592672050756263027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_31
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a5834ab068a1710800000000000000
+      internalID: 1664790396824738387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_32
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a78dd68714f24d0800000000000000
+      internalID: -3157232828268643754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_33
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a86596b0e21e6790800000000000000
+      internalID: -7535064370199041881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_34
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867aa353413e89d90800000000000000
+      internalID: -7090667937362958488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyan_slime_35
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 0
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c733ed21de5709a0800000000000000
+      internalID: -6266936103951714368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cyan_slime_0: 5395785575796118790
+      cyan_slime_1: -609167633218382278
+      cyan_slime_10: 513384055130949698
+      cyan_slime_11: -8551932337139346402
+      cyan_slime_12: 3875378147623080030
+      cyan_slime_13: 5983922338917011463
+      cyan_slime_14: -840459318174976264
+      cyan_slime_15: 1089021713986356411
+      cyan_slime_16: -3374801649960387463
+      cyan_slime_17: 2025694153470677069
+      cyan_slime_18: -5725309318658468316
+      cyan_slime_19: -207698228402463524
+      cyan_slime_2: -8121481764161521330
+      cyan_slime_20: -4416353916915363606
+      cyan_slime_21: 8366813997699823327
+      cyan_slime_22: 8978339670656891712
+      cyan_slime_23: -6232896736127536293
+      cyan_slime_24: -7424474377026684572
+      cyan_slime_25: 2501703603750289885
+      cyan_slime_26: 1252621879820100067
+      cyan_slime_27: -3586978334217262579
+      cyan_slime_28: -5323899729309841187
+      cyan_slime_29: -3213469482915237046
+      cyan_slime_3: 4315872873957035354
+      cyan_slime_30: 5592672050756263027
+      cyan_slime_31: 1664790396824738387
+      cyan_slime_32: -3157232828268643754
+      cyan_slime_33: -7535064370199041881
+      cyan_slime_34: -7090667937362958488
+      cyan_slime_35: -6266936103951714368
+      cyan_slime_4: 4339385465361772014
+      cyan_slime_5: -3747407212724370516
+      cyan_slime_6: 7905629321817522459
+      cyan_slime_7: 7098304166269631346
+      cyan_slime_8: -8377905565737982524
+      cyan_slime_9: -8696344536758059598
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

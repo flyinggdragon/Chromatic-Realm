@@ -29,3 +29,27 @@ https://sanctumpixel.itch.io/forest-lite-pixel-art-tileset
 parallax-sunset-mountains
 kayillustrations
 https://kayillustrations.itch.io/parallax-sunset-mountains
+
+simple animated water
+Destron
+https://opengameart.org/content/simple-animated-water
+
+Splash Water
+Julien Jorge <julien.jorge@stuff-o-matic.com>
+https://opengameart.org/content/water-splash
+
+Winter Pixel Art Asset Pack
+Haladrias
+https://haladrias.itch.io/winter-pixel-art-asset-pack
+
+Free Slime Enemy
+pixelmikazuki
+https://pixelmikazuki.itch.io/free-slime-enemy
+
+Pixel Slime
+rvros
+https://rvros.itch.io/pixel-art-animated-slime
+
+6 direction slime animations
+Shimyx
+https://shimyx.itch.io/6-direction-slimes-animation

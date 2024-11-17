@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      magenta_thin_tree_0: -4171957090949281610
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

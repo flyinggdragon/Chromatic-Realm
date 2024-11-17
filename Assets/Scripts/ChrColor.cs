@@ -6,6 +6,7 @@ public static class ChrColor {
     // Estrutura para cores personalizáveis.
     public static ColorAttr Red = new(
         new Color(1f, 0f, 0f, 1f),
+        0.372f,
         ColorTemperature.Warm,
         ColorType.Primary,
         ColorName.Red,
@@ -16,6 +17,7 @@ public static class ChrColor {
 
     public static ColorAttr Orange = new(
         new Color(1f, 0.5f, 0f, 1f),
+        0.414f,
         ColorTemperature.Warm,
         ColorType.Tertiary,
         ColorName.Orange,
@@ -26,6 +28,7 @@ public static class ChrColor {
 
     public static ColorAttr Yellow = new(
         new Color(1f, 1f, 0f, 1f),
+        0.522f,
         ColorTemperature.Warm,
         ColorType.Secondary,
         ColorName.Yellow,
@@ -36,6 +39,7 @@ public static class ChrColor {
 
     public static ColorAttr Lime = new(
         new Color(0.5f, 1f, 0f, 1f),
+        0.63f,
         ColorTemperature.Warm,
         ColorType.Tertiary,
         ColorName.Lime,
@@ -46,6 +50,7 @@ public static class ChrColor {
 
     public static ColorAttr Green = new(
         new Color(0f, 1f, 0f, 1f),
+        0.676f,
         ColorTemperature.Neutral,
         ColorType.Primary,
         ColorName.Green,
@@ -56,6 +61,7 @@ public static class ChrColor {
 
     public static ColorAttr Springgreen = new(
         new Color(0f, 1f, 0.5f, 1f),
+        0.761f,
         ColorTemperature.Cool,
         ColorType.Tertiary,
         ColorName.Springgreen,
@@ -66,6 +72,7 @@ public static class ChrColor {
 
     public static ColorAttr Cyan = new(
         new Color(0f, 1f, 1f, 1f),
+        0.869f,
         ColorTemperature.Cool,
         ColorType.Secondary,
         ColorName.Cyan,
@@ -76,6 +83,7 @@ public static class ChrColor {
 
     public static ColorAttr Azure = new(
         new Color(0f, 0.5f, 1f, 1f),
+        0f,
         ColorTemperature.Cool,
         ColorType.Tertiary,
         ColorName.Azure,
@@ -86,6 +94,7 @@ public static class ChrColor {
 
     public static ColorAttr Blue = new(
         new Color(0f, 0f, 1f, 1f),
+        0.037f,
         ColorTemperature.Cool,
         ColorType.Primary,
         ColorName.Blue,
@@ -96,6 +105,7 @@ public static class ChrColor {
 
     public static ColorAttr Violet = new(
         new Color(0.5f, 0f, 1f, 1f),
+        0.083f,
         ColorTemperature.Cool,
         ColorType.Tertiary,
         ColorName.Violet,
@@ -106,6 +116,7 @@ public static class ChrColor {
 
     public static ColorAttr Magenta = new(
         new Color(1f, 0f, 1f, 1f),
+        0.218f,
         ColorTemperature.Neutral,
         ColorType.Secondary,
         ColorName.Magenta,
@@ -116,6 +127,7 @@ public static class ChrColor {
 
     public static ColorAttr Rose = new(
         new Color(1f, 0f, 0.5f, 1f),
+        0.338f,
         ColorTemperature.Warm,
         ColorType.Tertiary,
         ColorName.Rose,
@@ -126,6 +138,7 @@ public static class ChrColor {
 
     public static ColorAttr White = new(
         new Color(1f, 1f, 1f, 1f),
+        0f,
         ColorTemperature.Neutral,
         ColorType.All,
         ColorName.White,
@@ -136,6 +149,7 @@ public static class ChrColor {
 
     public static ColorAttr Black = new(
         new Color(0f, 0f, 0f, 1f),
+        0f,
         ColorTemperature.Neutral,
         ColorType.None,
         ColorName.Black,
@@ -193,6 +207,7 @@ public static class ChrColor {
 [System.Serializable]
 public class ColorAttr {
     public Color rgbValue { get; }
+    public float hueShift { get; }
     public ColorTemperature colorTemperature { get; }
     public ColorType colorType { get; }
     public ColorName chrColorName { get; }
@@ -201,20 +216,22 @@ public class ColorAttr {
     public List<ColorName> triadicColors { get; }
 
     public ColorAttr(
-        Color inRGBValue,
-        ColorTemperature inColorTemperature,
-        ColorType inColorType,
-        ColorName inChrColorName, 
-        ColorName inComplementaryColor, 
-        List<ColorName> inAnalogueColors, 
-        List<ColorName> inTriadicColors
+        Color rgbValue,
+        float hueShift,
+        ColorTemperature colorTemperature,
+        ColorType colorType,
+        ColorName chrColorName,
+        ColorName complementaryColor,
+        List<ColorName> analogueColors,
+        List<ColorName> triadicColors
     ) {
-        rgbValue = inRGBValue;
-        colorTemperature = inColorTemperature;
-        colorType = inColorType;
-        chrColorName = inChrColorName;
-        complementaryColor = inComplementaryColor;
-        analogueColors = inAnalogueColors;
-        triadicColors = inTriadicColors;
+        this.rgbValue = rgbValue;
+        this.hueShift = hueShift;
+        this.colorTemperature = colorTemperature;
+        this.colorType = colorType;
+        this.chrColorName = chrColorName;
+        this.complementaryColor = complementaryColor;
+        this.analogueColors = analogueColors;
+        this.triadicColors = triadicColors;
     }
 }

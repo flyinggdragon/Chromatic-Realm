@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: 35c0141ee7a1979488e71c390672d7d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5618940678299565090
+    second: azure_slime_0
+  - first:
+      213: -7026371388546714943
+    second: azure_slime_1
+  - first:
+      213: 8441929913892421504
+    second: azure_slime_2
+  - first:
+      213: -8161376508024637731
+    second: azure_slime_3
+  - first:
+      213: -3611391298449279831
+    second: azure_slime_4
+  - first:
+      213: -167585747904948792
+    second: azure_slime_5
+  - first:
+      213: 4957332739926229833
+    second: azure_slime_6
+  - first:
+      213: -2142413673489989403
+    second: azure_slime_7
+  - first:
+      213: 1317133128741814222
+    second: azure_slime_8
+  - first:
+      213: -304087521109470384
+    second: azure_slime_9
+  - first:
+      213: 5903901741347949660
+    second: azure_slime_10
+  - first:
+      213: -6604869776576450843
+    second: azure_slime_11
+  - first:
+      213: -4314229610351714969
+    second: azure_slime_12
+  - first:
+      213: 1943212490447427516
+    second: azure_slime_13
+  - first:
+      213: 4763651960343693965
+    second: azure_slime_14
+  - first:
+      213: 7743322397121248439
+    second: azure_slime_15
+  - first:
+      213: -165647676476879858
+    second: azure_slime_16
+  - first:
+      213: 2539934687742183279
+    second: azure_slime_17
+  - first:
+      213: 4564375266279614437
+    second: azure_slime_18
+  - first:
+      213: 3854277009582447031
+    second: azure_slime_19
+  - first:
+      213: -3487913104807750693
+    second: azure_slime_20
+  - first:
+      213: -2279917895874668114
+    second: azure_slime_21
+  - first:
+      213: -8864689496337354733
+    second: azure_slime_22
+  - first:
+      213: 1085287214748850159
+    second: azure_slime_23
+  - first:
+      213: 7189602162275672285
+    second: azure_slime_24
+  - first:
+      213: 7255455025364473197
+    second: azure_slime_25
+  - first:
+      213: 1011167530349684257
+    second: azure_slime_26
+  - first:
+      213: 5015713316614283462
+    second: azure_slime_27
+  - first:
+      213: -5090136651856208325
+    second: azure_slime_28
+  - first:
+      213: -4696814026571752194
+    second: azure_slime_29
+  - first:
+      213: -8754155088808406039
+    second: azure_slime_30
+  - first:
+      213: 224106720979356301
+    second: azure_slime_31
+  - first:
+      213: 4613979087844820158
+    second: azure_slime_32
+  - first:
+      213: -442988653423471010
+    second: azure_slime_33
+  - first:
+      213: -9213902400699806301
+    second: azure_slime_34
+  - first:
+      213: -6644078400884448248
+    second: azure_slime_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: azure_slime_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 165
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed346f739338502b0800000000000000
+      internalID: -5618940678299565090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 164
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c274bd03705d7e90800000000000000
+      internalID: -7026371388546714943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 164
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f3d488782c72570800000000000000
+      internalID: 8441929913892421504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 164
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd639f88e47fcbe80800000000000000
+      internalID: -8161376508024637731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_4
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 165
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a47efe7fb2c1edc0800000000000000
+      internalID: -3611391298449279831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 166
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c515b276ad9cadf0800000000000000
+      internalID: -167585747904948792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_6
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 133
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94387b4acdbfbc440800000000000000
+      internalID: 4957332739926229833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 132
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e080bd6d1e9442e0800000000000000
+      internalID: -2142413673489989403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_8
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 131
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecffd842a95674210800000000000000
+      internalID: 1317133128741814222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_9
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 131
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05314abb20aa7cbf0800000000000000
+      internalID: -304087521109470384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_10
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 131
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ccad18a5fdee150800000000000000
+      internalID: 5903901741347949660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_11
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 132
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee627baee9c654a0800000000000000
+      internalID: -6604869776576450843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 100
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d9383f607c024c0800000000000000
+      internalID: -4314229610351714969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 99
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb79838e67da7fa10800000000000000
+      internalID: 1943212490447427516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_14
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 98
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a01e11834eb1240800000000000000
+      internalID: 4763651960343693965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 98
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bcfcbdb1bec57b60800000000000000
+      internalID: 7743322397121248439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_16
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 98
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c0abdd05083bdf0800000000000000
+      internalID: -165647676476879858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_17
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 99
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67c09f2429af3320800000000000000
+      internalID: 2539934687742183279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_18
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 67
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7ec202f1be75f30800000000000000
+      internalID: 4564375266279614437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_19
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 66
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9dd16f4842d7530800000000000000
+      internalID: 3854277009582447031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 65
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3118cc281789fc0800000000000000
+      internalID: -3487913104807750693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_21
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 65
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea99553d0ca1c50e0800000000000000
+      internalID: -2279917895874668114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_22
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 65
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310fca6cedb4af480800000000000000
+      internalID: -8864689496337354733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_23
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 66
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe7d062c8f6bf0f00800000000000000
+      internalID: 1085287214748850159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_24
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 34
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd062de031996c360800000000000000
+      internalID: 7189602162275672285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_25
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 33
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d651cae87ed80b460800000000000000
+      internalID: 7255455025364473197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_26
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 32
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126e6eee283680e00800000000000000
+      internalID: 1011167530349684257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_27
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 32
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0adf3efa46b9540800000000000000
+      internalID: 5015713316614283462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_28
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 32
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e1aef0fa33c59b0800000000000000
+      internalID: -5090136651856208325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_29
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 33
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc5e12178091deb0800000000000000
+      internalID: -4696814026571752194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_30
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e395e6045ef28680800000000000000
+      internalID: -8754155088808406039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_31
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a80c710ef2c1300800000000000000
+      internalID: 224106720979356301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_32
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb44214d885280040800000000000000
+      internalID: 4613979087844820158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_33
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e565a21ba203ad9f0800000000000000
+      internalID: -442988653423471010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_34
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad4b2b7594a12080800000000000000
+      internalID: -9213902400699806301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: azure_slime_35
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 0
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 804ef6f65ed7bc3a0800000000000000
+      internalID: -6644078400884448248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      azure_slime_0: -5618940678299565090
+      azure_slime_1: -7026371388546714943
+      azure_slime_10: 5903901741347949660
+      azure_slime_11: -6604869776576450843
+      azure_slime_12: -4314229610351714969
+      azure_slime_13: 1943212490447427516
+      azure_slime_14: 4763651960343693965
+      azure_slime_15: 7743322397121248439
+      azure_slime_16: -165647676476879858
+      azure_slime_17: 2539934687742183279
+      azure_slime_18: 4564375266279614437
+      azure_slime_19: 3854277009582447031
+      azure_slime_2: 8441929913892421504
+      azure_slime_20: -3487913104807750693
+      azure_slime_21: -2279917895874668114
+      azure_slime_22: -8864689496337354733
+      azure_slime_23: 1085287214748850159
+      azure_slime_24: 7189602162275672285
+      azure_slime_25: 7255455025364473197
+      azure_slime_26: 1011167530349684257
+      azure_slime_27: 5015713316614283462
+      azure_slime_28: -5090136651856208325
+      azure_slime_29: -4696814026571752194
+      azure_slime_3: -8161376508024637731
+      azure_slime_30: -8754155088808406039
+      azure_slime_31: 224106720979356301
+      azure_slime_32: 4613979087844820158
+      azure_slime_33: -442988653423471010
+      azure_slime_34: -9213902400699806301
+      azure_slime_35: -6644078400884448248
+      azure_slime_4: -3611391298449279831
+      azure_slime_5: -167585747904948792
+      azure_slime_6: 4957332739926229833
+      azure_slime_7: -2142413673489989403
+      azure_slime_8: 1317133128741814222
+      azure_slime_9: -304087521109470384
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

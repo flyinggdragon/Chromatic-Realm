@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: 347d8d4298eeee2418e37a3787cd8617
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6102520724217178003
+    second: springgreen_slime_0
+  - first:
+      213: -829243251625868222
+    second: springgreen_slime_1
+  - first:
+      213: 759711316488043124
+    second: springgreen_slime_2
+  - first:
+      213: 2719009561386381302
+    second: springgreen_slime_3
+  - first:
+      213: 8802683406104369050
+    second: springgreen_slime_4
+  - first:
+      213: -8045665733198519488
+    second: springgreen_slime_5
+  - first:
+      213: -8374177334485868263
+    second: springgreen_slime_6
+  - first:
+      213: -1972539878343685803
+    second: springgreen_slime_7
+  - first:
+      213: -1483617480407998909
+    second: springgreen_slime_8
+  - first:
+      213: 4015772993473217766
+    second: springgreen_slime_9
+  - first:
+      213: 8536549033135183825
+    second: springgreen_slime_10
+  - first:
+      213: 436480507496316490
+    second: springgreen_slime_11
+  - first:
+      213: -3025321661566199918
+    second: springgreen_slime_12
+  - first:
+      213: -7598387293077820160
+    second: springgreen_slime_13
+  - first:
+      213: -9153464777701527959
+    second: springgreen_slime_14
+  - first:
+      213: -2210120265158491280
+    second: springgreen_slime_15
+  - first:
+      213: -3682973736334676264
+    second: springgreen_slime_16
+  - first:
+      213: -1625019263043273227
+    second: springgreen_slime_17
+  - first:
+      213: 4680551564419945852
+    second: springgreen_slime_18
+  - first:
+      213: -8678571967651536815
+    second: springgreen_slime_19
+  - first:
+      213: -2187638621292901304
+    second: springgreen_slime_20
+  - first:
+      213: 8677897090268623266
+    second: springgreen_slime_21
+  - first:
+      213: 6627898282511162148
+    second: springgreen_slime_22
+  - first:
+      213: 6518773640391644458
+    second: springgreen_slime_23
+  - first:
+      213: 677031949438101693
+    second: springgreen_slime_24
+  - first:
+      213: -2172453266798293479
+    second: springgreen_slime_25
+  - first:
+      213: 4418300168311129793
+    second: springgreen_slime_26
+  - first:
+      213: 7898106753715007358
+    second: springgreen_slime_27
+  - first:
+      213: -7359704515223734418
+    second: springgreen_slime_28
+  - first:
+      213: 8330203292458665169
+    second: springgreen_slime_29
+  - first:
+      213: 3293122863670589278
+    second: springgreen_slime_30
+  - first:
+      213: -6618036915681461517
+    second: springgreen_slime_31
+  - first:
+      213: -1347827018305990045
+    second: springgreen_slime_32
+  - first:
+      213: -436631273895445160
+    second: springgreen_slime_33
+  - first:
+      213: -7858485797114726832
+    second: springgreen_slime_34
+  - first:
+      213: 1980337449820218347
+    second: springgreen_slime_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: springgreen_slime_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 165
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397ac61244280b450800000000000000
+      internalID: 6102520724217178003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 164
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244437af7afed74f0800000000000000
+      internalID: -829243251625868222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 164
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a3d1fca690b8a00800000000000000
+      internalID: 759711316488043124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 164
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff63574accdbb520800000000000000
+      internalID: 2719009561386381302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_4
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 165
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9793135be9692a70800000000000000
+      internalID: 8802683406104369050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 166
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0436b27b4ad085090800000000000000
+      internalID: -8045665733198519488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_6
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 133
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911a7d32512f8cb80800000000000000
+      internalID: -8374177334485868263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 132
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559480e7e6120a4e0800000000000000
+      internalID: -1972539878343685803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_8
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 131
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e98b913c1296be0800000000000000
+      internalID: -1483617480407998909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_9
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 131
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e40496d244eab730800000000000000
+      internalID: 4015772993473217766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_10
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 131
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d71ab7fd1ae77670800000000000000
+      internalID: 8536549033135183825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_11
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 132
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e33b085b0be0600800000000000000
+      internalID: 436480507496316490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 100
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2975d074af5e306d0800000000000000
+      internalID: -3025321661566199918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 99
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d2142d30b1d8690800000000000000
+      internalID: -7598387293077820160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_14
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 98
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96eec05284c58f080800000000000000
+      internalID: -9153464777701527959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 98
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073065c14531451e0800000000000000
+      internalID: -2210120265158491280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_16
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 98
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8deada866e273ecc0800000000000000
+      internalID: -3682973736334676264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_17
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 99
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd73290795c279e0800000000000000
+      internalID: -1625019263043273227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_18
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 67
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75562669d8a4f040800000000000000
+      internalID: 4680551564419945852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_19
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 66
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 150a776c6c48f8780800000000000000
+      internalID: -8678571967651536815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 65
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c49e8b342f3a1e0800000000000000
+      internalID: -2187638621292901304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_21
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 65
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a17bd61d651e6870800000000000000
+      internalID: 8677897090268623266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_22
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 65
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42bdf703f560bfb50800000000000000
+      internalID: 6627898282511162148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_23
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 66
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2559b68616577a50800000000000000
+      internalID: 6518773640391644458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_24
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 34
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db829df88fc456900800000000000000
+      internalID: 677031949438101693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_25
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 33
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ec9559345e9d1e0800000000000000
+      internalID: -2172453266798293479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_26
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 32
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6cb3b0894f05d30800000000000000
+      internalID: 4418300168311129793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_27
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 32
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7feb4d1f36bb9d60800000000000000
+      internalID: 7898106753715007358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_28
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 32
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67304e9cb31dd990800000000000000
+      internalID: -7359704515223734418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_29
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 33
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d4c9c952c3da9370800000000000000
+      internalID: 8330203292458665169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_30
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e577dcafbc583bd20800000000000000
+      internalID: 3293122863670589278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_31
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa72623d720824a0800000000000000
+      internalID: -6618036915681461517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_32
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362923bc77e8b4de0800000000000000
+      internalID: -1347827018305990045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_33
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85db2a57b26c0f9f0800000000000000
+      internalID: -436631273895445160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_34
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0563686bdcc01f290800000000000000
+      internalID: -7858485797114726832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: springgreen_slime_35
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 0
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3efe71b629b7b10800000000000000
+      internalID: 1980337449820218347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      springgreen_slime_0: 6102520724217178003
+      springgreen_slime_1: -829243251625868222
+      springgreen_slime_10: 8536549033135183825
+      springgreen_slime_11: 436480507496316490
+      springgreen_slime_12: -3025321661566199918
+      springgreen_slime_13: -7598387293077820160
+      springgreen_slime_14: -9153464777701527959
+      springgreen_slime_15: -2210120265158491280
+      springgreen_slime_16: -3682973736334676264
+      springgreen_slime_17: -1625019263043273227
+      springgreen_slime_18: 4680551564419945852
+      springgreen_slime_19: -8678571967651536815
+      springgreen_slime_2: 759711316488043124
+      springgreen_slime_20: -2187638621292901304
+      springgreen_slime_21: 8677897090268623266
+      springgreen_slime_22: 6627898282511162148
+      springgreen_slime_23: 6518773640391644458
+      springgreen_slime_24: 677031949438101693
+      springgreen_slime_25: -2172453266798293479
+      springgreen_slime_26: 4418300168311129793
+      springgreen_slime_27: 7898106753715007358
+      springgreen_slime_28: -7359704515223734418
+      springgreen_slime_29: 8330203292458665169
+      springgreen_slime_3: 2719009561386381302
+      springgreen_slime_30: 3293122863670589278
+      springgreen_slime_31: -6618036915681461517
+      springgreen_slime_32: -1347827018305990045
+      springgreen_slime_33: -436631273895445160
+      springgreen_slime_34: -7858485797114726832
+      springgreen_slime_35: 1980337449820218347
+      springgreen_slime_4: 8802683406104369050
+      springgreen_slime_5: -8045665733198519488
+      springgreen_slime_6: -8374177334485868263
+      springgreen_slime_7: -1972539878343685803
+      springgreen_slime_8: -1483617480407998909
+      springgreen_slime_9: 4015772993473217766
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

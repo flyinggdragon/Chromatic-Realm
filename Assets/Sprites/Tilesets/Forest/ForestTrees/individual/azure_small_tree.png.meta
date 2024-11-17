@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      azure_small_tree_0: 6779548584237855516
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

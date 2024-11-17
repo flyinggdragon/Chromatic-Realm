@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      springgreen_thin_tree_0: -6907553269611763557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

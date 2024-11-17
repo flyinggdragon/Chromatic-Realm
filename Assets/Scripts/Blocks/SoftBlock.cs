@@ -10,13 +10,13 @@ public class SoftBlock : Block {
         
         switch(currentHarmony) {
             case Harmony.All:
-                return 15f;
+                return 18f;
 
             case Harmony.Complementary:
-                return 15f;
+                return 18f;
             
             case Harmony.Analogue:
-                return 10f;
+                return 12f;
             
             case Harmony.Triadic:
                 return 5f;

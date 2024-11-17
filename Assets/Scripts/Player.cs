@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
     // Private
     private float _speed = 15f;
     private float _harmonySpeedBonus = 0f;
-    private float _jumpForce = 10f; 
+    private float _jumpForce = 12f; 
     private bool _isFacingRight = true;
     private bool _isWallSliding;
     private float _wallSlidingSpeed = 2f;
@@ -17,7 +15,8 @@ public class Player : MonoBehaviour {
     private Vector2 _wallJumpingPower = new Vector2(8f, 16f);
     private bool _shouldWallJump = false;
     private Color _color;
-    
+    private Material material;
+    private Animator animator;
 
     // Public
     public Rigidbody2D rb;
@@ -29,7 +28,8 @@ public class Player : MonoBehaviour {
     public bool shouldMove = true;
     public bool shouldInput = true;
     public int chromaticCircleUses;
-    
+    public Vector2 CurrentVelocity { get; private set; } // Propriedade para guardar a velocidade atual
+
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform wallCheck;
@@ -39,6 +39,8 @@ public class Player : MonoBehaviour {
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        material = GetComponent<Renderer>().material;
+        animator = GetComponent<Animator>();
         ChangeColor(ChrColor.FindColorAttr(currentColorName));
     }
 
@@ -46,7 +48,7 @@ public class Player : MonoBehaviour {
         colorAttr = newColorAttr;
         currentColorName = colorAttr.chrColorName;
         _color = colorAttr.rgbValue;
-        sr.color = _color;
+        material.SetFloat("_HueShift", newColorAttr.hueShift);
     }
 
     private void Update() {
@@ -59,12 +61,17 @@ public class Player : MonoBehaviour {
 
         if (!_isWallSliding) Flip();
         if (_shouldWallJump) WallJump(); WallSlide();
+
+        animator.SetBool("IsWalking", CurrentVelocity.x != 0f);
     }
 
     private void FixedUpdate() {
         if (shouldMove && !_isWallSliding) {
             Move();
         }
+
+        // Atualiza a propriedade de velocidade atual
+        CurrentVelocity = rb.linearVelocity;
     }
 
     private void Move() {
@@ -74,7 +81,6 @@ public class Player : MonoBehaviour {
     }
 
     private void HandleInput() {
-        // Toggleia a interface de cor
         if (Input.GetKeyDown(KeyCode.Q)) {
             if (chromaticCircleUses != 0) {
                 ColorInterface ci = GameObject.Find("UI").transform.GetChild(0).GetComponent<ColorInterface>();
@@ -92,6 +98,8 @@ public class Player : MonoBehaviour {
     }
 
     public void Jump(float jumpForce) {
+        animator.SetTrigger("JumpTrigger");
+
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         grounded = false;
     }
@@ -149,74 +157,5 @@ public class Player : MonoBehaviour {
         ResetMovement();
         shouldMove = false;
         shouldInput = false;
-    }
-
-    private void GiveHarmonyEffects(Surface s) {
-        switch(s.colorName) {
-            case ColorName.White:
-                _harmonySpeedBonus = 3f;
-                return;
-            case ColorName.Black:
-                _harmonySpeedBonus = 0f;
-                return;
-        }
-
-        Harmony h = ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(s.colorName));
-
-        switch(h) {
-            case Harmony.Complementary:
-                _harmonySpeedBonus = -2.5f;
-                break;
-            case Harmony.Triadic:
-                _harmonySpeedBonus = 0.5f;
-                break;
-            case Harmony.Analogue:
-                _harmonySpeedBonus = 3f;
-                break;
-            case Harmony.None:
-                _harmonySpeedBonus = 0f;
-                break;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D other) {
-        //if (other.gameObject.CompareTag("Ground")) {
-            //grounded = true;
-        //}
-
-        //if (other.gameObject.CompareTag("Block")) {
-            //if (other.gameObject.GetComponent<Block>() is not SoftBlock) return;
-            //grounded = true;
-        //}
-    }
-
-    private void OnCollisionStay2D(Collision2D other) {
-        if (other.gameObject.CompareTag("Ground")) {
-            GiveHarmonyEffects(other.gameObject.GetComponent<Surface>());
-        }
-
-        if (other.gameObject.CompareTag("Wall")) {
-            ColorAttr wallColor = ChrColor.FindColorAttr(other.gameObject.GetComponent<Surface>().colorName);
-            
-            Harmony h = ChrColor.DetermineHarmony(colorAttr, wallColor);
-
-            if (h == Harmony.Analogue || h == Harmony.Equal) {
-                _shouldWallJump = true;
-            } else {
-                _shouldWallJump = false;
-            }
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D other) {
-        //if (other.gameObject.CompareTag("Ground")) {
-            //grounded = false;
-        //}
-
-        if (other.gameObject.CompareTag("Block")) {
-            if (other.gameObject.GetComponent<Block>() is not SoftBlock) return;
-
-            grounded = false;
-        }
     }
 }
