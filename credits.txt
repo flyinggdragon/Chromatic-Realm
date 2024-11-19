@@ -53,3 +53,7 @@ https://rvros.itch.io/pixel-art-animated-slime
 6 direction slime animations
 Shimyx
 https://shimyx.itch.io/6-direction-slimes-animation
+
+Stone and Ice Blocks
+Gamertose
+https://assetstore.unity.com/packages/2d/textures-materials/brick/stone-and-ice-blocks-by-gamertose-50490?srsltid=AfmBOoq6uN292Djn2VRq2lXrciR7XD1EugXWxT13lYs0DLZZpPPNPDiT

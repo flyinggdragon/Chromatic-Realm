@@ -1,54 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class IceBlock : MonoBehaviour {
-    private Vector2 position;
-    [SerializeField] private GameObject waterBlockPrefab;
     public Collider2D blockCollider;
-    public Rigidbody2D rb;
-    public SpriteRenderer sr;
 
-    private void Melt() {
-        Destroy(gameObject);
-        Instantiate(waterBlockPrefab, transform.position, Quaternion.identity);
-    }
-
-    private void Update() {
-        CheckContactWithObjects();
-    }
-
-    private void CheckContactWithObjects() {
+    private void CheckContactWithWaterGrid() {
         Collider2D[] contacts = new Collider2D[10];
         int contactCount = Physics2D.OverlapCollider(blockCollider, new ContactFilter2D(), contacts);
 
         for (int i = 0; i < contactCount; i++) {
             Collider2D contact = contacts[i];
 
-            if (contact.CompareTag("ThePlayer") || contact.CompareTag("Block")) {
-                if (Physics2D.IsTouching(blockCollider, contact)) {
-                    ColorAttr objAttr = contact.GetComponent<Player>()?.colorAttr ?? contact.GetComponent<Block>()?.colorAttr;
-
-                    if (objAttr.colorTemperature is ColorTemperature.Warm) {
-                        Melt();
-                        break;
-                    }
+            if (contact.CompareTag("Water")) {
+                Water waterGrid = contact.GetComponent<Water>();
+                if (waterGrid != null) {
+                    // Notifica o Water para congelar o tile na posição do IceBlock
+                    Vector3Int gridPosition = waterGrid.GetComponent<Tilemap>().WorldToCell(transform.position);
+                    waterGrid.FreezeTile(gridPosition);
                 }
             }
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.CompareTag("ThePlayer")) {
-            Player player = other.gameObject.GetComponent<Player>();
-            player.grounded = true;
-        }
+    private void Update() {
+        CheckContactWithWaterGrid();
     }
 
-    private void OnCollisionExit2D(Collision2D other) {
-        if (other.gameObject.CompareTag("ThePlayer")) {
-            Player player = other.gameObject.GetComponent<Player>();
-            player.grounded = false;
+    private void Melt() {
+        Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("ThePlayer") || collision.gameObject.CompareTag("Block")) {
+            ColorAttr otherColor = collision.gameObject.GetComponent<Player>()?.colorAttr ?? collision.gameObject.GetComponent<Block>()?.colorAttr;
+
+            if (otherColor?.colorTemperature == ColorTemperature.Warm) {
+                Melt();
+            }
         }
     }
 }
