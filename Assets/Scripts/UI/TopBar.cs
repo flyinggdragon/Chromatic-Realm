@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class TopBar : MonoBehaviour {
+public class TopBar : UIElement {
     [SerializeField] TMP_Text cccUses;
     [SerializeField] Timer timer;
 

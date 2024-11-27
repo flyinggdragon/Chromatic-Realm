@@ -25,10 +25,8 @@ public class Player : MonoBehaviour {
     public bool walled;
     public ColorName currentColorName;
     public ColorAttr colorAttr { get; private set; }
-    public bool shouldMove = true;
-    public bool shouldInput = true;
     public int chromaticCircleUses;
-    public Vector2 CurrentVelocity { get; private set; } // Propriedade para guardar a velocidade atual
+    public Vector2 CurrentVelocity { get; set; }
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -54,7 +52,7 @@ public class Player : MonoBehaviour {
     private void Update() {
         chromaticCircleUses = GameManager.chromaticCircleUses;
         
-        if (shouldInput) HandleInput();
+        if (GameManager.shouldInput) HandleInput();
         
         grounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
         walled = Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
@@ -66,11 +64,10 @@ public class Player : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (shouldMove && !_isWallSliding) {
+        if (GameManager.shouldMove && !_isWallSliding) {
             Move();
         }
 
-        // Atualiza a propriedade de velocidade atual
         CurrentVelocity = rb.linearVelocity;
     }
 
@@ -145,17 +142,7 @@ public class Player : MonoBehaviour {
     }
 
     public void ResetMovement() {
-        rb.linearVelocity = Vector2.zero;
-    }
-
-    public void EnableMovement() {
-        shouldMove = true;
-        shouldInput = true;
-    }
-
-    public void DisableMovement() {
-        ResetMovement();
-        shouldMove = false;
-        shouldInput = false;
+         rb.linearVelocity = Vector2.zero;
+         CurrentVelocity = Vector2.zero;
     }
 }

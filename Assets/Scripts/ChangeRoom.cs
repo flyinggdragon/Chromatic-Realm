@@ -7,7 +7,7 @@ public class ChangeRoom : MonoBehaviour {
     [SerializeField] private BoxCollider2D activationTrigger;
 
     private void ChangeColor(Player player) {
-        player.DisableMovement();
+        GameManager.DisableMovement();
         
         StartCoroutine(colorInterface.AsyncColorSelection());
         // Decrementar um de CCC (futuro)

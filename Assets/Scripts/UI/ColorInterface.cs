@@ -104,7 +104,7 @@ public class ColorInterface: UIElement {
         obj.SetActive(false);
         currentlyActive = false;
 
-        player.EnableMovement();
+        GameManager.EnableMovement();
 
         shouldClose = true;
     }
