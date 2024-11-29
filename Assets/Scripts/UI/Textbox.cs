@@ -6,8 +6,7 @@ using TMPro;
 
 public class Textbox : UIElement {
     public TMP_Text textObj;
-    public Image imageBackground;
-    public List<string> textList;
+    public List<string> textList { get; set; }
     private bool clicked = false;
     public float waitTime = 2f;
 
@@ -36,9 +35,5 @@ public class Textbox : UIElement {
 
         GameManager.EnableMovement();
         SelfDestroy();
-    }
-
-    private void SelfDestroy() {
-        Destroy(gameObject);
     }
 }   

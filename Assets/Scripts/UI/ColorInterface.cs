@@ -8,48 +8,47 @@ using TMPro;
 public class ColorInterface: UIElement {
     [SerializeField] private Transform colorPicker;
     [SerializeField] private Transform colorInfo;
-    [SerializeField] private Player player;
+    [SerializeField] private Transform infoContainer;
+    [SerializeField] private Transform colorTitle;
+    [SerializeField] private Transform colorSubattr;
+    [SerializeField] private Transform harmoniesContainer;
+    private Player player;
     private bool colorSelected = false;
 
     protected override void Start() {
+        player = GameObject.FindFirstObjectByType<Player>();
         ColorHighlight(player.currentColorName);
     }
 
     public void ColorHighlight(ColorName colorName) {
         ColorAttr colorAttr = ChrColor.FindColorAttr(colorName);
 
-        Transform infoContainer = colorInfo.GetChild(0).transform;
-
-        Transform colorTitle = infoContainer.GetChild(0).transform;
-        Transform colorSubattr = colorTitle.GetChild(1).transform;
-        Transform harmoniesContainer = infoContainer.GetChild(1).transform;
-
-        TMP_Text colorNameTitle = colorTitle.GetChild(0).GetComponent<TMP_Text>();
-        TMP_Text colorTemperatureTitle = colorSubattr.GetChild(0).GetComponent<TMP_Text>();
-        TMP_Text colorTypeTitle = colorSubattr.GetChild(1).GetComponent<TMP_Text>();
+        TMP_Text titleTextComponent = colorTitle.GetComponent<TMP_Text>();
+        TMP_Text temperatureTitleComponent = colorSubattr.GetChild(0).GetComponent<TMP_Text>();
+        TMP_Text typeTitleComponent = colorSubattr.GetChild(1).GetComponent<TMP_Text>();
 
         // Nome da cor
-        colorNameTitle.text = colorName.ToString();
-        colorNameTitle.color = colorAttr.rgbValue;
+        titleTextComponent.text = colorName.ToString();
+        titleTextComponent.color = colorAttr.rgbValue;
 
         // Temperatura da cor
         ColorTemperature ct = colorAttr.colorTemperature;
-        colorTemperatureTitle.text = ct.ToString();
+        temperatureTitleComponent.text = ct.ToString();
         
         switch(ct) {
             case ColorTemperature.Warm:
-                colorTemperatureTitle.color = ChrColor.Red.rgbValue;
+                temperatureTitleComponent.color = ChrColor.Red.rgbValue;
                 break;
             case ColorTemperature.Cool:
-                colorTemperatureTitle.color = ChrColor.Blue.rgbValue;
+                temperatureTitleComponent.color = ChrColor.Blue.rgbValue;
                 break;
             default:
-                colorTemperatureTitle.color = ChrColor.White.rgbValue;
+                temperatureTitleComponent.color = ChrColor.White.rgbValue;
                 break;
         }
 
         // Tipo da cor
-        colorTypeTitle.text = colorAttr.colorType.ToString();
+        typeTitleComponent.text = colorAttr.colorType.ToString();
 
         // Harmonias
         Transform complementary = harmoniesContainer.GetChild(0);
@@ -94,14 +93,14 @@ public class ColorInterface: UIElement {
 
         colorSelected = false;
         
-        obj.SetActive(true);
+        gameObject.SetActive(true);
         currentlyActive = true;
 
         while (!colorSelected) {
             yield return null;
         }
 
-        obj.SetActive(false);
+        gameObject.SetActive(false);
         currentlyActive = false;
 
         GameManager.EnableMovement();

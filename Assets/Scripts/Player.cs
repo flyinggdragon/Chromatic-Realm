@@ -60,6 +60,10 @@ public class Player : MonoBehaviour {
         if (!_isWallSliding) Flip();
         if (_shouldWallJump) WallJump(); WallSlide();
 
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            GameObject.FindFirstObjectByType<UIManager>().TogglePause();
+        }
+
         animator.SetBool("IsWalking", CurrentVelocity.x != 0f);
     }
 
@@ -80,7 +84,7 @@ public class Player : MonoBehaviour {
     private void HandleInput() {
         if (Input.GetKeyDown(KeyCode.Q)) {
             if (chromaticCircleUses != 0) {
-                ColorInterface ci = GameObject.Find("UI").transform.GetChild(0).GetComponent<ColorInterface>();
+                ColorInterface ci = GameObject.Find("UI").transform.GetChild(1).GetComponent<ColorInterface>();
                 ci.ToggleVisibility();
             }
         }

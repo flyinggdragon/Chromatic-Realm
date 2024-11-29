@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UIElement : MonoBehaviour {
-    [SerializeField] public GameObject obj;
     public bool currentlyActive { get; set; } = false;
     public bool shouldClose { get; set; } = true;
 
@@ -13,6 +12,10 @@ public class UIElement : MonoBehaviour {
 
     public virtual void ToggleVisibility() {
         currentlyActive = !currentlyActive;
-        if (shouldClose) obj.SetActive(currentlyActive);
+        if (shouldClose) gameObject.SetActive(currentlyActive);
+    }
+
+    public virtual void SelfDestroy() {
+        Destroy(gameObject);
     }
 }
