@@ -19,19 +19,31 @@ public class Player : MonoBehaviour {
     private Animator animator;
 
     // Public
+    [Header("Components")]
     public Rigidbody2D rb;
     public SpriteRenderer sr;
+
+    
+    [Header("Movement")]
     public bool grounded;
     public bool walled;
+    public Vector2 CurrentVelocity { get; set; }
+    
+    [Header("Color")]
     public ColorName currentColorName;
     public ColorAttr colorAttr { get; private set; }
-    public int chromaticCircleUses;
-    public Vector2 CurrentVelocity { get; set; }
 
+
+    [Header("Collision Checks")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
+
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClip walk;
+    [SerializeField] private AudioClip jump;
+    [SerializeField] private AudioClip die;
 
     // Methods
     private void Start() {
@@ -50,8 +62,6 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
-        chromaticCircleUses = GameManager.chromaticCircleUses;
-        
         if (GameManager.shouldInput) HandleInput();
         
         grounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -83,7 +93,7 @@ public class Player : MonoBehaviour {
 
     private void HandleInput() {
         if (Input.GetKeyDown(KeyCode.Q)) {
-            if (chromaticCircleUses != 0) {
+            if (GameManager.chromaticCircleUses != 0) {
                 ColorInterface ci = GameObject.Find("UI").transform.GetChild(1).GetComponent<ColorInterface>();
                 ci.ToggleVisibility();
             }
@@ -100,6 +110,7 @@ public class Player : MonoBehaviour {
 
     public void Jump(float jumpForce) {
         animator.SetTrigger("JumpTrigger");
+        AudioManager.Instance.PlaySFX(jump);
 
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         grounded = false;

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
+    [SerializeField] private AudioClip backgroundMusic;
     [SerializeField] private GameObject main;
     [SerializeField] private GameObject color;
     [SerializeField] private GameObject options;
@@ -10,6 +11,8 @@ public class MainMenu : MonoBehaviour {
 
     private void Start() {
         currentView = main;
+
+        AudioManager.Instance.PlayMusic(backgroundMusic);
     }
 
     public void GameStart() {
