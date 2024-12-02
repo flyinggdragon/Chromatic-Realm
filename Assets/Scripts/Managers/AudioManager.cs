@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour {
     [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
-    private AudioClip currentMusic;
+    //private AudioClip currentMusic;
 
     private void Awake() {
         if (Instance != null && Instance != this) {
@@ -16,12 +16,14 @@ public class AudioManager : MonoBehaviour {
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        //currentMusic = musicSource.clip;
     }
 
     public void PlayMusic(AudioClip clip, float volume = 0.5f) {
-        if (currentMusic == clip) return;
+        //if (currentMusic == clip) return;
 
-        currentMusic = clip;
+        //currentMusic = clip;
         
         musicSource.clip = clip;
         musicSource.volume = volume;

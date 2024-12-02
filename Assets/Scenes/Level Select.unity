@@ -266,7 +266,6 @@ GameObject:
   - component: {fileID: 14973744}
   - component: {fileID: 14973747}
   - component: {fileID: 14973746}
-  - component: {fileID: 14973745}
   m_Layer: 0
   m_Name: Mountain
   m_TagString: Untagged
@@ -293,20 +292,6 @@ RectTransform:
   m_AnchoredPosition: {x: 46.36743, y: 26}
   m_SizeDelta: {x: 3029.692, y: 876.3208}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &14973745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14973743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db660fe8fba7f3143bbc1e545dadedbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 344558722}
-  parallaxEffect: 0
 --- !u!114 &14973746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,6 +613,7 @@ MonoBehaviour:
   cccUses: -1
   levelMusic: {fileID: 8300000, guid: a07a236810f42174fa7c5570fba9e5c2, type: 3}
   locked: 0
+  completed: 0
 --- !u!114 &480451164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,6 +821,7 @@ MonoBehaviour:
   cccUses: -1
   levelMusic: {fileID: 8300000, guid: a07a236810f42174fa7c5570fba9e5c2, type: 3}
   locked: 0
+  completed: 0
 --- !u!114 &562487285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,7 +1015,6 @@ GameObject:
   - component: {fileID: 877920610}
   - component: {fileID: 877920613}
   - component: {fileID: 877920612}
-  - component: {fileID: 877920611}
   m_Layer: 0
   m_Name: Sky
   m_TagString: Untagged
@@ -1055,20 +1041,6 @@ RectTransform:
   m_AnchoredPosition: {x: 45.065, y: 168.4161}
   m_SizeDelta: {x: 3040.6, y: 932.5074}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &877920611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877920609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db660fe8fba7f3143bbc1e545dadedbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 344558722}
-  parallaxEffect: 0
 --- !u!114 &877920612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1859,6 +1831,7 @@ MonoBehaviour:
   cccUses: -1
   levelMusic: {fileID: 8300000, guid: a07a236810f42174fa7c5570fba9e5c2, type: 3}
   locked: 0
+  completed: 0
 --- !u!114 &1442321273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2231,7 +2204,6 @@ GameObject:
   - component: {fileID: 1720899071}
   - component: {fileID: 1720899074}
   - component: {fileID: 1720899073}
-  - component: {fileID: 1720899072}
   m_Layer: 0
   m_Name: Pines
   m_TagString: Untagged
@@ -2258,20 +2230,6 @@ RectTransform:
   m_AnchoredPosition: {x: 46.36743, y: -231}
   m_SizeDelta: {x: 3029.692, y: 876.3208}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1720899072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720899070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db660fe8fba7f3143bbc1e545dadedbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 344558722}
-  parallaxEffect: 0
 --- !u!114 &1720899073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2729,6 +2687,7 @@ MonoBehaviour:
   cccUses: -1
   levelMusic: {fileID: 8300000, guid: a07a236810f42174fa7c5570fba9e5c2, type: 3}
   locked: 0
+  completed: 0
 --- !u!114 &2145129579
 MonoBehaviour:
   m_ObjectHideFlags: 0

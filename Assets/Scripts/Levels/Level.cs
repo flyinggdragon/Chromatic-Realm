@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +7,7 @@ public class Level: MonoBehaviour {
     public int cccUses;
     public AudioClip levelMusic;
     public bool locked;
+    public bool completed;
 
     private void Start() {
         GameManager.chromaticCircleUses = cccUses;
@@ -16,5 +16,10 @@ public class Level: MonoBehaviour {
 
     public void Load() {
         SceneManager.LoadScene(levelName);
+    }
+
+    public void End() {
+        // Iniciar sequência de vitória.
+        SceneManager.LoadScene("Level Select");
     }
 }
