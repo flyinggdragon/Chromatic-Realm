@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void GameStart() {
-        SceneManager.LoadScene("Forest-1");
+        SceneManager.LoadScene("Level Select");
     }
 
     public void DisplayOptions() {

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a88f498e01be9934693a5225aa030cea
+guid: e3a57c0b25479ac4198e7137140bf71c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7113298255519769854
-    second: pine1_0
+      213: -4389339530744084276
+    second: sky_cloud_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pine1_0
+      name: sky_cloud_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 688
-        height: 148
+        height: 211
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef469a5531387b260800000000000000
-      internalID: 7113298255519769854
+      spriteID: cc84b67d3fee513c0800000000000000
+      internalID: -4389339530744084276
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pine1_0: 7113298255519769854
+      sky_cloud_0: -4389339530744084276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
