@@ -10,11 +10,13 @@ public class Textbox : UIElement {
     private bool clicked = false;
     public float waitTime = 2f;
 
+    public System.Action OnTextComplete;
+
     protected override void Start() {
-        StartCoroutine(DisplayTextAndWait());
+        
     }
 
-    private IEnumerator DisplayTextAndWait() {
+    public IEnumerator DisplayTextAndWait() {
         foreach (var str in textList) {
             textObj.text = str;
 
@@ -34,6 +36,7 @@ public class Textbox : UIElement {
         }
 
         GameManager.EnableMovement();
+        OnTextComplete?.Invoke();
         SelfDestroy();
     }
 }   

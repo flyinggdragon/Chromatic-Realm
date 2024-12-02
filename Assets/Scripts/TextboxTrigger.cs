@@ -7,7 +7,7 @@ public class TextboxTrigger : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("ThePlayer")) {
-            GameObject.Find("UI").GetComponent<UIManager>().InstantiateWindow(strings);
+            StartCoroutine(GameObject.Find("UI").GetComponent<UIManager>().InstantiateWindow(strings));
             Destroy(gameObject);
         }
     }
