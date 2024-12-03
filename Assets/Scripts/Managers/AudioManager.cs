@@ -20,13 +20,12 @@ public class AudioManager : MonoBehaviour {
         //currentMusic = musicSource.clip;
     }
 
-    public void PlayMusic(AudioClip clip, float volume = 0.5f) {
+    public void PlayMusic(AudioClip clip) {
         //if (currentMusic == clip) return;
 
         //currentMusic = clip;
         
         musicSource.clip = clip;
-        musicSource.volume = volume;
         musicSource.loop = true;
         musicSource.Stop();
         musicSource.Play();
