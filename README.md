@@ -1,3 +1,5 @@
+![Logotipo](https://github.com/flyinggdragon/Chromatic-Realm/blob/main/Assets/Title/ChromaticRealmTitle.png?raw=true)
+
 # O que é isto?
 Projeto desenvolvido pelo aluno Marco Antonio de Lucca di Iorio como TCC para graduação de Jogos Digitais pela UNISINOS/RS, em disciplinas ministradas nos semestres letivos de 2024/2 e 2025/1.
 
@@ -39,44 +41,50 @@ Objetivos tais quais listados no Whiteboard do projeto. Sob constante atualizaç
   - [x] Brancos
   - [x] Pretos
 - [x] Temperatura das Cores
-- [ ] Paredes/Chãos Coloridas
-- [x] Puxabilidade dos Blocos
+- [x] Paredes/Chãos Coloridas
 - [x] Seletor de Cores
 - [x] Salas de Troca
-- [ ] Nova Tentativa de Implementação de Mistura de Cores
 
 **Arte**
-- [ ] Círculo Cromático
-- [ ] Personagem
-- [ ] Blocos
-  - [ ] Macios
-  - [ ] Contraste
-  - [ ] Grudentos
-  - [ ] Omnicromáticos
-  - [ ] Brancos
-  - [ ] Pretos
-- [ ] Chão/Teto
-- [ ] Paredes Coloridas
-- [ ] Salas de Troca
-- [ ] Animações
-
-- [ ] Protótipo Pronto
-- [ ] Lançamento do Pré-Alpha 1.0
-- [ ] Receber Feedback
-- [ ] Aplicar feedbacks recebidos.
+- [x] Círculo Cromático
+- [x] Personagem
+- [x] Blocos
+  - [x] Macios
+  - [x] Contraste
+  - [x] Grudentos
+  - [x] Omnicromáticos
+  - [x] Brancos
+  - [x] Pretos
+- [x] Chão/Teto
+- [ ] Paredes Coloridas (adiado)
+- [x] Salas de Troca
+- [x] Animações
+- [ ] Água/Gelo (adiado, dificuldade de implementação)
 
 **UI**
-- [ ] Círculo Cromático
-- [ ] Barra Superior
-- [ ] Modais
+- [x] Círculo Cromático
+- [x] Barra Superior
+- [x] Modais
+- [x] Pause
+- [x] Menu
+
+- [x] Sons
 
  **Fases**
-- [ ] Floresta (5)
-- [ ] Cidade (5)
+- [ ] Floresta (2)
+- [ ] Cidade (2)
 
-- [ ] Lançamento do Alpha.
+ **Alpha**
+- [ ] Fases novas
+- [ ] Arrumar bugs
+- [ ] Lançamento da Alpha
+- [ ] Receber feedback
+- [ ] Aplicar feedback
+      
+ **Beta**
+- [ ] Nova Tentativa de Implementação de Mistura de Cores
 
 ## Comentários
-Foco na Alpha. Prototipar ideias primeiro, testar com o público, coletar feedback, cortar ideias que não funcionarem, manter e/ou melhorar ideias aprovadas.
+Alpha 1.0 lançado! Pretendo colocar tudo no lugar, as mecânicas, fases e arrumar os bugs antes de liberar para playtesting. Este estado será necessariamente o último da Alpha antes da entrada na Beta.
 
-Última atualização: 13/10/2024, 00:06
+Última atualização: 03/12/2024 - 15:34
