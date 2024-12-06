@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class ChangeRoom : MonoBehaviour {
     [SerializeField] private ColorInterface colorInterface;
-    [SerializeField] private BoxCollider2D activationTrigger;
 
     private void ChangeColor(Player player) {
-        GameManager.DisableMovement();
-        
         StartCoroutine(colorInterface.AsyncColorSelection());
         // Decrementar um de CCC (futuro)
     }

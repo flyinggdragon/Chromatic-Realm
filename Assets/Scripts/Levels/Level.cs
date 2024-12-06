@@ -16,7 +16,6 @@ public class Level: MonoBehaviour {
     private void Start() {
         GameManager.chromaticCircleUses = cccUses;
         AudioManager.Instance.PlayMusic(levelMusic);
-        GameManager.EnableMovement();
     }
 
     public void Load() {
@@ -24,9 +23,6 @@ public class Level: MonoBehaviour {
     }
 
     public IEnumerator End() {
-        // Iniciar sequência de vitória.
-        GameManager.DisableMovement();
-
         UIManager uiManager = FindFirstObjectByType<UIManager>();
 
         completed = true;

@@ -89,21 +89,20 @@ public class ColorInterface: UIElement {
     }
 
     public IEnumerator AsyncColorSelection() {
-        shouldClose = false;
+        GameManager.ResetMovement();
 
+        shouldClose = false;
         colorSelected = false;
         
-        gameObject.SetActive(true);
-        currentlyActive = true;
+        isOpen = true;
+        gameObject.SetActive(isOpen);
 
         while (!colorSelected) {
             yield return null;
         }
 
-        gameObject.SetActive(false);
-        currentlyActive = false;
-
-        GameManager.EnableMovement();
+        isOpen = false;
+        gameObject.SetActive(isOpen);
 
         shouldClose = true;
     }

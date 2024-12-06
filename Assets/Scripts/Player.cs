@@ -62,7 +62,10 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
-        if (GameManager.shouldInput) HandleInput();
+        GameManager.shouldInput = !Textbox.isOpen && !Pause.isPaused;
+        GameManager.shouldMove = !Textbox.isOpen && !Pause.isPaused;
+
+        if (GameManager.shouldMove) HandleInput();
         
         grounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
         walled = Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);

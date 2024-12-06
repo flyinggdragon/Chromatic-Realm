@@ -7,19 +7,21 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour {
+    public static bool isPaused = false;
+
     public void Toggle() {
-        if (!GameManager.isPaused) {
-            GameObject.FindAnyObjectByType<Player>().ResetMovement();
-            GameManager.DisableMovement();
-        }
-        else {
-            GameManager.EnableMovement();
+        GameManager.ResetMovement();
+    
+        if (!Textbox.isOpen) {
+            isPaused = !isPaused;
+
+            if (isPaused) Time.timeScale = 0f;
+            else Time.timeScale = 1f;
         }
         
-        gameObject.SetActive(!GameManager.isPaused);
-        GameManager.isPaused = !GameManager.isPaused;
-
+        gameObject.SetActive(isPaused);
     }
+
     public void OnReturn() {
         Toggle();
     }

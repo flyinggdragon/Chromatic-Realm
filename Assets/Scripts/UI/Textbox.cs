@@ -7,36 +7,43 @@ using TMPro;
 public class Textbox : UIElement {
     public TMP_Text textObj;
     public List<string> textList { get; set; }
-    private bool clicked = false;
-    public float waitTime = 2f;
-
     public System.Action OnTextComplete;
 
     protected override void Start() {
         
     }
 
-    public IEnumerator DisplayTextAndWait() {
+    public IEnumerator DisplayTextAndWait(float waitTime = 2f) {
+        GameManager.ResetMovement();
+        
+        isOpen = true;
+
         foreach (var str in textList) {
             textObj.text = str;
 
-            GameManager.DisableMovement();
-
             yield return new WaitForSeconds(waitTime);
 
-            while (!clicked) {
+            while (!shouldClose) {
                 if (Input.GetMouseButtonDown(0)) {
-                    clicked = true;
+                    shouldClose = true;
                 }
 
                 yield return null;
             }
 
-            clicked = false;
+            shouldClose = false;
         }
 
-        GameManager.EnableMovement();
         OnTextComplete?.Invoke();
         SelfDestroy();
+    }
+
+    public override void SelfDestroy() {
+        isOpen = false;
+        Destroy(gameObject);
+    }
+
+    public void Test() {
+        Debug.Log("Test");
     }
 }   

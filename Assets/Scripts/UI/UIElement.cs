@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UIElement : MonoBehaviour {
-    public bool currentlyActive { get; set; } = false;
+    public static bool isOpen = false;
     public bool shouldClose { get; set; } = true;
 
     protected virtual void Start() {
@@ -11,8 +11,11 @@ public class UIElement : MonoBehaviour {
     }
 
     public virtual void ToggleVisibility() {
-        currentlyActive = !currentlyActive;
-        if (shouldClose) gameObject.SetActive(currentlyActive);
+        if (shouldClose) {
+            gameObject.SetActive(isOpen);
+            
+            isOpen = !isOpen;
+        }
     }
 
     public virtual void SelfDestroy() {

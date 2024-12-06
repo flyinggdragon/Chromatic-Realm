@@ -7,13 +7,13 @@ public class UIManager : MonoBehaviour {
     public GameObject quitModalPrefab;
     public GameObject pause;
 
-    public IEnumerator InstantiateWindow(List<string> strings) {
+    public IEnumerator InstantiateWindow(List<string> strings, float waitTime = 2f) {
         GameObject textboxInstance = Instantiate(textboxPrefab, transform);
 
         Textbox textbox = textboxInstance.GetComponent<Textbox>();
         textbox.textList = strings;
 
-        yield return StartCoroutine(textbox.DisplayTextAndWait());
+        yield return StartCoroutine(textbox.DisplayTextAndWait(waitTime));
     }
 
     public void TogglePause() {
@@ -24,6 +24,6 @@ public class UIManager : MonoBehaviour {
         List<string> strings = new List<string> {"Level Completed"};
         strings[0] = "Level Completed!";
 
-        yield return StartCoroutine(InstantiateWindow(strings));
+        yield return StartCoroutine(InstantiateWindow(strings, 5f));
     }
 }

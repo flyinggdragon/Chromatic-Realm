@@ -16576,7 +16576,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5439549101931197144, guid: 437a94e2a825f5c4f9a52dcfb442b068, type: 3}
   m_PrefabInstance: {fileID: 915141060}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1640771327
+--- !u!1001 &1614798167
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -16589,12 +16589,24 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 5204171246803428576, guid: f01c20d9fb03b084c8ad8b650390fc95, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15600504
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204171246803428576, guid: f01c20d9fb03b084c8ad8b650390fc95, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15600504
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204171246803428576, guid: f01c20d9fb03b084c8ad8b650390fc95, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.15600504
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204171246803428576, guid: f01c20d9fb03b084c8ad8b650390fc95, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 145.61
       objectReference: {fileID: 0}
     - target: {fileID: 5204171246803428576, guid: f01c20d9fb03b084c8ad8b650390fc95, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 6.18
       objectReference: {fileID: 0}
     - target: {fileID: 5204171246803428576, guid: f01c20d9fb03b084c8ad8b650390fc95, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16606,15 +16618,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5204171246803428576, guid: f01c20d9fb03b084c8ad8b650390fc95, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5204171246803428576, guid: f01c20d9fb03b084c8ad8b650390fc95, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5204171246803428576, guid: f01c20d9fb03b084c8ad8b650390fc95, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5204171246803428576, guid: f01c20d9fb03b084c8ad8b650390fc95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17190,9 +17202,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strings:
   - Not enough height...
-  - Complementary harmony is know for causing strong contrast.
+  - Complementary harmony is known for causing strong contrast.
   - Maybe, bouncing with a complementary color to blue will make you bounce higher!
-  - Why not trying it here!
+  - Why not trying it here?
 --- !u!212 &2022857878
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17257,7 +17269,7 @@ Transform:
   m_GameObject: {fileID: 2022857875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.7, y: -8.66, z: 0}
+  m_LocalPosition: {x: 61.66, y: -8.66, z: 0}
   m_LocalScale: {x: 1, y: 3.3318, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17588,6 +17600,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1106296971385818084, guid: 1a19284ad21f9ba42af746e226eb0a0d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393483156959455091, guid: 1a19284ad21f9ba42af746e226eb0a0d, type: 3}
+      propertyPath: die
+      value: 
+      objectReference: {fileID: 8300000, guid: 840881ffb943f8c4982710c4016fa666, type: 3}
+    - target: {fileID: 2393483156959455091, guid: 1a19284ad21f9ba42af746e226eb0a0d, type: 3}
+      propertyPath: jump
+      value: 
+      objectReference: {fileID: 8300000, guid: 394d802f1035a79469095d4bd58a591b, type: 3}
+    - target: {fileID: 2393483156959455091, guid: 1a19284ad21f9ba42af746e226eb0a0d, type: 3}
+      propertyPath: walk
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4584309451928418764, guid: 1a19284ad21f9ba42af746e226eb0a0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.9
@@ -17724,4 +17752,4 @@ SceneRoots:
   - {fileID: 829582759}
   - {fileID: 1488829091}
   - {fileID: 8194811303864487111}
-  - {fileID: 1640771327}
+  - {fileID: 1614798167}
