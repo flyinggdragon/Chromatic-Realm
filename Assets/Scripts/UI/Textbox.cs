@@ -5,18 +5,22 @@ using UnityEngine.UI;
 using TMPro;
 
 public class Textbox : UIElement {
+    public static bool inDialogue = false;
     public TMP_Text textObj;
     public List<string> textList { get; set; }
     public System.Action OnTextComplete;
 
-    protected override void Start() {
-        
+    protected override void Update() {
+        inDialogue = isOpen;
     }
 
     public IEnumerator DisplayTextAndWait(float waitTime = 2f) {
         GameManager.ResetMovement();
-        
+
         isOpen = true;
+        Player.shouldMove = false;
+        Player.shouldInput = false;
+        UIManager.uiOpen = true;
 
         foreach (var str in textList) {
             textObj.text = str;
@@ -35,11 +39,16 @@ public class Textbox : UIElement {
         }
 
         OnTextComplete?.Invoke();
+
+        isOpen = false;
+        UIManager.uiOpen = false;
+        Player.shouldMove = true;
+        Player.shouldInput = true;
+
         SelfDestroy();
     }
 
     public override void SelfDestroy() {
-        isOpen = false;
         Destroy(gameObject);
     }
 

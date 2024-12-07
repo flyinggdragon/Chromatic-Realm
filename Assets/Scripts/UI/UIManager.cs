@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour {
     public GameObject textboxPrefab;
     public GameObject quitModalPrefab;
     public GameObject pause;
+    public static bool uiOpen;
 
     public IEnumerator InstantiateWindow(List<string> strings, float waitTime = 2f) {
         GameObject textboxInstance = Instantiate(textboxPrefab, transform);
@@ -17,7 +18,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void TogglePause() {
-        pause.GetComponent<Pause>().Toggle();
+        pause.GetComponent<Pause>().ToggleVisibility();
     }
 
     public IEnumerator DisplayVictory() {

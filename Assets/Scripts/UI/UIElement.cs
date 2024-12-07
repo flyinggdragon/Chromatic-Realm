@@ -3,18 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UIElement : MonoBehaviour {
-    public static bool isOpen = false;
-    public bool shouldClose { get; set; } = true;
+    public bool isOpen = false;
+    public bool shouldClose = true;
 
     protected virtual void Start() {
         
     }
 
+    protected virtual void Update() {
+
+    }
+
     public virtual void ToggleVisibility() {
         if (shouldClose) {
-            gameObject.SetActive(isOpen);
-            
+            if (UIManager.uiOpen && !isOpen) return;
+
             isOpen = !isOpen;
+            UIManager.uiOpen = isOpen;
+            gameObject.SetActive(isOpen);
+
+            Player.shouldMove = !isOpen;
+            Player.shouldInput = !isOpen;
         }
     }
 

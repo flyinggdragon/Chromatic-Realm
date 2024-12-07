@@ -6,7 +6,7 @@ public class TopBar : UIElement {
     [SerializeField] TMP_Text cccUses;
     [SerializeField] Image barBackground;
 
-    private void Update() {
+    protected override void Update() {
         if (GameManager.chromaticCircleUses == -1) {
             cccUses.text = "∞";
         }

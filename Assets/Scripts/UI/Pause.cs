@@ -6,33 +6,31 @@ using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class Pause : MonoBehaviour {
-    public static bool isPaused = false;
+public class Pause : UIElement {
+    public override void ToggleVisibility() {
+        if (shouldClose) {
+            if (UIManager.uiOpen && !isOpen) return;
 
-    public void Toggle() {
-        GameManager.ResetMovement();
-    
-        if (!Textbox.isOpen) {
-            isPaused = !isPaused;
+            GameManager.ResetMovement();
 
-            if (isPaused) Time.timeScale = 0f;
-            else Time.timeScale = 1f;
+            isOpen = !isOpen;
+            gameObject.SetActive(isOpen);
+
+            Time.timeScale = isOpen ? 0f : 1f;
         }
-        
-        gameObject.SetActive(isPaused);
     }
 
     public void OnReturn() {
-        Toggle();
+        ToggleVisibility();
     }
 
     public void OnRestart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Toggle();
+        ToggleVisibility();
     }
 
     public void OnQuit() {
         SceneManager.LoadScene("Main Menu");
-        Toggle();
+        ToggleVisibility();
     }
 }

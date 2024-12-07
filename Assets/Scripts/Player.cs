@@ -28,6 +28,9 @@ public class Player : MonoBehaviour {
     public bool grounded;
     public bool walled;
     public Vector2 CurrentVelocity { get; set; }
+    public static bool shouldMove = true;
+    public static bool shouldInput = true;
+
     
     [Header("Color")]
     public ColorName currentColorName;
@@ -62,10 +65,7 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
-        GameManager.shouldInput = !Textbox.isOpen && !Pause.isPaused;
-        GameManager.shouldMove = !Textbox.isOpen && !Pause.isPaused;
-
-        if (GameManager.shouldMove) HandleInput();
+        if (shouldMove) HandleInput();
         
         grounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
         walled = Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (GameManager.shouldMove && !_isWallSliding) {
+        if (shouldMove && !_isWallSliding) {
             Move();
         }
 
