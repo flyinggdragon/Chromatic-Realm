@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Block : MonoBehaviour {
+public class Block : MonoBehaviour, ICanColorChange {
     // Public
     public Collider2D blockCollider;
     public ColorName currentColorName;
-    public ColorAttr colorAttr { get; protected set; }
+    public ColorAttr colorAttr { get; set; }
     public Rigidbody2D rb { get; protected set; }
     public SpriteRenderer sr { get; protected set; }
     
     // Protected
     protected Vector2 _position;
-    public Color32 _color;
+    public Color32 color { get; set; }
 
     protected virtual void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -22,8 +22,8 @@ public class Block : MonoBehaviour {
         colorAttr = ChrColor.FindColorAttr(currentColorName);
 
         currentColorName = colorAttr.chrColorName;
-        _color = colorAttr.rgbValue;
-        sr.color = _color;
+        color = colorAttr.rgbValue;
+        sr.color = color;
     }
 
     public virtual void ObjectAttrVisualColorChange(ColorAttr newColorAttr) {
@@ -31,11 +31,11 @@ public class Block : MonoBehaviour {
         colorAttr = newColorAttr;
 
         currentColorName = colorAttr.chrColorName;
-        _color = colorAttr.rgbValue;
-        sr.color = _color;
+        color = colorAttr.rgbValue;
+        sr.color = color;
     }
 
-    public virtual void ColorUpdate(ColorAttr newColorAttr) {
+    public virtual void ChangeColor(ColorAttr newColorAttr) {
         ObjectAttrVisualColorChange(newColorAttr);
 
         // Atualiza também a cor de qualquer outro componente <Block> associado ao mesmo Object.
@@ -58,6 +58,14 @@ public class Block : MonoBehaviour {
         return false;
     }
 
+    protected virtual void OnTriggerEnter2D(UnityEngine.Collider2D collision) {
+        if (collision.gameObject.CompareTag("MixRay")) {
+            MixRay mixRay = collision.gameObject.GetComponent<MixRay>();
+
+            mixRay.CauseColorChange(gameObject);
+        }
+    }
+    
     protected virtual void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("ThePlayer")) {
             Player player = collision.gameObject.GetComponent<Player>();

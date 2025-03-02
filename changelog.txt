@@ -1,7 +1,6 @@
-CHANGELOG - Alpha 1.0.2
+CHANGELOG - v.1.0.2-hotfix.1-alpha
 
 ADDED
-- SFX added: Ice Block Melt.
 
 CHANGED
 
@@ -10,6 +9,7 @@ DEPRECATED
 REMOVED
 
 FIXED
+- Fixed bug where movement would be locked after UI appearing.
 
 SECURITY
 

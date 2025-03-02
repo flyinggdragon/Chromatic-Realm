@@ -24,13 +24,13 @@ public class ConnectedBlock : Block {
 
     private void ApplyColorToBlock(Block block, ColorAttr colorAttr) {
         block.currentColorName = colorAttr.chrColorName;
-        block._color = colorAttr.rgbValue;
+        block.color = colorAttr.rgbValue;
         block.sr.color = colorAttr.rgbValue;
 
         foreach (Block subBlock in block.GetComponents<Block>()) {
             if (subBlock != block) {
                 subBlock.currentColorName = colorAttr.chrColorName;
-                subBlock._color = colorAttr.rgbValue;
+                subBlock.color = colorAttr.rgbValue;
                 subBlock.sr.color = colorAttr.rgbValue;
             }
         }

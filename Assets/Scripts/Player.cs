@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour, ICanColorChange {
     // Private
     private float _speed = 15f;
     private float _harmonySpeedBonus = 0f;
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour {
     
     [Header("Color")]
     public ColorName currentColorName;
-    public ColorAttr colorAttr { get; private set; }
+    public ColorAttr colorAttr { get; set; }
 
 
     [Header("Collision Checks")]
@@ -162,5 +162,13 @@ public class Player : MonoBehaviour {
     public void ResetMovement() {
          rb.linearVelocity = Vector2.zero;
          CurrentVelocity = Vector2.zero;
+    }
+
+    protected virtual void OnTriggerEnter2D(UnityEngine.Collider2D collision) {
+        if (collision.gameObject.CompareTag("MixRay")) {
+            MixRay mixRay = collision.gameObject.GetComponent<MixRay>();
+
+            mixRay.CauseColorChange(gameObject);
+        }
     }
 }
