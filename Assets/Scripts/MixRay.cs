@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MixRay : MonoBehaviour {
+public class MixRay : MonoBehaviour, IColorChanger {
     public ColorName currentColorName;
     public ColorAttr colorAttr { get; protected set; }
     public SpriteRenderer sr { get; protected set; }

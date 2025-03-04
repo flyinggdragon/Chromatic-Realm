@@ -164,11 +164,22 @@ public class Player : MonoBehaviour, ICanColorChange {
          CurrentVelocity = Vector2.zero;
     }
 
-    protected virtual void OnTriggerEnter2D(UnityEngine.Collider2D collision) {
-        if (collision.gameObject.CompareTag("MixRay")) {
-            MixRay mixRay = collision.gameObject.GetComponent<MixRay>();
+    protected void OnTriggerEnter2D(UnityEngine.Collider2D collision) {
+        if (collision.gameObject.CompareTag("MixRay") || collision.gameObject.CompareTag("ChangeRay")) {
+            collision.gameObject.GetComponent<IColorChanger>().CauseColorChange(gameObject);
+        }
+    }
 
-            mixRay.CauseColorChange(gameObject);
+    protected void OnCollisionEnter2D(Collision2D collider) {
+        if (collider.gameObject.CompareTag("Wall")) {
+            Surface s = collider.gameObject.GetComponent<Surface>();
+            
+            if (
+                ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(s.colorName))
+                is Harmony.Analogue
+            ) {
+                _shouldWallJump = true;
+            }
         }
     }
 }

@@ -59,10 +59,8 @@ public class Block : MonoBehaviour, ICanColorChange {
     }
 
     protected virtual void OnTriggerEnter2D(UnityEngine.Collider2D collision) {
-        if (collision.gameObject.CompareTag("MixRay")) {
-            MixRay mixRay = collision.gameObject.GetComponent<MixRay>();
-
-            mixRay.CauseColorChange(gameObject);
+        if (collision.gameObject.CompareTag("MixRay") || collision.gameObject.CompareTag("ChangeRay")) {
+            collision.gameObject.GetComponent<IColorChanger>().CauseColorChange(gameObject);
         }
     }
     

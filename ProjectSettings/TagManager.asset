@@ -12,6 +12,7 @@ TagManager:
   - ChangeRoom
   - Water
   - MixRay
+  - ChangeRay
   layers:
   - Default
   - TransparentFX
