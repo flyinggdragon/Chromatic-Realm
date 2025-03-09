@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: 2265857032150864121}
   - component: {fileID: 2830187076227285770}
   - component: {fileID: 2723063512721657191}
-  - component: {fileID: 6158125386471672575}
   m_Layer: 0
   m_Name: Lock
   m_TagString: Untagged
@@ -212,21 +211,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6158125386471672575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4995739756480740081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e219d99d80c75246a6d6eff00d09d6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: {fileID: 0}
-  locked: 0
-  completed: 0
 --- !u!1 &8413617811258484058
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,11 +221,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6601046391041757957}
   - component: {fileID: 7972226855732067949}
+  - component: {fileID: 6678104814333212767}
   - component: {fileID: 3073079074622380104}
   - component: {fileID: 542912272088160031}
   - component: {fileID: 5047293459385879033}
-  - component: {fileID: 1904603935780963405}
-  - component: {fileID: 6678104814333212767}
   m_Layer: 5
   m_Name: Level
   m_TagString: Untagged
@@ -278,6 +261,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8413617811258484058}
   m_CullTransparentMesh: 1
+--- !u!114 &6678104814333212767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8413617811258484058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 325abc1e7159f7747a7c3dc8bac1b1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickClip: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverClip: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
+  number: {fileID: 7009270592580078699}
+  level: {fileID: 0}
 --- !u!114 &3073079074622380104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,9 +324,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1904603935780963405}
-          m_TargetAssemblyTypeName: Level, Assembly-CSharp
-          m_MethodName: Load
+        - m_Target: {fileID: 6678104814333212767}
+          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+          m_MethodName: LoadStage
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -393,9 +392,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1904603935780963405}
-        m_TargetAssemblyTypeName: Level, Assembly-CSharp
-        m_MethodName: Load
+      - m_Target: {fileID: 6678104814333212767}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: HoverSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -405,34 +404,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1904603935780963405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8413617811258484058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13907b70e56a42949929935093bb2a5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelName: Forest-1
-  cccUses: -1
-  levelMusic: {fileID: 8300000, guid: a07a236810f42174fa7c5570fba9e5c2, type: 3}
-  locked: 0
-  completed: 0
---- !u!114 &6678104814333212767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8413617811258484058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 325abc1e7159f7747a7c3dc8bac1b1f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickClip: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
-  hoverClip: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
+      - m_Target: {fileID: 6678104814333212767}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: LoadStage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: Level, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

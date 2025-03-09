@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b78b70891a5124ca369e05d1dbf442, type: 3}
+  m_Name: Forest
+  m_EditorClassIdentifier: 
+  worldName: Forest
+  levels:
+  - {fileID: 11400000, guid: b87c32609b13fba418aab3f499351d83, type: 2}
+  - {fileID: 11400000, guid: 3683de013eed84a428fb09c3f7927b73, type: 2}
+  backgroundMusic: {fileID: 8300000, guid: 3dc46c4cb48fc0c42922df4440d15609, type: 3}
+  background: {fileID: 11400000, guid: dcfb022105306e14c9964be943b9889a, type: 2}

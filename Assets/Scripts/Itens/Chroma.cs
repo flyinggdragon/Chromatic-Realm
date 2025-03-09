@@ -1,10 +1,22 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Chroma : Item {
     public AudioClip victorySound;
+    public Level level;
     protected override void Collect() {
         AudioManager.Instance.PlaySFX(victorySound, 1.0f);
 
-        StartCoroutine(GameObject.FindFirstObjectByType<Level>().End());
+        StartCoroutine(EndStage());
+    }
+
+    private IEnumerator EndStage() {
+        UIManager uiManager = FindFirstObjectByType<UIManager>();
+
+        level.completed = true;
+
+        yield return StartCoroutine(uiManager.DisplayVictory());
+        SceneManager.LoadScene("Level Select");
     }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,4 +30,4 @@ public class Level: MonoBehaviour {
         yield return StartCoroutine(uiManager.DisplayVictory());
         SceneManager.LoadScene("Level Select");
     }
-}
+}*/
