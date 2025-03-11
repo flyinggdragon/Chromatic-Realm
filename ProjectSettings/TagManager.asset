@@ -50,14 +50,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: SkyCloud
+  - name: Far Far
     uniqueID: 1129480165
     locked: 0
-  - name: Mountain
-    uniqueID: 2089162797
+  - name: Far
+    uniqueID: 1031574555
     locked: 0
-  - name: Pines
-    uniqueID: 4181695163
+  - name: Mid-Far
+    uniqueID: 3653385437
+    locked: 0
+  - name: Mid
+    uniqueID: 1135405355
+    locked: 0
+  - name: Close
+    uniqueID: 403270587
     locked: 0
   - name: Player
     uniqueID: 2306788339

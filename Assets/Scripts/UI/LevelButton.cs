@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class Button : MonoBehaviour {
+public class LevelButton : MonoBehaviour {
     [SerializeField] private AudioClip clickClip;
     [SerializeField] private AudioClip hoverClip;
     [SerializeField] public TMP_Text number;
@@ -17,10 +17,6 @@ public class Button : MonoBehaviour {
     }
 
     public void LoadStage() {
-        if (level != null) {
-            SceneManager.LoadScene(level.levelName);
-        } else {
-            Debug.LogWarning("O nível não foi atribuído corretamente ao botão!");
-        }
+        level.LoadLevel();
     }
 }

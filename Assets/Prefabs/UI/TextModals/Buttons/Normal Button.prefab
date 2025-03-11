@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5226455119473620256}
   - component: {fileID: 1001327710879963545}
   - component: {fileID: 6165793938874991895}
-  - component: {fileID: 658867917358190460}
   - component: {fileID: 1112908256848218736}
+  - component: {fileID: 427842580357961015}
   m_Layer: 5
   m_Name: Normal Button
   m_TagString: Untagged
@@ -123,8 +123,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 658867917358190460}
-        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+      - m_Target: {fileID: 427842580357961015}
+        m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
         m_MethodName: ClickSound
         m_Mode: 1
         m_Arguments:
@@ -135,20 +135,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &658867917358190460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8140608382634542283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 325abc1e7159f7747a7c3dc8bac1b1f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickClip: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
-  hoverClip: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!114 &1112908256848218736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,8 +152,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 658867917358190460}
-          m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        - m_Target: {fileID: 427842580357961015}
+          m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
           m_MethodName: HoverSound
           m_Mode: 1
           m_Arguments:
@@ -178,6 +164,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &427842580357961015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140608382634542283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb6144be9549d8459ca81100a2617e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickClip: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverClip: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
+  number: {fileID: 0}
+  level: {fileID: 0}
 --- !u!1 &8740680129996542270
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +272,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 60.55
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1

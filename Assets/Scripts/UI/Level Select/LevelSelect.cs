@@ -48,7 +48,9 @@ public class LevelSelect : MonoBehaviour {
 
         foreach (Level level in currentlySelectedWorld.levels) {
             GameObject levelInstance = Instantiate(levelPrefab, levelHolder);
-            Button btn = levelInstance.GetComponent<Button>();
+            levelInstance.name = $"{world.name}-{i}";
+
+            LevelButton btn = levelInstance.GetComponent<LevelButton>();
             btn.level = level;
             btn.number.text = i.ToString();
 

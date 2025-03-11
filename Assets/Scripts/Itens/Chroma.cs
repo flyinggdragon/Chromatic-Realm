@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Chroma : Item {
     public AudioClip victorySound;
     public Level level;
+
     protected override void Collect() {
         AudioManager.Instance.PlaySFX(victorySound, 1.0f);
 
@@ -17,6 +18,7 @@ public class Chroma : Item {
         level.completed = true;
 
         yield return StartCoroutine(uiManager.DisplayVictory());
+        GameManager.chromaticCircleUses = 0;
         SceneManager.LoadScene("Level Select");
     }
 }

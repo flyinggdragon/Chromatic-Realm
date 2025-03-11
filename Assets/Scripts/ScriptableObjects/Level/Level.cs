@@ -11,4 +11,10 @@ public class Level : ScriptableObject {
     public bool available;
     public bool completed = false;
     public int cccUses;
+
+    public void LoadLevel() {
+        GameManager.chromaticCircleUses = cccUses;
+        AudioManager.Instance.PlayMusic(levelMusic);
+        SceneManager.LoadScene(levelName);
+    }
 }
