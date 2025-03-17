@@ -219,26 +219,6 @@ public static class ChrColor {
             return Magenta;
         }
 
-        // Definições de mistura de cores secundárias + primárias
-        if ((color1 == ColorName.Orange && color2 == ColorName.Red) || (color1 == ColorName.Red && color2 == ColorName.Orange)) {
-            return Rose;
-        }
-        if ((color1 == ColorName.Orange && color2 == ColorName.Yellow) || (color1 == ColorName.Yellow && color2 == ColorName.Orange)) {
-            return Lime;
-        }
-        if ((color1 == ColorName.Green && color2 == ColorName.Yellow) || (color1 == ColorName.Yellow && color2 == ColorName.Green)) {
-            return Lime;
-        }
-        if ((color1 == ColorName.Green && color2 == ColorName.Blue) || (color1 == ColorName.Blue && color2 == ColorName.Green)) {
-            return Springgreen;
-        }
-        if ((color1 == ColorName.Magenta && color2 == ColorName.Red) || (color1 == ColorName.Red && color2 == ColorName.Magenta)) {
-            return Rose;
-        }
-        if ((color1 == ColorName.Magenta && color2 == ColorName.Blue) || (color1 == ColorName.Blue && color2 == ColorName.Magenta)) {
-            return Violet;
-        }
-
         Debug.LogWarning("Nenhuma mistura válida encontrada para as cores fornecidas.");
         return null;
     }

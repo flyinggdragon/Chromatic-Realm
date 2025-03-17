@@ -31,8 +31,8 @@ public class AudioManager : MonoBehaviour {
         musicSource.Play();
     }
 
-    public void PlaySFX(AudioClip clip, float volume = 0.5f) {
-        sfxSource.volume = volume;
+    // Volume pode ser ajustável, mas por enquanto não precisa.
+    public void PlaySFX(AudioClip clip) {
         sfxSource.PlayOneShot(clip);
     }
 }

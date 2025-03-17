@@ -229,6 +229,12 @@ MonoBehaviour:
   currentColorName: 6
   connectedBlock: {fileID: 339459704}
   connectionType: 0
+  lineRenderer: {fileID: 103956652}
+--- !u!120 &103956652 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 5762442026946878338, guid: f24084ca3522b84458b5d8d58ebdaeed, type: 3}
+  m_PrefabInstance: {fileID: 1251969633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &130434898
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +567,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1f345d2c1de81419c618ecc007689a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!120 &396230475 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 2324051215680122889, guid: 600b4febfcb2816489e8c819db7faec6, type: 3}
+  m_PrefabInstance: {fileID: 2056695822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &411414998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26839,6 +26850,18 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1988178957
       objectReference: {fileID: 0}
+    - target: {fileID: 2324051215680122889, guid: 600b4febfcb2816489e8c819db7faec6, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2324051215680122889, guid: 600b4febfcb2816489e8c819db7faec6, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.5354843
+      objectReference: {fileID: 0}
+    - target: {fileID: 2680046242883691289, guid: 600b4febfcb2816489e8c819db7faec6, type: 3}
+      propertyPath: lineRenderer
+      value: 
+      objectReference: {fileID: 396230475}
     - target: {fileID: 2680046242883691289, guid: 600b4febfcb2816489e8c819db7faec6, type: 3}
       propertyPath: connectedBlock
       value: 
@@ -26849,7 +26872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2680046242883691289, guid: 600b4febfcb2816489e8c819db7faec6, type: 3}
       propertyPath: currentColorName
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2730732229132788614, guid: 600b4febfcb2816489e8c819db7faec6, type: 3}
       propertyPath: m_SortingLayer

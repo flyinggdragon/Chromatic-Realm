@@ -25,17 +25,19 @@ public class SoftBlock : Block {
                 return 0f;
             
             default:
-                return 2.5f;
+            return 2.5f;
         }
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision) {
-        if (IsTopCollision(collision.contacts)) {
-            Player player = collision.gameObject.GetComponent<Player>();
+        if (collision.gameObject.CompareTag("ThePlayer")) {
+            if (IsTopCollision(collision.contacts)) {
+                Player player = collision.gameObject.GetComponent<Player>();
 
-            // Calcula a altura do pulo com base na cor
-            float jumpForce = GetJumpHeight(player.colorAttr);
-            player.Jump(jumpForce);
+                // Calcula a altura do pulo com base na cor
+                float jumpForce = GetJumpHeight(player.colorAttr);
+                player.Jump(jumpForce);
+            }
         }
     }
 }

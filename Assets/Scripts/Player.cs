@@ -55,6 +55,8 @@ public class Player : MonoBehaviour, ICanColorChange {
         material = GetComponent<Renderer>().material;
         animator = GetComponent<Animator>();
         ChangeColor(ChrColor.FindColorAttr(currentColorName));
+
+        shouldMove = true;
     }
 
     public void ChangeColor(ColorAttr newColorAttr) {

@@ -6,6 +6,35 @@ using UnityEngine;
 public class ConnectedBlock : Block {
     [SerializeField] public ConnectedBlock connectedBlock;
     [SerializeField] public ConnectionType connectionType;
+    [SerializeField] public LineRenderer lineRenderer;
+    
+    protected override void Start() {
+        rb = GetComponent<Rigidbody2D>();
+        sr = GetComponentInChildren<SpriteRenderer>();
+
+        // Atualiza a cor para a cor escolhida no Inspector.
+        colorAttr = ChrColor.FindColorAttr(currentColorName);
+
+        currentColorName = colorAttr.chrColorName;
+        color = colorAttr.rgbValue;
+        sr.color = color;
+
+        lineRenderer.startWidth = 0.1f;
+        lineRenderer.endWidth = 0.1f;
+        lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        lineRenderer.startColor = new Color(1f, 1f, 1f, 0.5f);
+        lineRenderer.endColor = new Color(1f, 1f, 1f, 0.5f);
+        lineRenderer.positionCount = 2;
+    }
+
+    protected void Update() {
+        if (connectedBlock is not null) {
+            lineRenderer.SetPosition(0, transform.position);
+            lineRenderer.SetPosition(1, connectedBlock.transform.position);
+        }
+
+        UpdateConnectingLineColor();
+    }
 
     public override void ObjectAttrVisualColorChange(ColorAttr newColorAttr) {
         if (connectionType == ConnectionType.Contrast) {
@@ -23,6 +52,7 @@ public class ConnectedBlock : Block {
     }
 
     private void ApplyColorToBlock(Block block, ColorAttr colorAttr) {
+        block.colorAttr = colorAttr;
         block.currentColorName = colorAttr.chrColorName;
         block.color = colorAttr.rgbValue;
         block.sr.color = colorAttr.rgbValue;
@@ -33,6 +63,24 @@ public class ConnectedBlock : Block {
                 subBlock.color = colorAttr.rgbValue;
                 subBlock.sr.color = colorAttr.rgbValue;
             }
+        }
+    }
+
+    private void UpdateConnectingLineColor() {
+        Color thisColor = colorAttr.rgbValue;
+        Color connectedColor = connectedBlock.colorAttr.rgbValue;
+
+        if (connectionType is ConnectionType.Contrast) {
+            lineRenderer.startColor = new Color(thisColor.r, thisColor.g, thisColor.b, 0.5f);
+            lineRenderer.endColor = new Color(connectedColor.r, connectedColor.g, connectedColor.b, 0.5f);
+
+            Debug.Log(thisColor);
+            Debug.Log(connectedColor);
+            Debug.Log(lineRenderer.startColor);
+            Debug.Log(lineRenderer.endColor);
+        } else {            
+            lineRenderer.startColor = new Color(thisColor.r, thisColor.g, thisColor.b, 0.5f);
+            lineRenderer.endColor = new Color(thisColor.r, thisColor.g, thisColor.b, 0.5f);
         }
     }
 

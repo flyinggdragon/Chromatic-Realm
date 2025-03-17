@@ -7,7 +7,8 @@ public class Chroma : Item {
     public Level level;
 
     protected override void Collect() {
-        AudioManager.Instance.PlaySFX(victorySound, 1.0f);
+        AudioManager.Instance.PlaySFX(victorySound);
+        Player.shouldMove = false;
 
         StartCoroutine(EndStage());
     }
