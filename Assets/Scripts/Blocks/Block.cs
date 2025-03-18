@@ -72,33 +72,14 @@ public class Block : MonoBehaviour, ICanColorChange {
                 player.grounded = true;
             }
 
-            /*
-            // Puxabilidade dos blocos pelo player.
             Harmony currentHarmony = ChrColor.DetermineHarmony(colorAttr, player.colorAttr);
 
-            // Se a harmonia não for análoga nem igual, não é puxável.
-            if (currentHarmony is not Harmony.Equal && currentHarmony is not Harmony.Analogue) {
-                rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+            if (currentHarmony is Harmony.Equal || currentHarmony is Harmony.Analogue) {
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             } else {
-                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-            }*/
-        }
-        
-        /*
-        // "Puxabuilidade de blocos por blocos".
-        if (collision.gameObject.CompareTag("Block")) {
-            Block block = collision.gameObject.GetComponent<Block>();
-
-            Harmony currentHarmony = ChrColor.DetermineHarmony(colorAttr, block.colorAttr);
-
-            // Se a harmonia não for análoga nem igual, não é puxável.
-            if (currentHarmony is not Harmony.Equal && currentHarmony is not Harmony.Analogue) {
                 rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
-            } else {
-                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             }
         }
-        */
     }
 
     protected virtual void OnCollisionExit2D(Collision2D collision) {

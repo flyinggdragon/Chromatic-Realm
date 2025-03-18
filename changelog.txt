@@ -1,16 +1,11 @@
-CHANGELOG - v.1.0.2-hotfix.1-alpha
+# CHANGELOG -  v.1.0.2-beta
 
-ADDED
+## **Added:**
+- Added pull and push ability to blocks.
 
-CHANGED
+## **Changed:**
 
-DEPRECATED
 
-REMOVED
+## **Fixed:**
 
-FIXED
-- Fixed bug where movement would be locked after UI appearing.
-
-SECURITY
-
-DO NOT FORGET TO DELETE AUDIO MANAGER FROM THE SCENE BEFORE RELEASING.
+(Reativar caixas de diálogo Forest-1)

@@ -14,6 +14,8 @@ public class Player : MonoBehaviour, ICanColorChange {
     private float _wallJumpingDuration = 0.4f;
     private Vector2 _wallJumpingPower = new Vector2(8f, 16f);
     private bool _shouldWallJump = false;
+    private bool _isGrabbing = false;
+    private Block _grabbedBlock;
     private Color _color;
     private Material material;
     private Animator animator;
@@ -80,6 +82,9 @@ public class Player : MonoBehaviour, ICanColorChange {
         }
 
         animator.SetBool("IsWalking", CurrentVelocity.x != 0f);
+        HandleGrabbing();
+
+        Debug.Log(_harmonySpeedBonus);
     }
 
     private void FixedUpdate() {
@@ -87,13 +92,37 @@ public class Player : MonoBehaviour, ICanColorChange {
             Move();
         }
 
+        if (_isGrabbing && _grabbedBlock != null) {
+            _grabbedBlock.rb.linearVelocity = new Vector2(rb.linearVelocity.x, _grabbedBlock.rb.linearVelocity.y);
+        }
+
         CurrentVelocity = rb.linearVelocity;
+    }
+
+    private void HandleGrabbing() {
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            if (_grabbedBlock == null) {
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1.5f);
+                foreach (Collider2D collider in colliders) {
+                    if (collider.CompareTag("Block")) {
+                        _grabbedBlock = collider.GetComponent<Block>();
+                        _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                        _isGrabbing = true;
+                        break; // Sai do loop ao encontrar o primeiro bloco
+                    }
+                }
+            } else {
+                _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+                _grabbedBlock = null;
+                _isGrabbing = false;
+            }
+        }
     }
 
     private void Move() {
         float hInput = Input.GetAxis("Horizontal");
-        Vector2 movement = new(hInput * (_speed + _harmonySpeedBonus), rb.linearVelocity.y);
-        rb.linearVelocity = movement;
+        Debug.Log("hInput: " + hInput);
+        rb.linearVelocity = new Vector2(hInput * (_speed + _harmonySpeedBonus), rb.linearVelocity.y);
     }
 
     private void HandleInput() {
