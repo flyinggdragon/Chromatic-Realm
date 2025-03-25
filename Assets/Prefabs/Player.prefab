@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 4320488770740460179}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.207, y: -0.029, z: 0}
+  m_LocalPosition: {x: -0.001, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93,7 +93,7 @@ Transform:
   m_GameObject: {fileID: 4860876960867040513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.24, y: -2.9, z: 0}
+  m_LocalPosition: {x: 26.3, y: 9.8, z: 0}
   m_LocalScale: {x: 4.477731, y: 4.4777308, z: 4.4777308}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -253,6 +253,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3c8a1ed2-105e-49f3-a482-b6e3f516cab3
     m_ActionName: 'Player/Jump[/Keyboard/w,/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2393483156959455091}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ToggleChromaticCircle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0c017d34-14ca-4b29-8aff-41a942f30299
+    m_ActionName: 'Player/Chromatic Circle[/Keyboard/tab]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2393483156959455091}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: HandleGrabbing
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c77f00f6-551a-4aba-8ce8-f11d7ed7c419
+    m_ActionName: 'Player/Grab[/Keyboard/shift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -274,12 +306,12 @@ MonoBehaviour:
   horizontalMovement: 0
   jumpForce: 12
   groundCheckPos: {fileID: 7351204308057530651}
-  groundCheckSize: {x: 1.77, y: 0.14}
+  groundCheckSize: {x: 1.61, y: 0.14}
   groundLayer:
     serializedVersion: 2
     m_Bits: 384
   wallCheckPos: {fileID: 4697679751555187913}
-  wallCheckSize: {x: 0.11, y: -0.68}
+  wallCheckSize: {x: 1.73, y: -0.68}
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -288,11 +320,16 @@ MonoBehaviour:
   fallSpeedMultiplier: 2
   wallSlideSpeed: 2
   isWallSliding: 0
+  isWallJumping: 0
+  wallJumpDirection: 0
+  wallJumpTime: 0.5
+  wallJumpTimer: 0
+  wallJumpPower: {x: 5, y: 10}
   rb: {fileID: 6894139691818603135}
   sr: {fileID: 1106296971385818084}
   grounded: 1
   walled: 0
-  currentColorName: 6
+  currentColorName: 1
   walk: {fileID: 0}
   jump: {fileID: 8300000, guid: 394d802f1035a79469095d4bd58a591b, type: 3}
   die: {fileID: 8300000, guid: 840881ffb943f8c4982710c4016fa666, type: 3}

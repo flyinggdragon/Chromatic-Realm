@@ -13,7 +13,7 @@ public class SoftBlock : Block {
                 return 25f;
 
             case Harmony.Complementary:
-                return 245f;
+                return 25f;
             
             case Harmony.Analogue:
                 return 18f;

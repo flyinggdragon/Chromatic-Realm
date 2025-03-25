@@ -20,12 +20,6 @@ public class ColorInterface: UIElement {
         ColorHighlight(player.currentColorName);
     }
 
-    protected override void Update() {
-        if (Input.GetKeyDown(KeyCode.Q)) {
-            ToggleVisibility();
-        }
-    }
-
     public void ColorHighlight(ColorName colorName) {
         ColorAttr colorAttr = ChrColor.FindColorAttr(colorName);
 

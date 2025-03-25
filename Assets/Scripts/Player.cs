@@ -26,6 +26,7 @@ public class Player : MonoBehaviour, ICanColorChange {
     public float fallSpeedMultiplier = 2f;
     
     [Header("Wall Movement")]
+    private bool shouldWallJump;
     public float wallSlideSpeed = 2f;
     public bool isWallSliding = false;
     public bool isWallJumping;
@@ -37,7 +38,6 @@ public class Player : MonoBehaviour, ICanColorChange {
     [Header("Grabbing")]
     private bool _isGrabbing = false;
     private Block _grabbedBlock;
-    private Color _color;
 
     [Header("Components")]
     public Rigidbody2D rb;
@@ -62,6 +62,9 @@ public class Player : MonoBehaviour, ICanColorChange {
     [SerializeField] private AudioClip jump;
     [SerializeField] private AudioClip die;
 
+    [Header("Other")]
+    private Color _color;
+
     // Methods
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -82,10 +85,16 @@ public class Player : MonoBehaviour, ICanColorChange {
             rb.linearVelocity = new(horizontalMovement * speed, rb.linearVelocity.y);
             // Flip
         }
-
-        HandleInput();
+        
         animator.SetBool("IsWalking", CurrentVelocity.x != 0f);
-        HandleGrabbing();
+    }
+
+    private void FixedUpdate() {
+        if (_isGrabbing && _grabbedBlock != null) {
+            _grabbedBlock.rb.linearVelocity = new(rb.linearVelocity.x, _grabbedBlock.rb.linearVelocity.y);
+        }
+
+        CurrentVelocity = rb.linearVelocity;
     }
 
     public void Move(InputAction.CallbackContext context) {
@@ -93,24 +102,34 @@ public class Player : MonoBehaviour, ICanColorChange {
     }
 
     public void Jump(InputAction.CallbackContext context) {
-        if (!IsGrounded()) return;
-
-        if (context.performed) {
-            rb.linearVelocity = new(rb.linearVelocity.x, jumpForce);
-        } else if (context.canceled) {
-            rb.linearVelocity = new(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+        if (IsGrounded()) {
+            if (context.performed) {
+                rb.linearVelocity = new(rb.linearVelocity.x, jumpForce);
+            } else if (context.canceled) {
+                rb.linearVelocity = new(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            }
         }
 
-        if (context.performed && wallJumpTimer > 0f) {
+        Debug.Log(shouldWallJump);
+        if (context.performed && wallJumpTimer > 0f && shouldWallJump) {
             isWallJumping = true;
             rb.linearVelocity = new(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
             wallJumpTimer = 0;
 
             if (transform.localScale.x != wallJumpDirection) {
-                //Flip
+                // Flip
             }
 
             Invoke(nameof(CancelWallJump), wallJumpTime * 0.1f);
+        }
+    }
+
+    public void ToggleChromaticCircle(InputAction.CallbackContext context) {
+        if (context.performed) {
+            if (GameManager.chromaticCircleUses != 0) {
+                ColorInterface ci = GameObject.Find("UI").transform.GetChild(1).GetComponent<ColorInterface>();
+                ci.ToggleVisibility();
+            }
         }
     }
     public void SoftBlockJump(float force) {
@@ -171,16 +190,8 @@ public class Player : MonoBehaviour, ICanColorChange {
         material.SetFloat("_HueShift", newColorAttr.hueShift);
     }
 
-    private void FixedUpdate() {
-        if (_isGrabbing && _grabbedBlock != null) {
-            _grabbedBlock.rb.linearVelocity = new(rb.linearVelocity.x, _grabbedBlock.rb.linearVelocity.y);
-        }
-
-        CurrentVelocity = rb.linearVelocity;
-    }
-
-    private void HandleGrabbing() {
-        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+    public void HandleGrabbing(InputAction.CallbackContext context) {
+        if (context.performed) {
             if (_grabbedBlock == null) {
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1.5f);
                 foreach (Collider2D collider in colliders) {
@@ -188,10 +199,13 @@ public class Player : MonoBehaviour, ICanColorChange {
                         _grabbedBlock = collider.GetComponent<Block>();
                         _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                         _isGrabbing = true;
-                        break; // Sai do loop ao encontrar o primeiro bloco
+                        break;
                     }
                 }
-            } else {
+            }
+        } 
+        else if (context.canceled) {
+            if (_grabbedBlock != null) {
                 _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
                 _grabbedBlock = null;
                 _isGrabbing = false;
@@ -199,17 +213,8 @@ public class Player : MonoBehaviour, ICanColorChange {
         }
     }
 
-    private void HandleInput() {
-        if (Input.GetKeyDown(KeyCode.Q)) {
-            if (GameManager.chromaticCircleUses != 0) {
-                ColorInterface ci = GameObject.Find("UI").transform.GetChild(1).GetComponent<ColorInterface>();
-                ci.ToggleVisibility();
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            GameObject.FindFirstObjectByType<UIManager>().TogglePause();
-        }
+    public void Pause() {
+        GameObject.FindFirstObjectByType<UIManager>().TogglePause();
     }
 
     public void ResetMovement() {
@@ -232,14 +237,12 @@ public class Player : MonoBehaviour, ICanColorChange {
 
     protected void OnCollisionEnter2D(Collision2D collider) {
         if (collider.gameObject.CompareTag("Wall")) {
+            Debug.Log("Wall Collision");
             Surface s = collider.gameObject.GetComponent<Surface>();
-            
-            if (
-                ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(s.colorName))
-                is Harmony.Analogue
-            ) {
-                //_shouldWallJump = true;
-            }
+
+            Harmony harmony = ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(s.colorName));
+
+            shouldWallJump = harmony is Harmony.Analogue || harmony is Harmony.Equal;
         }
     }
 }

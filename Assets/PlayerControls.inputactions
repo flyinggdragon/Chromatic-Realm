@@ -1,5 +1,5 @@
 {
-    "name": "PlayerComtrols",
+    "name": "PlayerControls",
     "maps": [
         {
             "name": "Player",
@@ -18,6 +18,24 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "3c8a1ed2-105e-49f3-a482-b6e3f516cab3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Chromatic Circle",
+                    "type": "Button",
+                    "id": "0c017d34-14ca-4b29-8aff-41a942f30299",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Grab",
+                    "type": "Button",
+                    "id": "c77f00f6-551a-4aba-8ce8-f11d7ed7c419",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -99,6 +117,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e32e1dbc-f3a3-404f-9809-b7f2c48a9165",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Chromatic Circle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "80d859cf-2089-438b-a53a-3ce91b16d670",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

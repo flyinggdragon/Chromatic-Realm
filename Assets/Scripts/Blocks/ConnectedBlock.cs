@@ -73,11 +73,6 @@ public class ConnectedBlock : Block {
         if (connectionType is ConnectionType.Contrast) {
             lineRenderer.startColor = new Color(thisColor.r, thisColor.g, thisColor.b, 0.5f);
             lineRenderer.endColor = new Color(connectedColor.r, connectedColor.g, connectedColor.b, 0.5f);
-
-            Debug.Log(thisColor);
-            Debug.Log(connectedColor);
-            Debug.Log(lineRenderer.startColor);
-            Debug.Log(lineRenderer.endColor);
         } else {            
             lineRenderer.startColor = new Color(thisColor.r, thisColor.g, thisColor.b, 0.5f);
             lineRenderer.endColor = new Color(thisColor.r, thisColor.g, thisColor.b, 0.5f);
