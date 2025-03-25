@@ -1,49 +1,61 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour, ICanColorChange {
-    // Private
-    private float _speed = 15f;
-    private float _harmonySpeedBonus = 0f;
-    private float _jumpForce = 12f; 
-    private bool _isFacingRight = true;
-    private bool _isWallSliding;
-    private float _wallSlidingSpeed = 2f;
-    private float _wallJumpingDirection;
-    private float _wallJumpingTime = 0.2f;
-    private float _wallJumpingCounter;
-    private float _wallJumpingDuration = 0.4f;
-    private Vector2 _wallJumpingPower = new Vector2(8f, 16f);
-    private bool _shouldWallJump = false;
+    [Header("Movement")]
+    public float speed = 15f;
+    public float horizontalMovement;
+    private bool isFacingRight = false;
+
+    [Header("Jump")]
+    public float jumpForce = 12f; 
+
+    [Header("Ground Check")]
+    public Transform groundCheckPos;
+    public Vector2 groundCheckSize = new(0.5f, 0.05f);
+    public LayerMask groundLayer;
+
+    [Header("Wall Check")]
+    public Transform wallCheckPos;
+    public Vector2 wallCheckSize = new(0.5f, 0.05f);
+    public LayerMask wallLayer;
+    
+    [Header("Gravity")]
+    public float baseGravity = 2f;
+    public float maxFallSpeed = 10f;
+    public float fallSpeedMultiplier = 2f;
+    
+    [Header("Wall Movement")]
+    public float wallSlideSpeed = 2f;
+    public bool isWallSliding = false;
+    public bool isWallJumping;
+    public float wallJumpDirection;
+    public float wallJumpTime = 0.5f;
+    public float wallJumpTimer;
+    public Vector2 wallJumpPower = new(5f, 10f);
+
+    [Header("Grabbing")]
     private bool _isGrabbing = false;
     private Block _grabbedBlock;
     private Color _color;
-    private Material material;
-    private Animator animator;
 
-    // Public
     [Header("Components")]
     public Rigidbody2D rb;
     public SpriteRenderer sr;
-
+    private Material material;
+    private Animator animator;
     
-    [Header("Movement")]
+    [Header("Movement Constraints")]
     public bool grounded;
     public bool walled;
     public Vector2 CurrentVelocity { get; set; }
     public static bool shouldMove = true;
     public static bool shouldInput = true;
-
+    private float harmonySpeedBonus = 0f;
     
     [Header("Color")]
     public ColorName currentColorName;
     public ColorAttr colorAttr { get; set; }
-
-
-    [Header("Collision Checks")]
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Transform wallCheck;
-    [SerializeField] private LayerMask wallLayer;
 
     [Header("Audio Clips")]
     [SerializeField] private AudioClip walk;
@@ -61,6 +73,97 @@ public class Player : MonoBehaviour, ICanColorChange {
         shouldMove = true;
     }
 
+    private void Update() {
+        Gravity();
+        WallSlide();
+        WallJump();
+        
+        if (!isWallJumping) {
+            rb.linearVelocity = new(horizontalMovement * speed, rb.linearVelocity.y);
+            // Flip
+        }
+
+        HandleInput();
+        animator.SetBool("IsWalking", CurrentVelocity.x != 0f);
+        HandleGrabbing();
+    }
+
+    public void Move(InputAction.CallbackContext context) {
+        horizontalMovement = context.ReadValue<Vector2>().x;
+    }
+
+    public void Jump(InputAction.CallbackContext context) {
+        if (!IsGrounded()) return;
+
+        if (context.performed) {
+            rb.linearVelocity = new(rb.linearVelocity.x, jumpForce);
+        } else if (context.canceled) {
+            rb.linearVelocity = new(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+        }
+
+        if (context.performed && wallJumpTimer > 0f) {
+            isWallJumping = true;
+            rb.linearVelocity = new(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
+            wallJumpTimer = 0;
+
+            if (transform.localScale.x != wallJumpDirection) {
+                //Flip
+            }
+
+            Invoke(nameof(CancelWallJump), wallJumpTime * 0.1f);
+        }
+    }
+    public void SoftBlockJump(float force) {
+        rb.linearVelocity = new(rb.linearVelocity.x, force);
+    }
+
+    private bool IsGrounded() {
+        if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer)) {
+            return true;
+        }
+        
+        return false;
+    }
+
+    private bool IsWalled() {
+        return Physics2D.OverlapBox(wallCheckPos.position, wallCheckSize, 0, wallLayer);
+    }
+
+    private void Gravity() {
+        if (rb.linearVelocity.y < 0) {
+            rb.gravityScale = baseGravity * fallSpeedMultiplier;
+            rb.linearVelocity = new(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -maxFallSpeed));
+        } else {
+            rb.gravityScale = baseGravity;
+        }
+    }
+
+    public void WallSlide() {
+        if (!IsGrounded() && IsWalled() && horizontalMovement != 0) {
+            isWallSliding = true;
+            rb.linearVelocity = new(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -wallSlideSpeed));
+        } else {
+            isWallSliding = false;
+        }
+    }
+
+    private void WallJump() {
+        if (isWallSliding) {
+            isWallJumping = false;
+            wallJumpDirection = -transform.localScale.x;
+            wallJumpTimer = wallJumpTime;
+            
+            CancelInvoke(nameof(CancelWallJump));
+        }
+         else if (wallJumpTimer> 0f) {
+            wallJumpTimer -= Time.deltaTime;
+         }
+    }
+
+    private void CancelWallJump() {
+        isWallJumping = false;
+    }
+
     public void ChangeColor(ColorAttr newColorAttr) {
         colorAttr = newColorAttr;
         currentColorName = colorAttr.chrColorName;
@@ -68,32 +171,9 @@ public class Player : MonoBehaviour, ICanColorChange {
         material.SetFloat("_HueShift", newColorAttr.hueShift);
     }
 
-    private void Update() {
-        if (shouldMove) HandleInput();
-        
-        grounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-        walled = Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
-
-        if (!_isWallSliding) Flip();
-        if (_shouldWallJump) WallJump(); WallSlide();
-
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            GameObject.FindFirstObjectByType<UIManager>().TogglePause();
-        }
-
-        animator.SetBool("IsWalking", CurrentVelocity.x != 0f);
-        HandleGrabbing();
-
-        Debug.Log(_harmonySpeedBonus);
-    }
-
     private void FixedUpdate() {
-        if (shouldMove && !_isWallSliding) {
-            Move();
-        }
-
         if (_isGrabbing && _grabbedBlock != null) {
-            _grabbedBlock.rb.linearVelocity = new Vector2(rb.linearVelocity.x, _grabbedBlock.rb.linearVelocity.y);
+            _grabbedBlock.rb.linearVelocity = new(rb.linearVelocity.x, _grabbedBlock.rb.linearVelocity.y);
         }
 
         CurrentVelocity = rb.linearVelocity;
@@ -119,12 +199,6 @@ public class Player : MonoBehaviour, ICanColorChange {
         }
     }
 
-    private void Move() {
-        float hInput = Input.GetAxis("Horizontal");
-        Debug.Log("hInput: " + hInput);
-        rb.linearVelocity = new Vector2(hInput * (_speed + _harmonySpeedBonus), rb.linearVelocity.y);
-    }
-
     private void HandleInput() {
         if (Input.GetKeyDown(KeyCode.Q)) {
             if (GameManager.chromaticCircleUses != 0) {
@@ -133,66 +207,21 @@ public class Player : MonoBehaviour, ICanColorChange {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded) {
-            Jump(_jumpForce);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0f) {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-        }
-    }
-
-    public void Jump(float jumpForce) {
-        animator.SetTrigger("JumpTrigger");
-        AudioManager.Instance.PlaySFX(jump);
-
-        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        grounded = false;
-    }
-
-    private void WallSlide() {
-        if (walled && !grounded && Input.GetAxisRaw("Horizontal") != 0f) {
-            _isWallSliding = true;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -_wallSlidingSpeed, float.MaxValue));
-        } else {
-            _isWallSliding = false;
-        }
-    }
-
-    private void WallJump() {
-        if (_isWallSliding) {
-            _wallJumpingDirection = -transform.localScale.x;
-            _wallJumpingCounter = _wallJumpingTime;
-        } else {
-            _wallJumpingCounter -= Time.deltaTime;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && _wallJumpingCounter > 0f) {
-            _isWallSliding = false;
-            rb.linearVelocity = new Vector2(_wallJumpingDirection * _wallJumpingPower.x, _wallJumpingPower.y);
-            _wallJumpingCounter = 0f;
-            Invoke(nameof(StopWallJumping), _wallJumpingDuration);
-        }
-    }
-
-    private void StopWallJumping() {
-        _isWallSliding = false;
-    }
-
-    private void Flip() {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-
-        if (_isFacingRight && horizontal < 0f || !_isFacingRight && horizontal > 0f) {
-            _isFacingRight = !_isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            GameObject.FindFirstObjectByType<UIManager>().TogglePause();
         }
     }
 
     public void ResetMovement() {
          rb.linearVelocity = Vector2.zero;
          CurrentVelocity = Vector2.zero;
+    }
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireCube(groundCheckPos.position, groundCheckSize);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(wallCheckPos.position, wallCheckSize);
     }
 
     protected void OnTriggerEnter2D(UnityEngine.Collider2D collision) {
@@ -209,7 +238,7 @@ public class Player : MonoBehaviour, ICanColorChange {
                 ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(s.colorName))
                 is Harmony.Analogue
             ) {
-                _shouldWallJump = true;
+                //_shouldWallJump = true;
             }
         }
     }

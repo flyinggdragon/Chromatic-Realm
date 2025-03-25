@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3113683127335045561}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.144, z: 0}
+  m_LocalPosition: {x: 0, y: -0.157, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 4320488770740460179}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 0, z: 0}
+  m_LocalPosition: {x: 0.207, y: -0.029, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,10 +72,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4584309451928418764}
   - component: {fileID: 1106296971385818084}
+  - component: {fileID: 6504134508963361154}
   - component: {fileID: 2393483156959455091}
   - component: {fileID: 6894139691818603135}
   - component: {fileID: 8757890748069084678}
-  - component: {fileID: 6124399364647246604}
+  - component: {fileID: 1817473590014663397}
   m_Layer: 0
   m_Name: Player
   m_TagString: ThePlayer
@@ -92,7 +93,7 @@ Transform:
   m_GameObject: {fileID: 4860876960867040513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.7, y: -3.4, z: 0}
+  m_LocalPosition: {x: -7.24, y: -2.9, z: 0}
   m_LocalScale: {x: 4.477731, y: 4.4777308, z: 4.4777308}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -142,7 +143,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1988178957
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 3
   m_Sprite: {fileID: 5826479529469629657, guid: 8cd85aa83e8370c44b6a6c04f1c53107, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -155,6 +156,108 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6504134508963361154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860876960867040513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 110ef9dabbc97e543a7826a4d3c62091, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2393483156959455091}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 07457456-d79c-4c60-a7c2-cd2adf04d09c
+    m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bffd1f94-9bac-4a05-96c1-8d43debde0f3
+    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 75b7e656-a5da-46d7-a374-312a94a09f3e
+    m_ActionName: 'UI/Submit[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 435e9e3f-291c-4fa9-9d5d-65abc01ba770
+    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4000ea1-eee4-439d-98ea-42ace8564a9d
+    m_ActionName: 'UI/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e6cebf14-0ef8-4951-99b6-bc9cafb3214b
+    m_ActionName: 'UI/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8ce5a3c1-8590-48cc-b98b-22007d10fb2e
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2d1a4282-b43a-4b0f-866a-12fa97dd537d
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6772cb03-2145-472f-b409-3d169ac8bf16
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ff351c09-91c7-4e0c-9be6-103e08316a2c
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8ccbd9dd-37e5-4a70-a38d-95500ca5c7f4
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2393483156959455091}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3c8a1ed2-105e-49f3-a482-b6e3f516cab3
+    m_ActionName: 'Player/Jump[/Keyboard/w,/Keyboard/space]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &2393483156959455091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,22 +270,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afde26415fdffe419b407a1643e5a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 15
+  horizontalMovement: 0
+  jumpForce: 12
+  groundCheckPos: {fileID: 7351204308057530651}
+  groundCheckSize: {x: 1.77, y: 0.14}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 384
+  wallCheckPos: {fileID: 4697679751555187913}
+  wallCheckSize: {x: 0.11, y: -0.68}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  baseGravity: 2
+  maxFallSpeed: 10
+  fallSpeedMultiplier: 2
+  wallSlideSpeed: 2
+  isWallSliding: 0
   rb: {fileID: 6894139691818603135}
   sr: {fileID: 1106296971385818084}
   grounded: 1
   walled: 0
-  currentColorName: 7
-  groundCheck: {fileID: 7351204308057530651}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 384
-  wallCheck: {fileID: 4697679751555187913}
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  walk: {fileID: 8300000, guid: dd77ef3c5708c314e958166efdba80c9, type: 3}
-  jump: {fileID: 8300000, guid: 67f9f8a205440414b8074e873cdd5ee6, type: 3}
-  die: {fileID: 0}
+  currentColorName: 6
+  walk: {fileID: 0}
+  jump: {fileID: 8300000, guid: 394d802f1035a79469095d4bd58a591b, type: 3}
+  die: {fileID: 8300000, guid: 840881ffb943f8c4982710c4016fa666, type: 3}
 --- !u!50 &6894139691818603135
 Rigidbody2D:
   serializedVersion: 5
@@ -199,7 +312,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 43c517352c03b8940b4e226211c9c213, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -232,8 +345,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!60 &6124399364647246604
-PolygonCollider2D:
+--- !u!61 &1817473590014663397
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -266,7 +379,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0017635897, y: 0.0026455522}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -276,21 +389,5 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.055757344, y: 0.15308261}
-      - {x: -0.14363916, y: 0.10371212}
-      - {x: -0.17906547, y: 0.06662744}
-      - {x: -0.20165196, y: -0.010980399}
-      - {x: -0.19586504, y: -0.07969919}
-      - {x: -0.15252966, y: -0.120631166}
-      - {x: -0.06384003, y: -0.15244704}
-      - {x: 0.0726754, y: -0.15356542}
-      - {x: 0.16511902, y: -0.116073996}
-      - {x: 0.1967832, y: -0.076171406}
-      - {x: 0.20290238, y: -0.013333634}
-      - {x: 0.18620376, y: 0.052981496}
-      - {x: 0.14768179, y: 0.10138407}
-      - {x: 0.11052521, y: 0.12927428}
-      - {x: 0.056393057, y: 0.1537235}
-  m_UseDelaunayMesh: 0
+  m_Size: {x: 0.38236266, y: 0.28001684}
+  m_EdgeRadius: 0

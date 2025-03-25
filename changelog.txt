@@ -1,11 +1,14 @@
 # CHANGELOG -  v.1.0.2-beta
 
 ## **Added:**
-- Added pull and push ability to blocks.
+
 
 ## **Changed:**
-
+- Remade the entire movement system.
 
 ## **Fixed:**
 
+Flipagem
+Verificar problema na puxabilidade das caixas (suspeita: wallCheck sempre fica pra dentro da caixa)
+Wall Jump condicional harmonias
 (Reativar caixas de diálogo Forest-1)
