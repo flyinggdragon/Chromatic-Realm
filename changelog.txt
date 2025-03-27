@@ -1,14 +1,13 @@
-# CHANGELOG -  v.1.0.2-beta
+# CHANGELOG -  v.1.1.0-beta
 
 ## **Added:**
 
 
 ## **Changed:**
 - Remade the entire movement system.
+- Remade the physics system.
+- Made block pushability be based on key hold, not toggle.
 
 ## **Fixed:**
 
 Flipagem
-Verificar problema na puxabilidade das caixas (suspeita: wallCheck sempre fica pra dentro da caixa)
-Wall Jump condicional harmonias
-(Reativar caixas de diálogo Forest-1)

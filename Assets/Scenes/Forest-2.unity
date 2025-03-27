@@ -3668,11 +3668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13907b70e56a42949929935093bb2a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: Forest-2
-  cccUses: 0
-  levelMusic: {fileID: 8300000, guid: a07a236810f42174fa7c5570fba9e5c2, type: 3}
-  locked: 0
-  completed: 0
 --- !u!4 &1488829091
 Transform:
   m_ObjectHideFlags: 0
@@ -11089,6 +11084,10 @@ PrefabInstance:
     - target: {fileID: 2393483156959455091, guid: 1a19284ad21f9ba42af746e226eb0a0d, type: 3}
       propertyPath: walk
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393483156959455091, guid: 1a19284ad21f9ba42af746e226eb0a0d, type: 3}
+      propertyPath: baseGravity
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2393483156959455091, guid: 1a19284ad21f9ba42af746e226eb0a0d, type: 3}
       propertyPath: currentColorName

@@ -102,7 +102,7 @@ public class Player : MonoBehaviour, ICanColorChange {
     }
 
     public void Jump(InputAction.CallbackContext context) {
-        if (IsGrounded()) {
+        if (IsGrounded() && !_isGrabbing) {
             if (context.performed) {
                 rb.linearVelocity = new(rb.linearVelocity.x, jumpForce);
             } else if (context.canceled) {
@@ -213,8 +213,10 @@ public class Player : MonoBehaviour, ICanColorChange {
         }
     }
 
-    public void Pause() {
-        GameObject.FindFirstObjectByType<UIManager>().TogglePause();
+   public void Pause(InputAction.CallbackContext context) {
+        if (context.performed) {
+            GameObject.FindFirstObjectByType<UIManager>().TogglePause();
+        }
     }
 
     public void ResetMovement() {

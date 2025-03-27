@@ -204,16 +204,14 @@ public static class ChrColor {
     }
 
     public static ColorAttr GetColorMix(ColorName color1, ColorName color2) {
-        // Obtemos os atributos das cores fornecidas
         ColorAttr attr1 = FindColorAttr(color1);
         ColorAttr attr2 = FindColorAttr(color2);
 
-        // Definições de mistura de cores primárias
-        if ((color1 == ColorName.Red && color2 == ColorName.Yellow) || (color1 == ColorName.Yellow && color2 == ColorName.Red)) {
-            return Orange;
+        if ((color1 == ColorName.Blue && color2 == ColorName.Green) || (color1 == ColorName.Green && color2 == ColorName.Blue)) {
+            return Cyan;
         }
-        if ((color1 == ColorName.Yellow && color2 == ColorName.Blue) || (color1 == ColorName.Blue && color2 == ColorName.Yellow)) {
-            return Green;
+        if ((color1 == ColorName.Red && color2 == ColorName.Green) || (color1 == ColorName.Green && color2 == ColorName.Red)) {
+            return Yellow;
         }
         if ((color1 == ColorName.Blue && color2 == ColorName.Red) || (color1 == ColorName.Red && color2 == ColorName.Blue)) {
             return Magenta;
