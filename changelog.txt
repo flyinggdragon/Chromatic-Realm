@@ -1,13 +1,6 @@
-# CHANGELOG -  v.1.1.0-beta
+# CHANGELOG -  v.1.2.0-beta
+Major UI rework.;
 
 ## **Added:**
-
-
 ## **Changed:**
-- Remade the entire movement system.
-- Remade the physics system.
-- Made block pushability be based on key hold, not toggle.
-
 ## **Fixed:**
-
-Flipagem

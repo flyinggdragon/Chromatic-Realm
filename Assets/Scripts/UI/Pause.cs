@@ -30,7 +30,7 @@ public class Pause : UIElement {
     }
 
     public void OnQuit() {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Level Select");
         ToggleVisibility();
     }
 }

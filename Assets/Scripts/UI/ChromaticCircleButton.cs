@@ -11,9 +11,8 @@ public class ChromaticCircleButton : MonoBehaviour {
     private void Start() {
         colorInterface = GetComponentInParent<ColorInterface>();
     }
-
-    // Método de hover
     public void MouseClick() {
+        Debug.Log("Clicou no red");
         colorInterface.ColorSelect(buttonColor);
     }
 

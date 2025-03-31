@@ -2,12 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class LevelSelect : MonoBehaviour {
     public GameObject levelPrefab;
     public Transform levelHolder;
-    public TMP_Text worldName;
+    public Text worldName;
     public Transform backgroundHolder;
     private int worldIndex = 0;
 
@@ -67,7 +66,7 @@ public class LevelSelect : MonoBehaviour {
             return;
         }
         if (worldIndex > worlds.Count) {
-            worldIndex = worlds.Count;
+            worldIndex = worlds.Count - 1;
             return;
         }
         

@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
+using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour {
     [SerializeField] private AudioClip clickClip;
     [SerializeField] private AudioClip hoverClip;
-    [SerializeField] public TMP_Text number;
+    [SerializeField] public Text number;
     public Level level;
 
     public void HoverSound() {

@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour {
     [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
-    //private AudioClip currentMusic;
+    private AudioClip currentMusic;
 
     private void Awake() {
         if (Instance != null && Instance != this) {
@@ -17,13 +17,13 @@ public class AudioManager : MonoBehaviour {
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        //currentMusic = musicSource.clip;
+        currentMusic = musicSource.clip;
     }
 
     public void PlayMusic(AudioClip clip) {
-        //if (currentMusic == clip) return;
+        if (currentMusic == clip) return;
 
-        //currentMusic = clip;
+        currentMusic = clip;
         
         musicSource.clip = clip;
         musicSource.loop = true;
@@ -31,7 +31,6 @@ public class AudioManager : MonoBehaviour {
         musicSource.Play();
     }
 
-    // Volume pode ser ajustável, mas por enquanto não precisa.
     public void PlaySFX(AudioClip clip) {
         sfxSource.PlayOneShot(clip);
     }
