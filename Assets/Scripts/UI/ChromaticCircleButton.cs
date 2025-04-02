@@ -5,18 +5,24 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class ChromaticCircleButton : MonoBehaviour {
-    [SerializeField] private ColorName buttonColor;
-    private ColorInterface colorInterface;
+    [SerializeField] public ColorName buttonColor;
+    private ChromaticCircle chromaticCircle;
+    public ChromaticCircleButton complementary;
+    public List<ChromaticCircleButton> analogs;
+    public List<ChromaticCircleButton> triadics;
+    [SerializeField] public Transform bottomExit;
+    [SerializeField] public Transform leftExit;
+    [SerializeField] public Transform rightExit;
 
     private void Start() {
-        colorInterface = GetComponentInParent<ColorInterface>();
+        chromaticCircle = GetComponentInParent<ChromaticCircle>();
     }
+
     public void MouseClick() {
-        Debug.Log("Clicou no red");
-        colorInterface.ColorSelect(buttonColor);
+        chromaticCircle.ColorSelect(buttonColor);
     }
 
     public void MouseEnter() {
-        colorInterface.ColorHighlight(buttonColor);
+        chromaticCircle.ColorHighlight(buttonColor);
     }
 }

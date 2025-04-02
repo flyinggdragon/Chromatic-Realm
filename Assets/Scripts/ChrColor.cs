@@ -5,6 +5,7 @@ using UnityEngine;
 public static class ChrColor {
     // Estrutura para cores personalizáveis.
     public static ColorAttr Red = new(
+        "Red",
         new Color(1f, 0f, 0f, 1f),
         0.372f,
         ColorTemperature.Warm,
@@ -16,6 +17,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Orange = new(
+        "Orange",
         new Color(1f, 0.5f, 0f, 1f),
         0.414f,
         ColorTemperature.Warm,
@@ -27,6 +29,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Yellow = new(
+        "Yellow",
         new Color(1f, 1f, 0f, 1f),
         0.522f,
         ColorTemperature.Warm,
@@ -38,6 +41,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Lime = new(
+        "Lime",
         new Color(0.5f, 1f, 0f, 1f),
         0.63f,
         ColorTemperature.Warm,
@@ -49,6 +53,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Green = new(
+        "Green",
         new Color(0f, 1f, 0f, 1f),
         0.676f,
         ColorTemperature.Neutral,
@@ -60,6 +65,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Springgreen = new(
+        "Spring Green",
         new Color(0f, 1f, 0.5f, 1f),
         0.761f,
         ColorTemperature.Cool,
@@ -71,6 +77,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Cyan = new(
+        "Cyan",
         new Color(0f, 1f, 1f, 1f),
         0.869f,
         ColorTemperature.Cool,
@@ -82,6 +89,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Azure = new(
+        "Azure",
         new Color(0f, 0.5f, 1f, 1f),
         0f,
         ColorTemperature.Cool,
@@ -93,6 +101,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Blue = new(
+        "Blue",
         new Color(0f, 0f, 1f, 1f),
         0.037f,
         ColorTemperature.Cool,
@@ -104,6 +113,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Violet = new(
+        "Violet",
         new Color(0.5f, 0f, 1f, 1f),
         0.083f,
         ColorTemperature.Cool,
@@ -115,6 +125,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Magenta = new(
+        "Magenta",
         new Color(1f, 0f, 1f, 1f),
         0.218f,
         ColorTemperature.Neutral,
@@ -126,6 +137,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Rose = new(
+        "Rose",
         new Color(1f, 0f, 0.5f, 1f),
         0.338f,
         ColorTemperature.Warm,
@@ -137,6 +149,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr White = new(
+        "White",
         new Color(1f, 1f, 1f, 1f),
         0f,
         ColorTemperature.Neutral,
@@ -148,6 +161,7 @@ public static class ChrColor {
     );
 
     public static ColorAttr Black = new(
+        "Black",
         new Color(0f, 0f, 0f, 1f),
         0f,
         ColorTemperature.Neutral,
@@ -224,6 +238,7 @@ public static class ChrColor {
 
 [System.Serializable]
 public class ColorAttr {
+    public string name;
     public Color rgbValue { get; }
     public float hueShift { get; }
     public ColorTemperature colorTemperature { get; }
@@ -234,6 +249,7 @@ public class ColorAttr {
     public List<ColorName> triadicColors { get; }
 
     public ColorAttr(
+        string name,
         Color rgbValue,
         float hueShift,
         ColorTemperature colorTemperature,
@@ -243,6 +259,7 @@ public class ColorAttr {
         List<ColorName> analogueColors,
         List<ColorName> triadicColors
     ) {
+        this.name = name;
         this.rgbValue = rgbValue;
         this.hueShift = hueShift;
         this.colorTemperature = colorTemperature;

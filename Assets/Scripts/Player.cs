@@ -127,8 +127,8 @@ public class Player : MonoBehaviour, ICanColorChange {
     public void ToggleChromaticCircle(InputAction.CallbackContext context) {
         if (context.performed) {
             if (GameManager.chromaticCircleUses != 0) {
-                ColorInterface ci = GameObject.Find("UI").transform.GetChild(1).GetComponent<ColorInterface>();
-                ci.ToggleVisibility();
+                ChromaticCircle cc = GameObject.Find("UI").transform.GetChild(2).GetComponent<ChromaticCircle>();
+                cc.ToggleVisibility();
             }
         }
     }
