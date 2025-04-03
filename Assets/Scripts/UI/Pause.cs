@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 public class Pause : UIElement {
+    [SerializeField] private GameObject quitWindowPrefab;
     public override void ToggleVisibility() {
         if (shouldClose) {
             if (UIManager.uiOpen && !isOpen) return;
@@ -30,7 +31,7 @@ public class Pause : UIElement {
     }
 
     public void OnQuit() {
-        SceneManager.LoadScene("Level Select");
         ToggleVisibility();
+        Instantiate(quitWindowPrefab, transform.parent.transform);
     }
 }

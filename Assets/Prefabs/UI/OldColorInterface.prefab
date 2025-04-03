@@ -3803,7 +3803,7 @@ GameObject:
   - component: {fileID: 3492332986182332763}
   - component: {fileID: 6808919447009124190}
   m_Layer: 5
-  m_Name: ColorWheel
+  m_Name: OldColorInterface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

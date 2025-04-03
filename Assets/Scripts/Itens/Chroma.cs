@@ -8,7 +8,9 @@ public class Chroma : Item {
 
     protected override void Collect() {
         AudioManager.Instance.PlaySFX(victorySound);
+        UIManager.uiOpen = true;
         Player.shouldMove = false;
+        Player.shouldInput = false;
 
         StartCoroutine(EndStage());
     }
@@ -20,6 +22,8 @@ public class Chroma : Item {
 
         yield return StartCoroutine(uiManager.DisplayVictory());
         GameManager.chromaticCircleUses = 0;
+        
+        UIManager.uiOpen = false;
         SceneManager.LoadScene("Level Select");
     }
 }

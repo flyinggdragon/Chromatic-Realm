@@ -74,6 +74,7 @@ public class Player : MonoBehaviour, ICanColorChange {
         ChangeColor(ChrColor.FindColorAttr(currentColorName));
 
         shouldMove = true;
+        shouldInput = true;
     }
 
     private void Update() {
@@ -98,10 +99,14 @@ public class Player : MonoBehaviour, ICanColorChange {
     }
 
     public void Move(InputAction.CallbackContext context) {
+        if (!shouldMove && !shouldInput) return;
+
         horizontalMovement = context.ReadValue<Vector2>().x;
     }
 
     public void Jump(InputAction.CallbackContext context) {
+        if (!shouldMove && !shouldInput) return;
+        
         if (IsGrounded() && !_isGrabbing) {
             if (context.performed) {
                 rb.linearVelocity = new(rb.linearVelocity.x, jumpForce);
@@ -110,7 +115,6 @@ public class Player : MonoBehaviour, ICanColorChange {
             }
         }
 
-        Debug.Log(shouldWallJump);
         if (context.performed && wallJumpTimer > 0f && shouldWallJump) {
             isWallJumping = true;
             rb.linearVelocity = new(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
@@ -220,8 +224,9 @@ public class Player : MonoBehaviour, ICanColorChange {
     }
 
     public void ResetMovement() {
-         rb.linearVelocity = Vector2.zero;
-         CurrentVelocity = Vector2.zero;
+        horizontalMovement = 0f;
+        rb.linearVelocity = Vector2.zero;
+        CurrentVelocity = Vector2.zero;
     }
 
     private void OnDrawGizmosSelected() {
@@ -239,7 +244,6 @@ public class Player : MonoBehaviour, ICanColorChange {
 
     protected void OnCollisionEnter2D(Collision2D collider) {
         if (collider.gameObject.CompareTag("Wall")) {
-            Debug.Log("Wall Collision");
             Surface s = collider.gameObject.GetComponent<Surface>();
 
             Harmony harmony = ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(s.colorName));

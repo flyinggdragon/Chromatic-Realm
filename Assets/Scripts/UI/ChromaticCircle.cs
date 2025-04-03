@@ -66,26 +66,12 @@ public class ChromaticCircle: UIElement {
 
             i++;
         }
-
-        //GenHarmonyLines(highlightedButton);
     }
     
     private ChromaticCircleButton GetCCBByColor(ColorName colorName) {
         return buttons.Find(ccb => ccb.buttonColor == colorName);
     }
 
-    /*
-    private void GenHarmonyLines(ChromaticCircleButton ccb) {
-        GameObject complementaryLine = new GameObject();
-        complementaryLine.name = "Complementary Line";
-        complementaryLine.transform.parent = ccb.transform;
-
-        LineRenderer complementaryLineRenderer = complementaryLine.AddComponent<LineRenderer>();
-
-        complementaryLineRenderer.SetPosition(0, ccb.bottomExit.position);
-        complementaryLineRenderer.SetPosition(1, ccb.complementary.bottomExit.position);
-    }
-    */
     public void ColorSelect(ColorName colorName) {
         player.ChangeColor(ChrColor.FindColorAttr(colorName));
         colorSelected = true;

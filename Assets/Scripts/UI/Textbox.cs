@@ -38,12 +38,11 @@ public class Textbox : UIElement {
             shouldClose = false;
         }
 
-        OnTextComplete?.Invoke();
-
-        isOpen = false;
-        UIManager.uiOpen = false;
         Player.shouldMove = true;
         Player.shouldInput = true;
+        UIManager.uiOpen = false;
+
+        OnTextComplete?.Invoke();        
 
         SelfDestroy();
     }
