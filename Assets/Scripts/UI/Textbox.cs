@@ -15,6 +15,8 @@ public class Textbox : UIElement {
     }
 
     public IEnumerator DisplayTextAndWait(float waitTime = 2f) {
+        AudioManager.Instance.PlaySFX(openSFX);
+
         GameManager.ResetMovement();
 
         isOpen = true;
@@ -44,6 +46,7 @@ public class Textbox : UIElement {
 
         OnTextComplete?.Invoke();        
 
+        AudioManager.Instance.PlaySFX(closeSFX);
         SelfDestroy();
     }
 

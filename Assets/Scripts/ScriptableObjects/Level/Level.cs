@@ -13,6 +13,7 @@ public class Level : ScriptableObject {
     public int cccUses;
 
     public void LoadLevel() {
+        GameManager.levelChromaticCircleUses = cccUses;
         GameManager.chromaticCircleUses = cccUses;
         AudioManager.Instance.PlayMusic(levelMusic);
         SceneManager.LoadScene(levelName);

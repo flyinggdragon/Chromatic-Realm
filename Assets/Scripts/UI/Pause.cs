@@ -17,6 +17,9 @@ public class Pause : UIElement {
             isOpen = !isOpen;
             gameObject.SetActive(isOpen);
 
+            if (isOpen) AudioManager.Instance.PlaySFX(openSFX);
+            else AudioManager.Instance.PlaySFX(closeSFX);
+
             Time.timeScale = isOpen ? 0f : 1f;
         }
     }
@@ -27,6 +30,7 @@ public class Pause : UIElement {
 
     public void OnRestart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.chromaticCircleUses = GameManager.levelChromaticCircleUses;
         ToggleVisibility();
     }
 

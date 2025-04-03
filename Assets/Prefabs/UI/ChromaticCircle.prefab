@@ -294,6 +294,8 @@ MonoBehaviour:
   bottomExit: {fileID: 6191320798570887175}
   leftExit: {fileID: 4283376355605168088}
   rightExit: {fileID: 4745044092010559082}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &1170607691652598285
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +630,8 @@ MonoBehaviour:
   bottomExit: {fileID: 2526316072398747211}
   leftExit: {fileID: 945816380398622731}
   rightExit: {fileID: 6310351037692375980}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &1325954224746780532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,6 +1121,8 @@ MonoBehaviour:
   bottomExit: {fileID: 1357142125420057393}
   leftExit: {fileID: 7556149016851231392}
   rightExit: {fileID: 8516804993326492112}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &1856924946073557299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1749,8 @@ MonoBehaviour:
   bottomExit: {fileID: 9104032965402289200}
   leftExit: {fileID: 395170945036592870}
   rightExit: {fileID: 4915519476205302173}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &2619541043592511197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,6 +1952,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   shouldClose: 1
+  openSFX: {fileID: 8300000, guid: 17918ec2773cbf14aa8966c0c27ad90e, type: 3}
+  closeSFX: {fileID: 8300000, guid: a15b5ebe4b0212b428e1be74d497861c, type: 3}
   backdropImg: {fileID: 6258063646579762245}
   colorName: {fileID: 769420434869899643}
   colorType: {fileID: 5239621756691429529}
@@ -2214,6 +2224,8 @@ MonoBehaviour:
   bottomExit: {fileID: 295785787662146650}
   leftExit: {fileID: 8798658634641852520}
   rightExit: {fileID: 417914661858189554}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &3562291569300018164
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,6 +3059,8 @@ MonoBehaviour:
   bottomExit: {fileID: 8832708237821622946}
   leftExit: {fileID: 1224843721519557446}
   rightExit: {fileID: 1071762835464400984}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &4989179238183511373
 GameObject:
   m_ObjectHideFlags: 0
@@ -3658,6 +3672,8 @@ MonoBehaviour:
   bottomExit: {fileID: 4293571178916920285}
   leftExit: {fileID: 1864255258565910610}
   rightExit: {fileID: 5468768257170978271}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &5891097248170351648
 GameObject:
   m_ObjectHideFlags: 0
@@ -4492,6 +4508,8 @@ MonoBehaviour:
   bottomExit: {fileID: 1498282366012680620}
   leftExit: {fileID: 2196423145742032545}
   rightExit: {fileID: 165475174750631797}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &7214290081910979539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4782,6 +4800,8 @@ MonoBehaviour:
   bottomExit: {fileID: 4305506419531941825}
   leftExit: {fileID: 3115670934931884070}
   rightExit: {fileID: 4316003884569245448}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &7387456238028161297
 GameObject:
   m_ObjectHideFlags: 0
@@ -5263,6 +5283,8 @@ MonoBehaviour:
   bottomExit: {fileID: 9129248103319558154}
   leftExit: {fileID: 9176429278395405524}
   rightExit: {fileID: 1134023321517236004}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &7979560962395035966
 GameObject:
   m_ObjectHideFlags: 0
@@ -5448,6 +5470,8 @@ MonoBehaviour:
   bottomExit: {fileID: 1853875694408174335}
   leftExit: {fileID: 7506429622159614433}
   rightExit: {fileID: 1352759906337327207}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &7993730161712470850
 GameObject:
   m_ObjectHideFlags: 0
@@ -5848,6 +5872,8 @@ MonoBehaviour:
   bottomExit: {fileID: 2147385846207476367}
   leftExit: {fileID: 2218152819898256611}
   rightExit: {fileID: 2630366251657533004}
+  selectSFX: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
+  hoverSFX: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
 --- !u!1 &8695855448046395485
 GameObject:
   m_ObjectHideFlags: 0

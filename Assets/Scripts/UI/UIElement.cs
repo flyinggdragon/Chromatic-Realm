@@ -5,6 +5,8 @@ using UnityEngine;
 public class UIElement : MonoBehaviour {
     public bool isOpen = false;
     public bool shouldClose = true;
+    [SerializeField] protected AudioClip openSFX;
+    [SerializeField] protected AudioClip closeSFX;
 
     protected virtual void Start() {
         
@@ -24,6 +26,9 @@ public class UIElement : MonoBehaviour {
 
             Player.shouldMove = !isOpen;
             Player.shouldInput = !isOpen;
+
+            if (isOpen) AudioManager.Instance.PlaySFX(openSFX);
+            else AudioManager.Instance.PlaySFX(closeSFX);
         }
     }
 

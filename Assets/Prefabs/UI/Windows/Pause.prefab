@@ -93,6 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   shouldClose: 1
+  openSFX: {fileID: 8300000, guid: 17918ec2773cbf14aa8966c0c27ad90e, type: 3}
+  closeSFX: {fileID: 8300000, guid: a15b5ebe4b0212b428e1be74d497861c, type: 3}
   quitWindowPrefab: {fileID: 222614836279578130, guid: a17b2cf2058e1184cab64837e4a2041d, type: 3}
 --- !u!1 &4746177094386464946
 GameObject:

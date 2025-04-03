@@ -13,6 +13,8 @@ public class ChromaticCircleButton : MonoBehaviour {
     [SerializeField] public Transform bottomExit;
     [SerializeField] public Transform leftExit;
     [SerializeField] public Transform rightExit;
+    [SerializeField] public AudioClip selectSFX;
+    [SerializeField] public AudioClip hoverSFX;
 
     private void Start() {
         chromaticCircle = GetComponentInParent<ChromaticCircle>();
@@ -20,9 +22,11 @@ public class ChromaticCircleButton : MonoBehaviour {
 
     public void MouseClick() {
         chromaticCircle.ColorSelect(buttonColor);
+        AudioManager.Instance.PlaySFX(selectSFX);
     }
 
     public void MouseEnter() {
         chromaticCircle.ColorHighlight(buttonColor);
+        AudioManager.Instance.PlaySFX(hoverSFX);
     }
 }

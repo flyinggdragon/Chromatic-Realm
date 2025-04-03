@@ -34,6 +34,7 @@ public class ChromaticCircle: UIElement {
     }
 
     public void ColorHighlight(ColorName color) {
+
         highlightedButton = GetCCBByColor(color);
         ColorAttr highlightedColorAttr = ChrColor.FindColorAttr(color);
 
@@ -73,6 +74,7 @@ public class ChromaticCircle: UIElement {
     }
 
     public void ColorSelect(ColorName colorName) {
+
         player.ChangeColor(ChrColor.FindColorAttr(colorName));
         colorSelected = true;
 

@@ -59,11 +59,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9cce4c188c4862428c2b9fc2a0e1d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
+  isOpen: 0
+  shouldClose: 1
+  openSFX: {fileID: 8300000, guid: 17918ec2773cbf14aa8966c0c27ad90e, type: 3}
+  closeSFX: {fileID: 8300000, guid: a15b5ebe4b0212b428e1be74d497861c, type: 3}
   textObj: {fileID: 1887900162884776883}
-  imageBackground: {fileID: 0}
-  textList: []
-  waitTime: 2
 --- !u!1 &5318536899509139237
 GameObject:
   m_ObjectHideFlags: 0
