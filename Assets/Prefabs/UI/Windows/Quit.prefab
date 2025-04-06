@@ -634,6 +634,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4620784328738964000}
     m_Modifications:
+    - target: {fileID: 2370635764570231386, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 151863835539475602}
+    - target: {fileID: 2370635764570231386, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HoverSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370635764570231386, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2517719787096400776, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.8916667
@@ -787,12 +799,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5125150496808114367}
     - target: {fileID: 7967385029917656168, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 151863835539475602}
+    - target: {fileID: 7967385029917656168, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Yes
       objectReference: {fileID: 0}
     - target: {fileID: 7967385029917656168, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ClickSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 7967385029917656168, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: QuitConfirmation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7967385029917656168, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4391244252935850747, guid: c974cd36835694c4f94953a9a00aab44, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -823,6 +847,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
+--- !u!114 &151863835539475602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8154145134944995885, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}
+  m_PrefabInstance: {fileID: 8300926408628061887}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f87d8033428f24786cc8c2dcfcea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3000171514016194258 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6525734062311676013, guid: 2ffe27abb7f5c0043afb8a527ba9416f, type: 3}

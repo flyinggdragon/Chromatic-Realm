@@ -18,7 +18,7 @@ public class Chroma : Item {
     private IEnumerator EndStage() {
         UIManager uiManager = FindFirstObjectByType<UIManager>();
 
-        level.completed = true;
+        level.Complete();
 
         yield return StartCoroutine(uiManager.DisplayVictory());
         GameManager.chromaticCircleUses = 0;

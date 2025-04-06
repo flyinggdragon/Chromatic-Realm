@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda756b04d6887249b97807b7188f3bf, type: 3}
   m_Name: City-2
   m_EditorClassIdentifier: 
+  next: {fileID: 0}
   levelName: City-2
   levelMusic: {fileID: 8300000, guid: dc8c20411c8c4fc4d886805eb02f9177, type: 3}
   available: 0

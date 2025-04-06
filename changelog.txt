@@ -1,6 +1,18 @@
-# CHANGELOG -  v.1.2.0-beta
-Major UI rework.;
+# CHANGELOG -  v.1.2-beta
+Major UI rework; Bug fixes;
+
+## **Changed:**
+- Chromatic Circle (Color Picker) is now a complete circle!
+- Remade all UI assets with for a prettier interface.
 
 ## **Added:**
-## **Changed:**
+- Quit confirmation window when pressing quit on the pause menu.
+- Colors to the CCC Counter.
+ - Rainbow color when infinite!
+- SFX to the new Chromatic Circle.
+- SFX to the UI menus!
+
 ## **Fixed:**
+- Fixed bug where player would continuosly drift horizontally when triggering Textbox.
+- Fixed bug where player could move or input when it shouldn't (while in an UI screen).
+- Fixed bug where CCC usage would not reset upon restarting the stage.

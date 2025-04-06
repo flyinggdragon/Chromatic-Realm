@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3291764281560281314}
   - component: {fileID: 3780290145231973704}
   - component: {fileID: 7967385029917656168}
-  - component: {fileID: 5133950754899631296}
+  - component: {fileID: 8154145134944995885}
   - component: {fileID: 2370635764570231386}
   m_Layer: 5
   m_Name: RedButton
@@ -135,7 +135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5133950754899631296}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
         m_MethodName: ClickSound
         m_Mode: 1
@@ -147,7 +147,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5133950754899631296
+--- !u!114 &8154145134944995885
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,13 +156,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4202900217718409785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdb6144be9549d8459ca81100a2617e2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8f87d8033428f24786cc8c2dcfcea77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clickClip: {fileID: 8300000, guid: 81544ff322f8c3c48a34a68cd60429ca, type: 3}
   hoverClip: {fileID: 8300000, guid: fd84522a973c62d4286083607bef6ce4, type: 3}
-  number: {fileID: 0}
-  level: {fileID: 0}
 --- !u!114 &2370635764570231386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +178,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 5133950754899631296}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
           m_MethodName: HoverSound
           m_Mode: 1
