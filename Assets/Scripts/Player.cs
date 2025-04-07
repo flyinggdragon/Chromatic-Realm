@@ -3,9 +3,11 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour, ICanColorChange {
     [Header("Movement")]
-    public float speed = 15f;
+    public float baseSpeed = 10f;
+    public float speed;
     public float horizontalMovement;
     private bool isFacingRight = false;
+    private float grabbingSpeedDemodifier = 0.5f;
 
     [Header("Jump")]
     public float jumpForce = 12f; 
@@ -43,7 +45,11 @@ public class Player : MonoBehaviour, ICanColorChange {
     public Rigidbody2D rb;
     public SpriteRenderer sr;
     private Material material;
-    private Animator animator;
+    
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private Animator smokeAnimator;
+    [SerializeField] private SpriteRenderer smokeAnimation;
     
     [Header("Movement Constraints")]
     public bool grounded;
@@ -51,7 +57,7 @@ public class Player : MonoBehaviour, ICanColorChange {
     public Vector2 CurrentVelocity { get; set; }
     public static bool shouldMove = true;
     public static bool shouldInput = true;
-    private float harmonySpeedBonus = 0f;
+    private float harmonySpeedModifier;
     
     [Header("Color")]
     public ColorName currentColorName;
@@ -70,7 +76,6 @@ public class Player : MonoBehaviour, ICanColorChange {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         material = GetComponent<Renderer>().material;
-        animator = GetComponent<Animator>();
         ChangeColor(ChrColor.FindColorAttr(currentColorName));
 
         shouldMove = true;
@@ -82,11 +87,16 @@ public class Player : MonoBehaviour, ICanColorChange {
         WallSlide();
         WallJump();
         
+        grabbingSpeedDemodifier = _isGrabbing ? 0.5f : 1.0f;
+        
+        speed = baseSpeed * harmonySpeedModifier * grabbingSpeedDemodifier;
+
         if (!isWallJumping) {
             rb.linearVelocity = new(horizontalMovement * speed, rb.linearVelocity.y);
             // Flip
         }
         
+        smokeAnimation.enabled = horizontalMovement > 0f;
         animator.SetBool("IsWalking", CurrentVelocity.x != 0f);
     }
 
@@ -192,8 +202,15 @@ public class Player : MonoBehaviour, ICanColorChange {
         currentColorName = colorAttr.chrColorName;
         _color = colorAttr.rgbValue;
         material.SetFloat("_HueShift", newColorAttr.hueShift);
+
+        harmonySpeedModifier = DetermineharmonySpeedModifier(currentColorName);
+        ChangeAnimSpeed();
     }
 
+    private void ChangeAnimSpeed() {
+        animator.SetFloat("speedModifier", harmonySpeedModifier);
+        smokeAnimator.SetFloat("speedModifier", harmonySpeedModifier);
+    }
     public void HandleGrabbing(InputAction.CallbackContext context) {
         if (context.performed) {
             if (_grabbedBlock == null) {
@@ -229,6 +246,30 @@ public class Player : MonoBehaviour, ICanColorChange {
         CurrentVelocity = Vector2.zero;
     }
 
+    private float DetermineharmonySpeedModifier(ColorName colorName) {
+        Harmony harmony = ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(colorName));
+
+        switch(harmony) {
+            case Harmony.All:
+                return 1.5f;
+            
+            case Harmony.Analogue:
+                return 1.5f;
+            
+            case Harmony.Triadic:
+                return 1.25f;
+
+            case Harmony.Complementary:
+                return 0.5f;
+            
+            case Harmony.None:
+                return 1.0f;
+            
+            default:
+                return 1.0f;
+        }
+    }
+
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.white;
         Gizmos.DrawWireCube(groundCheckPos.position, groundCheckSize);
@@ -249,6 +290,13 @@ public class Player : MonoBehaviour, ICanColorChange {
             Harmony harmony = ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(s.colorName));
 
             shouldWallJump = harmony is Harmony.Analogue || harmony is Harmony.Equal;
+        }
+
+        if (collider.gameObject.CompareTag("Ground")) {
+            Surface s = collider.gameObject.GetComponent<Surface>();
+
+            harmonySpeedModifier = DetermineharmonySpeedModifier(s.colorName);
+            ChangeAnimSpeed();
         }
     }
 }
