@@ -10,6 +10,7 @@ public class ChromaticCircleButton : MonoBehaviour {
     public ChromaticCircleButton complementary;
     public List<ChromaticCircleButton> analogs;
     public List<ChromaticCircleButton> triadics;
+    [SerializeField] public bool colorActive;
     [SerializeField] public Transform bottomExit;
     [SerializeField] public Transform leftExit;
     [SerializeField] public Transform rightExit;
@@ -18,6 +19,7 @@ public class ChromaticCircleButton : MonoBehaviour {
 
     private void Start() {
         chromaticCircle = GetComponentInParent<ChromaticCircle>();
+        GetComponent<Button>().interactable = colorActive;
     }
 
     public void MouseClick() {
@@ -26,7 +28,7 @@ public class ChromaticCircleButton : MonoBehaviour {
     }
 
     public void MouseEnter() {
-        chromaticCircle.ColorHighlight(buttonColor);
+        chromaticCircle.ColorHighlight(buttonColor, colorActive);
         AudioManager.Instance.PlaySFX(hoverSFX);
     }
 }

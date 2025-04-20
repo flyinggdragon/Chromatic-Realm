@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Forest-5
   m_EditorClassIdentifier: 
   next: {fileID: 11400000, guid: 65200f5af97cb394aa727daebde3797a, type: 2}
-  levelName: Forest-2
+  levelName: Forest-5
   levelMusic: {fileID: 8300000, guid: a07a236810f42174fa7c5570fba9e5c2, type: 3}
   available: 0
   completed: 0

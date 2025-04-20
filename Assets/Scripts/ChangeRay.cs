@@ -6,10 +6,16 @@ public class ChangeRay : MonoBehaviour, IColorChanger {
     public ColorName currentColorName;
     public ColorAttr colorAttr { get; protected set; }
     public SpriteRenderer sr { get; protected set; }
+    public AudioSource sfxSource;
+    public AudioClip sfx;
 
     public Color _color;
 
     public void Start() {
+        sfxSource.clip = sfx;
+        sfxSource.loop = true;
+        sfxSource.Play();
+
         colorAttr = ChrColor.FindColorAttr(currentColorName);
         currentColorName = colorAttr.chrColorName;
 

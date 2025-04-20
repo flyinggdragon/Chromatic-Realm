@@ -816,7 +816,7 @@ MonoBehaviour:
   m_CellSize: {x: 200, y: 200}
   m_Spacing: {x: 100, y: 100}
   m_Constraint: 1
-  m_ConstraintCount: 4
+  m_ConstraintCount: 6
 --- !u!1001 &822887204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -847,7 +847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_AnchorMin.x
@@ -855,23 +855,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -450
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -150.00003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_LocalPosition.z
@@ -895,11 +895,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 510
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -549.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283716693219237635, guid: 209c92aa4de9afe4e9a0f2607c543900, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2872,7 +2872,7 @@ MonoBehaviour:
   m_CellSize: {x: 200, y: 200}
   m_Spacing: {x: 100, y: 100}
   m_Constraint: 1
-  m_ConstraintCount: 4
+  m_ConstraintCount: 6
 --- !u!1 &2021437090
 GameObject:
   m_ObjectHideFlags: 0

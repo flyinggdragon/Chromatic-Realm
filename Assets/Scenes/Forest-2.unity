@@ -999,6 +999,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2399235194014862773, guid: f144f0f8aa664db4e82bdebec0645b22, type: 3}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 11400000, guid: 0775587840c10ed42913e3350c1a873e, type: 2}
     - target: {fileID: 4888477521063897526, guid: f144f0f8aa664db4e82bdebec0645b22, type: 3}
       propertyPath: m_Name
       value: Chroma

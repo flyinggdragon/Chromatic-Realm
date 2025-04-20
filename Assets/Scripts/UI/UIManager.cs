@@ -7,11 +7,6 @@ public class UIManager : MonoBehaviour {
     public Pause pause;
     public ChromaticCircle chromaticCircle;
     public static bool uiOpen;
-
-    void Update() {
-        Debug.Log(uiOpen);
-    }
-
     public IEnumerator InstantiateWindow(List<string> strings, float waitTime = 2f) {
         GameObject textboxInstance = Instantiate(textboxPrefab, transform);
 

@@ -5,9 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ChromaticCircle: UIElement {
+    [SerializeField] private GameObject normalHighlight;
     [SerializeField] private Image backdropImg;
     [SerializeField] private Text colorName;
     [SerializeField] private Text colorType;
+    [SerializeField] private GameObject notSelectable;
+    [SerializeField] private Image nsBackdropImg;
+    [SerializeField] private Text nsColorName;
     [SerializeField] private Transform complementaryColor;
     [SerializeField] private Transform analogColors;
     [SerializeField] private Transform triadicColors;
@@ -30,42 +34,59 @@ public class ChromaticCircle: UIElement {
         }
 
         player = GameObject.FindFirstObjectByType<Player>();
-        ColorHighlight(player.currentColorName);
+        ColorHighlight(player.currentColorName, true);
     }
 
-    public void ColorHighlight(ColorName color) {
+    public void ColorHighlight(ColorName color, bool colorActive) {
+        if (colorActive) {
+            notSelectable.SetActive(false);
+            normalHighlight.SetActive(true);
 
-        highlightedButton = GetCCBByColor(color);
-        ColorAttr highlightedColorAttr = ChrColor.FindColorAttr(color);
+            highlightedButton = GetCCBByColor(color);
+            ColorAttr highlightedColorAttr = ChrColor.FindColorAttr(color);
 
-        backdropImg.color = new Color(highlightedColorAttr.rgbValue.r, highlightedColorAttr.rgbValue.g, highlightedColorAttr.rgbValue.b, 1/3f);
+            backdropImg.color = new Color(highlightedColorAttr.rgbValue.r, highlightedColorAttr.rgbValue.g, highlightedColorAttr.rgbValue.b, 1/3f);
 
-        colorName.text = highlightedColorAttr.name;
-        colorName.color = highlightedColorAttr.rgbValue;
+            colorName.text = highlightedColorAttr.name;
+            colorName.color = highlightedColorAttr.rgbValue;
 
-        colorType.text = highlightedColorAttr.colorType.ToString();
+            colorType.text = highlightedColorAttr.colorType.ToString();
 
-        complementaryColor.GetComponentsInChildren<Image>()[0].color = ChrColor.FindColorAttr(highlightedButton.complementary.buttonColor).rgbValue;
-        complementaryColor.GetComponentInChildren<Text>().text = ChrColor.FindColorAttr(highlightedButton.complementary.buttonColor).name.Substring(0, 3) + ".";
-        
-        int i = 0;
-        foreach (Transform gt in analogColors.transform) {
-            GameObject g = gt.gameObject;
+            complementaryColor.GetComponentsInChildren<Image>()[0].color = ChrColor.FindColorAttr(highlightedButton.complementary.buttonColor).rgbValue;
+            complementaryColor.GetComponentInChildren<Text>().text = ChrColor.FindColorAttr(highlightedButton.complementary.buttonColor).name.Substring(0, 3) + ".";
+            
+            int i = 0;
+            foreach (Transform gt in analogColors.transform) {
+                GameObject g = gt.gameObject;
 
-            g.GetComponentsInChildren<Image>()[0].color = ChrColor.FindColorAttr(highlightedButton.analogs[i].buttonColor).rgbValue;
-            g.GetComponentInChildren<Text>().text = ChrColor.FindColorAttr(highlightedButton.analogs[i].buttonColor).name.Substring(0, 3) + ".";
+                g.GetComponentsInChildren<Image>()[0].color = ChrColor.FindColorAttr(highlightedButton.analogs[i].buttonColor).rgbValue;
+                g.GetComponentInChildren<Text>().text = ChrColor.FindColorAttr(highlightedButton.analogs[i].buttonColor).name.Substring(0, 3) + ".";
 
-            i++;
+                i++;
+            }
+
+            i = 0;
+            foreach (Transform gt in triadicColors.transform) {
+                GameObject g = gt.gameObject;
+
+                g.GetComponentsInChildren<Image>()[0].color = ChrColor.FindColorAttr(highlightedButton.triadics[i].buttonColor).rgbValue;
+                g.GetComponentInChildren<Text>().text = ChrColor.FindColorAttr(highlightedButton.triadics[i].buttonColor).name.Substring(0, 3) + ".";
+
+                i++;
+            }
         }
 
-        i = 0;
-        foreach (Transform gt in triadicColors.transform) {
-            GameObject g = gt.gameObject;
+        else {
+            normalHighlight.SetActive(false);
+            notSelectable.SetActive(true);
 
-            g.GetComponentsInChildren<Image>()[0].color = ChrColor.FindColorAttr(highlightedButton.triadics[i].buttonColor).rgbValue;
-            g.GetComponentInChildren<Text>().text = ChrColor.FindColorAttr(highlightedButton.triadics[i].buttonColor).name.Substring(0, 3) + ".";
+            highlightedButton = GetCCBByColor(color);
+            ColorAttr highlightedColorAttr = ChrColor.FindColorAttr(color);
 
-            i++;
+            nsBackdropImg.color = new Color(highlightedColorAttr.rgbValue.r, highlightedColorAttr.rgbValue.g, highlightedColorAttr.rgbValue.b, 1/3f);
+
+            nsColorName.text = highlightedColorAttr.name;
+            nsColorName.color = highlightedColorAttr.rgbValue;
         }
     }
     
