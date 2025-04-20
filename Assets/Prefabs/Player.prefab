@@ -345,9 +345,9 @@ MonoBehaviour:
   wallJumpPower: {x: 5, y: 10}
   rb: {fileID: 6894139691818603135}
   sr: {fileID: 1106296971385818084}
-  animator: {fileID: 0}
-  smokeAnimator: {fileID: 0}
-  smokeAnimation: {fileID: 0}
+  animator: {fileID: 8757890748069084678}
+  smokeAnimator: {fileID: 5799800007708211995}
+  smokeAnimation: {fileID: 5608666264701846997}
   grounded: 1
   walled: 0
   currentColorName: 1

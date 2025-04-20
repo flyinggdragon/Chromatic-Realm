@@ -34,7 +34,7 @@ public class SoftBlock : Block {
             if (IsTopCollision(collision.contacts)) {
                 Player player = collision.gameObject.GetComponent<Player>();
 
-                player.SoftBlockJump(GetJumpHeight(player.colorAttr));
+                if (!player.isGrabbing) player.SoftBlockJump(GetJumpHeight(player.colorAttr));
             }
         }
     }

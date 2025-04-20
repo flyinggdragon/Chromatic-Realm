@@ -6,7 +6,7 @@ public class Player : MonoBehaviour, ICanColorChange {
     public float baseSpeed = 10f;
     public float speed;
     public float horizontalMovement;
-    private bool isFacingRight = false;
+    private bool IsFacingRight => transform.localScale.x > 0;
     private float grabbingSpeedDemodifier = 0.5f;
 
     [Header("Jump")]
@@ -38,7 +38,7 @@ public class Player : MonoBehaviour, ICanColorChange {
     public Vector2 wallJumpPower = new(5f, 10f);
 
     [Header("Grabbing")]
-    private bool _isGrabbing = false;
+    public bool isGrabbing = false;
     private Block _grabbedBlock;
 
     [Header("Components")]
@@ -87,21 +87,21 @@ public class Player : MonoBehaviour, ICanColorChange {
         WallSlide();
         WallJump();
         
-        grabbingSpeedDemodifier = _isGrabbing ? 0.5f : 1.0f;
+        grabbingSpeedDemodifier = isGrabbing ? 0.5f : 1.0f;
         
         speed = baseSpeed * harmonySpeedModifier * grabbingSpeedDemodifier;
 
         if (!isWallJumping) {
             rb.linearVelocity = new(horizontalMovement * speed, rb.linearVelocity.y);
-            // Flip
+            CheckFlipDirection(horizontalMovement);
         }
         
-        smokeAnimation.enabled = horizontalMovement > 0f;
+        smokeAnimation.enabled = horizontalMovement != 0f && IsGrounded();
         animator.SetBool("IsWalking", CurrentVelocity.x != 0f);
     }
 
     private void FixedUpdate() {
-        if (_isGrabbing && _grabbedBlock != null) {
+        if (isGrabbing && _grabbedBlock != null) {
             _grabbedBlock.rb.linearVelocity = new(rb.linearVelocity.x, _grabbedBlock.rb.linearVelocity.y);
         }
 
@@ -117,12 +117,9 @@ public class Player : MonoBehaviour, ICanColorChange {
     public void Jump(InputAction.CallbackContext context) {
         if (!shouldMove && !shouldInput) return;
         
-        if (IsGrounded() && !_isGrabbing) {
-            if (context.performed) {
-                rb.linearVelocity = new(rb.linearVelocity.x, jumpForce);
-            } else if (context.canceled) {
-                rb.linearVelocity = new(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-            }
+        if (IsGrounded() && !isGrabbing) {
+            if (context.performed) rb.linearVelocity = new(rb.linearVelocity.x, jumpForce);
+            else if (context.canceled) rb.linearVelocity = new(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
 
         if (context.performed && wallJumpTimer > 0f && shouldWallJump) {
@@ -130,11 +127,21 @@ public class Player : MonoBehaviour, ICanColorChange {
             rb.linearVelocity = new(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
             wallJumpTimer = 0;
 
-            if (transform.localScale.x != wallJumpDirection) {
-                // Flip
-            }
+            if (transform.localScale.x != wallJumpDirection) Flip();
 
             Invoke(nameof(CancelWallJump), wallJumpTime * 0.1f);
+        }
+    }
+
+    private void Flip() {
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+
+    private void CheckFlipDirection(float direction) {
+        if ((direction > 0 && !IsFacingRight) || (direction < 0 && IsFacingRight)) {
+            Flip();
         }
     }
 
@@ -151,9 +158,7 @@ public class Player : MonoBehaviour, ICanColorChange {
     }
 
     private bool IsGrounded() {
-        if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer)) {
-            return true;
-        }
+        if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer)) return true;
         
         return false;
     }
@@ -211,6 +216,7 @@ public class Player : MonoBehaviour, ICanColorChange {
         animator.SetFloat("speedModifier", harmonySpeedModifier);
         smokeAnimator.SetFloat("speedModifier", harmonySpeedModifier);
     }
+
     public void HandleGrabbing(InputAction.CallbackContext context) {
         if (context.performed) {
             if (_grabbedBlock == null) {
@@ -219,7 +225,7 @@ public class Player : MonoBehaviour, ICanColorChange {
                     if (collider.CompareTag("Block")) {
                         _grabbedBlock = collider.GetComponent<Block>();
                         _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-                        _isGrabbing = true;
+                        isGrabbing = true;
                         break;
                     }
                 }
@@ -229,7 +235,7 @@ public class Player : MonoBehaviour, ICanColorChange {
             if (_grabbedBlock != null) {
                 _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
                 _grabbedBlock = null;
-                _isGrabbing = false;
+                isGrabbing = false;
             }
         }
     }

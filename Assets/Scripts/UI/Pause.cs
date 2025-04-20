@@ -15,6 +15,7 @@ public class Pause : UIElement {
             GameManager.ResetMovement();
 
             isOpen = !isOpen;
+            UIManager.uiOpen = isOpen;
             gameObject.SetActive(isOpen);
 
             if (isOpen) AudioManager.Instance.PlaySFX(openSFX);
