@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fda756b04d6887249b97807b7188f3bf, type: 3}
-  m_Name: City-2
+  m_Name: City-3
   m_EditorClassIdentifier: 
-  next: {fileID: 11400000, guid: 45d0c7f0203c4a3409c116755bf7afa6, type: 2}
-  levelName: City-2
+  next: {fileID: 11400000, guid: 5ced86907df48c749acf5fdf57df5c01, type: 2}
+  levelName: City-3
   levelMusic: {fileID: 8300000, guid: dc8c20411c8c4fc4d886805eb02f9177, type: 3}
-  available: 0
+  available: 1
   completed: 0
-  cccUses: 0
+  cccUses: -1

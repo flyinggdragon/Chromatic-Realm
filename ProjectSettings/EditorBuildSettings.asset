@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/City-1.unity
     guid: 35ef06be4c8a29d4a8feece589a095ac
   - enabled: 1
-    path: Assets/Scenes/City-2.unity
+    path: Assets/Scenes/City-3.unity
     guid: 3455357170e68e6498e89d063b9ac407
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

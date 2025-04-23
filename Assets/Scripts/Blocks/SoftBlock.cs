@@ -7,7 +7,7 @@ public class SoftBlock : Block {
         ColorAttr currentColorAttr = ChrColor.FindColorAttr(currentColorName);
 
         Harmony currentHarmony = ChrColor.DetermineHarmony(currentColorAttr, playerColor);
-        
+
         switch(currentHarmony) {
             case Harmony.All:
                 return 25f;
