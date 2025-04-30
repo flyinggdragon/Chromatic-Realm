@@ -1,7 +1,14 @@
-# CHANGELOG -  v.1.3.1-beta
+# CHANGELOG -  v.1.4-beta
 
 ## **Changed:**
+- Switched Forest level order: Forest-4 <-> Forest-6.
+- Tweaked Forest-6 (old Forest-4) a bit to prevent it from being cheesed.
 
 ## **Added:**
+- Tips on Forest-6 (old Forest-4) about Ground Color Harmony and White Objects.
+- Remaining City levels. They all have been reordered.
 
 ## **Fixed:**
+- Fixed bug where some analog combinations would not grant wall jumping abilities.
+- Fixed bug where City-1 would not become available on Level Select after completing Forest-6.
+- Fixed tip size in Forest-3 and Forest-5.

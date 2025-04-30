@@ -295,7 +295,7 @@ public class Player : MonoBehaviour, ICanColorChange {
 
             Harmony harmony = ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(s.colorName));
 
-            shouldWallJump = harmony is Harmony.Analogue || harmony is Harmony.Equal;
+            shouldWallJump = harmony is Harmony.Analogue || harmony is Harmony.Equal || harmony is Harmony.All;
         }
 
         if (collider.gameObject.CompareTag("Ground")) {

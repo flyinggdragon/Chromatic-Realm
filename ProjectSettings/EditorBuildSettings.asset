@@ -22,15 +22,24 @@ EditorBuildSettings:
     guid: 6c34b8b4aaa6bb9458f70cb468435382
   - enabled: 1
     path: Assets/Scenes/Forest-4.unity
-    guid: 10163495b7c999a42909d288593e72cb
+    guid: 779b61c2235c7e242a4900344a074ded
   - enabled: 1
     path: Assets/Scenes/Forest-5.unity
     guid: dcc90c75ccfd6334097845bc0cbdce4f
   - enabled: 1
+    path: Assets/Scenes/Forest-6.unity
+    guid: 10163495b7c999a42909d288593e72cb
+  - enabled: 1
     path: Assets/Scenes/City-1.unity
     guid: 35ef06be4c8a29d4a8feece589a095ac
   - enabled: 1
+    path: Assets/Scenes/City-2.unity
+    guid: 14d328545dddce346a461b68e441d4ed
+  - enabled: 1
     path: Assets/Scenes/City-3.unity
     guid: 3455357170e68e6498e89d063b9ac407
+  - enabled: 1
+    path: Assets/Scenes/City-4.unity
+    guid: 49d3e60e3043c07469fcfd83b7134424
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

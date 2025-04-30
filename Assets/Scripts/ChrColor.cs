@@ -48,7 +48,7 @@ public static class ChrColor {
         ColorType.Tertiary,
         ColorName.Lime,
         ColorName.Violet,
-        new List<ColorName> { ColorName.Orange, ColorName.Green },
+        new List<ColorName> { ColorName.Yellow, ColorName.Green },
         new List<ColorName> { ColorName.Azure, ColorName.Rose }
     );
 
@@ -120,7 +120,7 @@ public static class ChrColor {
         ColorType.Tertiary,
         ColorName.Violet,
         ColorName.Lime,
-        new List<ColorName> { ColorName.Magenta, ColorName.Rose },
+        new List<ColorName> { ColorName.Blue, ColorName.Magenta},
         new List<ColorName> { ColorName.Orange, ColorName.Springgreen }
     );
 
@@ -132,7 +132,7 @@ public static class ChrColor {
         ColorType.Secondary,
         ColorName.Magenta,
         ColorName.Green,
-        new List<ColorName> { ColorName.Rose, ColorName.Violet },
+        new List<ColorName> { ColorName.Violet, ColorName.Rose },
         new List<ColorName> { ColorName.Yellow, ColorName.Cyan }
     );
 
