@@ -15,6 +15,7 @@ MonoBehaviour:
   next: {fileID: 11400000, guid: 3683de013eed84a428fb09c3f7927b73, type: 2}
   levelName: Forest-4
   levelMusic: {fileID: 8300000, guid: a07a236810f42174fa7c5570fba9e5c2, type: 3}
+  environmentSound: {fileID: 8300000, guid: b0435cf951864c045ba9ac835f265109, type: 3}
   available: 0
   completed: 0
   cccUses: 0

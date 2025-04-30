@@ -9,6 +9,7 @@ public class Level : ScriptableObject {
     public Level next;
     public string levelName;
     public AudioClip levelMusic;
+    public AudioClip environmentSound;
     public bool available;
     public bool completed;
     public int cccUses;
@@ -19,6 +20,7 @@ public class Level : ScriptableObject {
         GameManager.levelChromaticCircleUses = cccUses;
         GameManager.chromaticCircleUses = cccUses;
         AudioManager.Instance.PlayMusic(levelMusic);
+        AudioManager.Instance.PlayEnvironment(environmentSound);
         SceneManager.LoadScene(levelName);
     }
 

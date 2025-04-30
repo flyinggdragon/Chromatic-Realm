@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour {
     [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
+    public AudioSource environmentSource;
     private AudioClip currentMusic;
 
     private void Awake() {
@@ -33,5 +34,12 @@ public class AudioManager : MonoBehaviour {
 
     public void PlaySFX(AudioClip clip) {
         sfxSource.PlayOneShot(clip);
+    }
+    
+    public void PlayEnvironment(AudioClip clip) {
+        environmentSource.clip = clip;
+        environmentSource.loop = true;
+        environmentSource.Stop();
+        environmentSource.Play();
     }
 }

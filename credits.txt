@@ -1,6 +1,48 @@
-Grass Texture
+Game developed as Final Project to Digital Games degree at UNISINOS.
+Jogo desenvolvido como Projeto Final para a Graduação em Jogos Digitais pela UNISINOS.
+
+Game Design, Programming, UI/UX Design:
+Marco "FlyingDragon" di Iorio
+
+Forest Tileset and Decoration: ma9ici4n
 https://ma9ici4n.itch.io/grass-tileset-pixel-art
-ma9ici4n
+
+Forest Background: sanctumpixel
+https://sanctumpixel.itch.io/forest-lite-pixel-art-tileset
+
+Falling Leaves sprites: rs-pixel-store (itch.io)
+https://rs-pixel-store.itch.io/falling-leaf-fx
+
+City Tileset: CrimsonCreative
+https://crimson-creative.itch.io/city-pixel-art-tileset
+
+City Background: free-game-assets (itch.io)
+https://free-game-assets.itch.io/free-city-backgrounds-pixel-art
+
+City Decoration: GandalfHardcore
+https://gandalfhardcore.itch.io/free-pixel-art-sidescroller-asset-pack-32x32-city
+
+Slime sprite: shymix
+https://shimyx.itch.io/6-direction-slimes-animation
+
+Soundtrack: tallbeard
+https://tallbeard.itch.io/music-loop-bundle
+
+Environment Sounds: thowsenmedia
+https://thowsenmedia.itch.io/video-game-natural-ambience-sounds
+
+SFX: kronbits
+https://kronbits.itch.io/freesfx
+
+Monogram Font: datagoblin
+https://datagoblin.itch.io/monogram
+
+GUI: dreammix, paperhatlizard
+https://dreammix.itch.io/keyboard-keys-for-ui
+https://paperhatlizard.itch.io/cryos-mini-gui
+
+Dust sprites: jasontomlee
+https://jasontomlee.itch.io/smoke-fx
 
 SunnyLand
 ansimuz
@@ -21,10 +63,6 @@ https://opengameart.org/content/tree-sprites-0
 Demon Woods
 aethrall
 https://aethrall.itch.io/demon-woods-parallax-background
-
-Forest Lite Pixel Art Tileset
-sanctumpixel
-https://sanctumpixel.itch.io/forest-lite-pixel-art-tileset
 
 parallax-sunset-mountains
 kayillustrations
@@ -111,3 +149,5 @@ https://toffeecraft.itch.io/ui-user-interface-pack-elegant
 https://jasontomlee.itch.io/smoke-fx
 
 https://omniclause.itch.io/spikes
+
+https://rs-pixel-store.itch.io/falling-leaf-fx

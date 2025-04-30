@@ -15,6 +15,7 @@ MonoBehaviour:
   next: {fileID: 11400000, guid: d41e70585db18b04383f24def6175a13, type: 2}
   levelName: City-5
   levelMusic: {fileID: 8300000, guid: dc8c20411c8c4fc4d886805eb02f9177, type: 3}
+  environmentSound: {fileID: 8300000, guid: 3598317fdf06d10419aa4a56230d24bc, type: 3}
   available: 0
   completed: 0
   cccUses: 0

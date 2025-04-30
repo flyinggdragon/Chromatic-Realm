@@ -1119,6 +1119,63 @@ MonoBehaviour:
   textboxPrefab: {fileID: 354433141429617534, guid: ff71d8b1059f0f845ba6aefb59c65fdf, type: 3}
   pause: {fileID: 915141061}
   chromaticCircle: {fileID: 0}
+--- !u!1001 &610808597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3266855794871066156, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.993828
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266855794871066156, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 48.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266855794871066156, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.25258842
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266855794871066156, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266855794871066156, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266855794871066156, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266855794871066156, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266855794871066156, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266855794871066156, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266855794871066156, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218243339082428976, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
+      propertyPath: m_Name
+      value: FallingLeaves
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80d4b850bd7b1a447b58bb8b13e02eaf, type: 3}
 --- !u!1 &644245174
 GameObject:
   m_ObjectHideFlags: 0
@@ -21749,3 +21806,4 @@ SceneRoots:
   - {fileID: 475133977}
   - {fileID: 1981009428}
   - {fileID: 486325481}
+  - {fileID: 610808597}
