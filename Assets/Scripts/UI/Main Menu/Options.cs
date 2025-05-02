@@ -9,12 +9,12 @@ public class Options : MonoBehaviour {
     public void Start() {
         music.value = AudioManager.Instance.musicSource.volume;
         sfx.value = AudioManager.Instance.sfxSource.volume;
-        environment.value = AudioManager.Instance.environmentSource.volume * 4;
+        environment.value = AudioManager.Instance.environmentSource.volume * 10;
     }
 
     public void Update() {
         AudioManager.Instance.musicSource.volume = music.value;
         AudioManager.Instance.sfxSource.volume = sfx.value;
-        AudioManager.Instance.environmentSource.volume = environment.value / 4;
+        AudioManager.Instance.environmentSource.volume = environment.value / 10;
     }
 }

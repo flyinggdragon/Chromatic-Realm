@@ -13824,7 +13824,7 @@ PrefabInstance:
     - target: {fileID: 2393483156959455091, guid: 1a19284ad21f9ba42af746e226eb0a0d, type: 3}
       propertyPath: jump
       value: 
-      objectReference: {fileID: 8300000, guid: 394d802f1035a79469095d4bd58a591b, type: 3}
+      objectReference: {fileID: 8300000, guid: f3a7da9b0ded77b47b8a041f8243b90c, type: 3}
     - target: {fileID: 2393483156959455091, guid: 1a19284ad21f9ba42af746e226eb0a0d, type: 3}
       propertyPath: walk
       value: 

@@ -1,0 +1,505 @@
+fileFormatVersion: 2
+guid: 143a4380020454b4392ee882d2658926
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5512467630874202417
+    second: ChromaticRealmTitleNew_0
+  - first:
+      213: 4907702900864951360
+    second: ChromaticRealmTitleNew_1
+  - first:
+      213: -7293163178253605946
+    second: ChromaticRealmTitleNew_2
+  - first:
+      213: 5918663184284236965
+    second: ChromaticRealmTitleNew_3
+  - first:
+      213: 2107337101126379592
+    second: ChromaticRealmTitleNew_4
+  - first:
+      213: 1718153608855952711
+    second: ChromaticRealmTitleNew_5
+  - first:
+      213: -8789043657499028796
+    second: ChromaticRealmTitleNew_6
+  - first:
+      213: 8422091463662444709
+    second: ChromaticRealmTitleNew_7
+  - first:
+      213: 5076901180449255439
+    second: ChromaticRealmTitleNew_8
+  - first:
+      213: 2582345335822543562
+    second: ChromaticRealmTitleNew_9
+  - first:
+      213: 632270787851367644
+    second: ChromaticRealmTitleNew_10
+  - first:
+      213: -4284755981696271555
+    second: ChromaticRealmTitleNew_11
+  - first:
+      213: 71946098052657837
+    second: ChromaticRealmTitleNew_12
+  - first:
+      213: 6367596757876028379
+    second: ChromaticRealmTitleNew_13
+  - first:
+      213: -9214329318660304346
+    second: ChromaticRealmTitleNew_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_0
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 77
+        width: 122
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce67e165e7cf73b0800000000000000
+      internalID: -5512467630874202417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 77
+        width: 123
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044a53549c9ab1440800000000000000
+      internalID: 4907702900864951360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_2
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 77
+        width: 122
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c32c3feaba79ca90800000000000000
+      internalID: -7293163178253605946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_3
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 78
+        width: 179
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5acb174cec0532250800000000000000
+      internalID: 5918663184284236965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_4
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 76
+        width: 125
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 848a3a6ade3ce3d10800000000000000
+      internalID: 2107337101126379592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_5
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 76
+        width: 125
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d1a65aa9b18d710800000000000000
+      internalID: 1718153608855952711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_6
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 76
+        width: 120
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2de5f1c5b070680800000000000000
+      internalID: -8789043657499028796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_7
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 76
+        width: 120
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a02375609741e470800000000000000
+      internalID: 8422091463662444709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_8
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 76
+        width: 125
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00707c99b6c47640800000000000000
+      internalID: 5076901180449255439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_9
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 76
+        width: 125
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acae61da66556d320800000000000000
+      internalID: 2582345335822543562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_10
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 76
+        width: 125
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4bcbf7ee646c800800000000000000
+      internalID: 632270787851367644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_11
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 76
+        width: 125
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b73c1e22d7984c0800000000000000
+      internalID: -4284755981696271555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_12
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 76
+        width: 120
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da27761589a9ff000800000000000000
+      internalID: 71946098052657837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_13
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 76
+        width: 125
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3312aa38f3e5850800000000000000
+      internalID: 6367596757876028379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChromaticRealmTitleNew_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 2200
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62219c5ed40202080800000000000000
+      internalID: -9214329318660304346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

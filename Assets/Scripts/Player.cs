@@ -118,6 +118,7 @@ public class Player : MonoBehaviour, ICanColorChange {
         if (!shouldMove && !shouldInput) return;
         
         if (IsGrounded() && !isGrabbing) {
+            AudioManager.Instance.PlaySFX(jump);
             if (context.performed) rb.linearVelocity = new(rb.linearVelocity.x, jumpForce);
             else if (context.canceled) rb.linearVelocity = new(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
@@ -154,6 +155,7 @@ public class Player : MonoBehaviour, ICanColorChange {
         }
     }
     public void SoftBlockJump(float force) {
+        AudioManager.Instance.PlaySFX(jump);
         rb.linearVelocity = new(rb.linearVelocity.x, force);
     }
 

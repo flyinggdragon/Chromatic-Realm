@@ -1,6 +1,3 @@
-Game developed as Final Project to Digital Games degree at UNISINOS.
-Jogo desenvolvido como Projeto Final para a Graduação em Jogos Digitais pela UNISINOS.
-
 Game Design, Programming, UI/UX Design:
 Marco "FlyingDragon" di Iorio
 
@@ -22,27 +19,22 @@ https://free-game-assets.itch.io/free-city-backgrounds-pixel-art
 City Decoration: GandalfHardcore
 https://gandalfhardcore.itch.io/free-pixel-art-sidescroller-asset-pack-32x32-city
 
-Slime sprite: shymix
-https://shimyx.itch.io/6-direction-slimes-animation
-
-Soundtrack: tallbeard
+Soundtrack: tallbeard, kronbits, thowsenmedia
 https://tallbeard.itch.io/music-loop-bundle
-
-Environment Sounds: thowsenmedia
+https://kronbits.itch.io/freesfx
 https://thowsenmedia.itch.io/video-game-natural-ambience-sounds
 
-SFX: kronbits
-https://kronbits.itch.io/freesfx
-
-Monogram Font: datagoblin
+Fonts: piotrkowy, datagoblin
+https://fontesk.com/hevuish-font/
 https://datagoblin.itch.io/monogram
 
-GUI: dreammix, paperhatlizard
+Assets: shimyx, jasontomlee, dreammix, paperhatlizard
+https://shimyx.itch.io/6-direction-slimes-animation
+https://jasontomlee.itch.io/smoke-fx
 https://dreammix.itch.io/keyboard-keys-for-ui
 https://paperhatlizard.itch.io/cryos-mini-gui
 
-Dust sprites: jasontomlee
-https://jasontomlee.itch.io/smoke-fx
+--
 
 SunnyLand
 ansimuz

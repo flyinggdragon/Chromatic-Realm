@@ -1,14 +1,21 @@
 # CHANGELOG -  v.1.4-beta
 
 ## **Changed:**
-- Switched Forest level order: Forest-4 <-> Forest-6.
-- Tweaked Forest-6 (old Forest-4) a bit to prevent it from being cheesed.
+- Stage reorder.
 
 ## **Added:**
-- Tips on Forest-6 (old Forest-4) about Ground Color Harmony and White Objects.
-- Remaining City levels. They all have been reordered.
+- Tips in Forest-6 (OG Forest-4) about Ground Color Harmony and White Objects.
+- Tip in City-1 about Wall Jumping.
+- Tip in City-2 about Black Objects.
+- All remaining City levels.
+- Falling leaves effect in the background in Forest
+- Falling rain effect in the background in City.
+- City's background slightly dimmed.
+- Environmental sounds to stages.
+- Slider to adjust Environmental sounds volume in the Options menu.
 
 ## **Fixed:**
+- Fixed inconsistent camera configuration between levels (zoom and vertical alignment).
 - Fixed bug where some analog combinations would not grant wall jumping abilities.
 - Fixed bug where City-1 would not become available on Level Select after completing Forest-6.
 - Fixed tip size in Forest-3 and Forest-5.

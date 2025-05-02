@@ -13,6 +13,7 @@ public class LevelSelect : MonoBehaviour {
     private void Start() {
         selectedWorld = worlds[worldIndex];
         AudioManager.Instance.PlayMusic(worldsMusic[worldIndex]);
+        AudioManager.Instance.environmentSource.Stop();
 
         foreach (GameObject g in worlds) {
             g.SetActive(g == selectedWorld);

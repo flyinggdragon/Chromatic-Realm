@@ -343,6 +343,7 @@ MonoBehaviour:
   wallJumpTime: 0.5
   wallJumpTimer: 0
   wallJumpPower: {x: 5, y: 10}
+  isGrabbing: 0
   rb: {fileID: 6894139691818603135}
   sr: {fileID: 1106296971385818084}
   animator: {fileID: 8757890748069084678}
@@ -352,7 +353,7 @@ MonoBehaviour:
   walled: 0
   currentColorName: 1
   walk: {fileID: 0}
-  jump: {fileID: 8300000, guid: 394d802f1035a79469095d4bd58a591b, type: 3}
+  jump: {fileID: 8300000, guid: f3a7da9b0ded77b47b8a041f8243b90c, type: 3}
   die: {fileID: 8300000, guid: 840881ffb943f8c4982710c4016fa666, type: 3}
 --- !u!50 &6894139691818603135
 Rigidbody2D:
