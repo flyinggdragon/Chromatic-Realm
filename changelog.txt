@@ -2,6 +2,7 @@
 
 ## **Changed:**
 - Stage reorder.
+- Remade Credits Screen. Added all credits.
 
 ## **Added:**
 - Tips in Forest-6 (OG Forest-4) about Ground Color Harmony and White Objects.
@@ -10,9 +11,10 @@
 - All remaining City levels.
 - Falling leaves effect in the background in Forest
 - Falling rain effect in the background in City.
-- City's background slightly dimmed.
+- City's levels background slightly dimmed.
 - Environmental sounds to stages.
 - Slider to adjust Environmental sounds volume in the Options menu.
+- Constant Parallax to the background in the Level Select Screen.
 
 ## **Fixed:**
 - Fixed inconsistent camera configuration between levels (zoom and vertical alignment).

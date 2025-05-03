@@ -1,6 +1,10 @@
 Game Design, Programming, UI/UX Design:
 Marco "FlyingDragon" di Iorio
 
+ma9ici4n, sanctumpixel, rs-pixel-store (itch.io), CrimsonCreative,
+free-game-assets (itch.io), GandalfHardcore, piotrkowy, datagoblin,
+shimyx, jasontomlee, dreammix, paperhatlizard
+
 Forest Tileset and Decoration: ma9ici4n
 https://ma9ici4n.itch.io/grass-tileset-pixel-art
 
