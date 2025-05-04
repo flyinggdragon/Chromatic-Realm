@@ -101,9 +101,10 @@ public class Player : MonoBehaviour, ICanColorChange {
     }
 
     private void FixedUpdate() {
+        /*
         if (isGrabbing && _grabbedBlock != null) {
             _grabbedBlock.rb.linearVelocity = new(rb.linearVelocity.x, _grabbedBlock.rb.linearVelocity.y);
-        }
+        }*/
 
         CurrentVelocity = rb.linearVelocity;
     }
@@ -219,16 +220,29 @@ public class Player : MonoBehaviour, ICanColorChange {
         smokeAnimator.SetFloat("speedModifier", harmonySpeedModifier);
     }
 
+    /*
     public void HandleGrabbing(InputAction.CallbackContext context) {
+        bool inRange;
+
         if (context.performed) {
             if (_grabbedBlock == null) {
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1.5f);
                 foreach (Collider2D collider in colliders) {
                     if (collider.CompareTag("Block")) {
+                        inRange = true;
                         _grabbedBlock = collider.GetComponent<Block>();
                         _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                         isGrabbing = true;
-                        break;
+                    }
+
+                    else { inRange = false; }
+
+                    if (!inRange) {
+                        if (_grabbedBlock != null) {
+                            _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+                            _grabbedBlock = null;
+                            isGrabbing = false;
+                        }
                     }
                 }
             }
@@ -240,7 +254,7 @@ public class Player : MonoBehaviour, ICanColorChange {
                 isGrabbing = false;
             }
         }
-    }
+    }*/
 
    public void Pause(InputAction.CallbackContext context) {
         if (context.performed) {
