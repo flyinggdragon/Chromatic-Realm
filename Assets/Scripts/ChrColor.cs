@@ -185,6 +185,10 @@ public static class ChrColor {
             return Harmony.All;
         }
 
+        if (currentColor.chrColorName == ColorName.Black || collidingWithColor.chrColorName == ColorName.Black) {
+            return Harmony.Black;
+        }
+
         else if (currentColor.chrColorName == ColorName.Black || collidingWithColor.chrColorName == ColorName.Black) {
             return Harmony.None;
         }

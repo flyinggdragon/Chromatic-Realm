@@ -25,7 +25,7 @@ public class SoftBlock : Block {
                 return 0f;
             
             default:
-            return 4f;
+            return 5f;
         }
     }
 

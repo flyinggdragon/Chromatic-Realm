@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 99de4177d118c6f45854d5dbe1c953f8
+guid: 0fd83cd63189c8849aa591f97890151b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1784288402152445335
-    second: mixRay_0
+      213: 4802474937985155861
+    second: introductiontocolortheory5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mixRay_0
+      name: introductiontocolortheory5_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 72
-        width: 659
-        height: 457
+        x: 0
+        y: 0
+        width: 1280
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 795552329d013c810800000000000000
-      internalID: 1784288402152445335
+      spriteID: 5134251f281d5a240800000000000000
+      internalID: 4802474937985155861
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mixRay_0: 1784288402152445335
+      introductiontocolortheory5_0: 4802474937985155861
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

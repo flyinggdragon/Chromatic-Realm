@@ -39,7 +39,7 @@ public class Player : MonoBehaviour, ICanColorChange {
 
     [Header("Grabbing")]
     public bool isGrabbing = false;
-    private Block _grabbedBlock;
+    public Grab grab;
 
     [Header("Components")]
     public Rigidbody2D rb;
@@ -70,6 +70,7 @@ public class Player : MonoBehaviour, ICanColorChange {
 
     [Header("Other")]
     private Color _color;
+    private Surface s;
 
     // Methods
     private void Start() {
@@ -101,10 +102,9 @@ public class Player : MonoBehaviour, ICanColorChange {
     }
 
     private void FixedUpdate() {
-        /*
-        if (isGrabbing && _grabbedBlock != null) {
-            _grabbedBlock.rb.linearVelocity = new(rb.linearVelocity.x, _grabbedBlock.rb.linearVelocity.y);
-        }*/
+        if (isGrabbing && grab.shouldGrab && grab.grabbingBlock != null && grab.rb != null) {
+        grab.rb.linearVelocity = rb.linearVelocity;
+    }
 
         CurrentVelocity = rb.linearVelocity;
     }
@@ -211,8 +211,13 @@ public class Player : MonoBehaviour, ICanColorChange {
         _color = colorAttr.rgbValue;
         material.SetFloat("_HueShift", newColorAttr.hueShift);
 
-        harmonySpeedModifier = DetermineharmonySpeedModifier(currentColorName);
-        ChangeAnimSpeed();
+        if (s is not null) {
+            harmonySpeedModifier = DetermineHarmonySpeedModifier(s.colorName);
+            ChangeAnimSpeed();
+
+            Harmony harmony = ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(s.colorName));
+            shouldWallJump = harmony is Harmony.Analogue || harmony is Harmony.Equal || harmony is Harmony.All;
+        }
     }
 
     private void ChangeAnimSpeed() {
@@ -220,41 +225,17 @@ public class Player : MonoBehaviour, ICanColorChange {
         smokeAnimator.SetFloat("speedModifier", harmonySpeedModifier);
     }
 
-    /*
+    
     public void HandleGrabbing(InputAction.CallbackContext context) {
-        bool inRange;
-
         if (context.performed) {
-            if (_grabbedBlock == null) {
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1.5f);
-                foreach (Collider2D collider in colliders) {
-                    if (collider.CompareTag("Block")) {
-                        inRange = true;
-                        _grabbedBlock = collider.GetComponent<Block>();
-                        _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-                        isGrabbing = true;
-                    }
-
-                    else { inRange = false; }
-
-                    if (!inRange) {
-                        if (_grabbedBlock != null) {
-                            _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
-                            _grabbedBlock = null;
-                            isGrabbing = false;
-                        }
-                    }
-                }
-            }
-        } 
-        else if (context.canceled) {
-            if (_grabbedBlock != null) {
-                _grabbedBlock.rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
-                _grabbedBlock = null;
-                isGrabbing = false;
-            }
+            isGrabbing = true;
         }
-    }*/
+
+        else if (context.canceled) {
+            isGrabbing = false;
+        }
+    }
+
 
    public void Pause(InputAction.CallbackContext context) {
         if (context.performed) {
@@ -268,7 +249,7 @@ public class Player : MonoBehaviour, ICanColorChange {
         CurrentVelocity = Vector2.zero;
     }
 
-    private float DetermineharmonySpeedModifier(ColorName colorName) {
+    private float DetermineHarmonySpeedModifier(ColorName colorName) {
         Harmony harmony = ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(colorName));
 
         switch(harmony) {
@@ -283,9 +264,9 @@ public class Player : MonoBehaviour, ICanColorChange {
 
             case Harmony.Complementary:
                 return 0.5f;
-            
-            case Harmony.None:
-                return 1.0f;
+
+            case Harmony.Black:
+                return 0.8f;
             
             default:
                 return 1.0f;
@@ -307,17 +288,16 @@ public class Player : MonoBehaviour, ICanColorChange {
 
     protected void OnCollisionEnter2D(Collision2D collider) {
         if (collider.gameObject.CompareTag("Wall")) {
-            Surface s = collider.gameObject.GetComponent<Surface>();
-
+            s = collider.gameObject.GetComponent<Surface>();
             Harmony harmony = ChrColor.DetermineHarmony(colorAttr, ChrColor.FindColorAttr(s.colorName));
 
             shouldWallJump = harmony is Harmony.Analogue || harmony is Harmony.Equal || harmony is Harmony.All;
         }
 
         if (collider.gameObject.CompareTag("Ground")) {
-            Surface s = collider.gameObject.GetComponent<Surface>();
+            s = collider.gameObject.GetComponent<Surface>();
 
-            harmonySpeedModifier = DetermineharmonySpeedModifier(s.colorName);
+            harmonySpeedModifier = DetermineHarmonySpeedModifier(s.colorName);
             ChangeAnimSpeed();
         }
     }

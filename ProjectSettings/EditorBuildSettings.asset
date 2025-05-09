@@ -47,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/City-6.unity
     guid: 279a63c1c5ad3494c805a6fb6bf01102
+  - enabled: 1
+    path: Assets/Scenes/Color Theory.unity
+    guid: 61a34b89ca681bd4eb5991b6bf3f6291
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -37,6 +37,24 @@ public class ChromaticCircle: UIElement {
         ColorHighlight(player.currentColorName, true);
     }
 
+    public override void ToggleVisibility() {
+        if (shouldClose) {
+            if (UIManager.uiOpen && !isOpen) return;
+
+            isOpen = !isOpen;
+            UIManager.uiOpen = isOpen;
+            gameObject.SetActive(isOpen);
+
+            Time.timeScale = isOpen ? 0.3f : 1.0f;
+
+            Player.shouldMove = !isOpen;
+            Player.shouldInput = !isOpen;
+
+            if (isOpen) AudioManager.Instance.PlaySFX(openSFX);
+            else AudioManager.Instance.PlaySFX(closeSFX);
+        }
+    }
+
     public void ColorHighlight(ColorName color, bool colorActive) {
         if (colorActive) {
             notSelectable.SetActive(false);

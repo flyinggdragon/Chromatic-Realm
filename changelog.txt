@@ -1,23 +1,18 @@
-# CHANGELOG -  v.1.4-beta
+# CHANGELOG -  v.1.4.1-beta
+After a playtest session with a potential player, I have implemented a few of the feedbacks I received and improved on the issues found.
+I have also reintroduced the block pull mechanic but it still isn't optimal. It might be refined later but at this point I need to urgently starting more testing so I'll just release it as is.
 
 ## **Changed:**
-- Stage reorder.
-- Remade Credits Screen. Added all credits.
+- Tweaks to the Stages so they either become uncheesable or a bit less troublesome.
+- Made the Tips more descriptive.
+- Black Ground Harmony is now slower. Still a bit faster than complementary.
+- Ajustments to each individual Parallax layer speed
 
 ## **Added:**
-- Tips in Forest-6 (OG Forest-4) about Ground Color Harmony and White Objects.
-- Tip in City-1 about Wall Jumping.
-- Tip in City-2 about Black Objects.
-- All remaining City levels.
-- Falling leaves effect in the background in Forest
-- Falling rain effect in the background in City.
-- City's levels background slightly dimmed.
-- Environmental sounds to stages.
-- Slider to adjust Environmental sounds volume in the Options menu.
-- Constant Parallax to the background in the Level Select Screen.
+- ((Grabbing mechanic. Reprogrammed from scratch.))
+- Introduction to Color Theory Screen
+- Game time slowdown while Chromatic Circle is open.
 
 ## **Fixed:**
-- Fixed inconsistent camera configuration between levels (zoom and vertical alignment).
-- Fixed bug where some analog combinations would not grant wall jumping abilities.
-- Fixed bug where City-1 would not become available on Level Select after completing Forest-6.
-- Fixed tip size in Forest-3 and Forest-5.
+- Fixed scaling issues with the backgrounds on main screen and level select.
+- Fixed bug where Wall Jump capability would not be immediately updated while hanging onto a wall

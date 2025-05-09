@@ -31,6 +31,8 @@ public class MixRay : MonoBehaviour, IColorChanger {
 
         ColorAttr newColor = ChrColor.GetColorMix(colorAttr.chrColorName, objColorAttr.chrColorName);
 
+        if (newColor is null) return;
+        
         obj.GetComponent<ICanColorChange>().ChangeColor(newColor);
     }
 }

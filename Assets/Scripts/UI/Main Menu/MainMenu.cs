@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
     [SerializeField] private AudioClip backgroundMusic;
     [SerializeField] private GameObject main;
-    [SerializeField] private GameObject color;
     [SerializeField] private GameObject options;
     [SerializeField] private GameObject credits;
     private GameObject currentView;
@@ -16,15 +15,22 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void GameStart() {
-        SceneManager.LoadScene("Level Select");
+        if (ColorTheory.playGamePressedFirstTime) {
+            ColorTheory.playGamePressed = true;
+            ColorTheory.playGamePressedFirstTime = false;
+            SceneManager.LoadScene("Color Theory");
+        }
+
+        else SceneManager.LoadScene("Level Select");
+    }
+    
+    public void DisplayColorTheory() {
+        ColorTheory.playGamePressed = false;
+        SceneManager.LoadScene("Color Theory");
     }
 
     public void DisplayOptions() {
         SwitchView(options);
-    }
-
-    public void DisplayColorInformation() {
-        SwitchView(color);
     }
 
     public void DisplayCredits() {

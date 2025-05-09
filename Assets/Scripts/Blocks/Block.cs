@@ -71,14 +71,14 @@ public class Block : MonoBehaviour, ICanColorChange {
             if (IsTopCollision(collision.contacts)) {
                 player.grounded = true;
             }
-
+            /*
             Harmony currentHarmony = ChrColor.DetermineHarmony(colorAttr, player.colorAttr);
-
+            
             if (currentHarmony is Harmony.Equal || currentHarmony is Harmony.Analogue) {
                 rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             } else {
                 rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
-            }
+            }*/
         }
     }
 

@@ -5,5 +5,6 @@ public enum Harmony {
     Triadic,
     Equal,
     All,
+    Black,
     None
 }
